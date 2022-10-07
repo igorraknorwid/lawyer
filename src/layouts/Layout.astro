@@ -4,6 +4,7 @@ interface Props {
   title: string;
 }
 const { title = "Astro default" } = Astro.props as Props;
+import '../styles/global.css';
 ---
 
 <html lang='en'>
@@ -12,6 +13,9 @@ const { title = "Astro default" } = Astro.props as Props;
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <meta name='viewport' content='width=device-width' />
     <meta name='generator' content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
     <title>{title}</title>
   </head>
   <body>
