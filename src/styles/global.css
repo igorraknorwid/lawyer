@@ -1,13 +1,10 @@
-/* @font-face {
+@font-face {
   font-family: "Pathway Gothic One";
-  src: url("/fonts/Pathway_Gothic_One/PathwayGothicOne-Regular.ttf")
-    format("ttf");
+  src: url("/fonts/PathwayGothicOne-Regular.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-} */
-/* 
-@import url("https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&family=Source+Sans+Pro:wght@400;600;700&display=swap"); */
+}
 
 html,
 body {
@@ -15,6 +12,6 @@ body {
   /* font-family: "Source Sans Pro", sans-serif; */
 }
 
-/* h1 {
+h1 {
   font-family: "Pathway Gothic One", sans-serif;
-} */
+}
