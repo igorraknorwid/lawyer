@@ -1,7 +1,18 @@
+/* @font-face {
+  font-family: "Pathway Gothic One";
+  src: url("/fonts/Pathway_Gothic_One/PathwayGothicOne-Regular.ttf")
+    format("ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&family=Source+Sans+Pro:wght@400;600;700&display=swap");
+
 html,
 body {
   background-color: blueviolet;
-  font-family: "Source Sans Pro", sans-serif;
+  /* font-family: "Source Sans Pro", sans-serif; */
 }
 
 h1 {
