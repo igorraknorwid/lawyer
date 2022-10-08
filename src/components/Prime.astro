@@ -1,0 +1,25 @@
+---
+import Burger from "./Burger"
+---
+
+<div class="prime">
+    <h1 class="text-[50px] text-white">Hello</h1>
+    <Burger client:load/>
+    </div>
+
+
+<style>
+
+  .prime {
+   height: 100vh;
+   background: url(/hero-lg.webp) no-repeat center / cover;
+  }
+
+  @media (max-width: 767px){
+    .prime{
+      height: 700px;      
+      background: url(/hero-mini.webp) no-repeat center / cover;
+  }
+    } 
+  
+  </style>
