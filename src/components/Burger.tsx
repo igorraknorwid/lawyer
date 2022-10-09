@@ -3,6 +3,7 @@ import "../styles/burger.css";
 
 
 
+
 interface ILinkCildren{
     id:number;
     slug:string;
@@ -30,6 +31,8 @@ function  Menu (links:ILink[]){
     )
  
 }
+
+
 
 
 export default function TopNavbar(){

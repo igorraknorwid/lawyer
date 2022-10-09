@@ -2,11 +2,24 @@
 import Awards from "../components/Awards";
 import Prime from "../components/Prime.astro";
 import Layout from "../layouts/Layout.astro";
+import {AwardsData} from "../types"
+ const response = await fetch("https://sheltered-river-97651.herokuapp.com/api/awards");
+ const awards_data = (await response.json()) as AwardsData;
+ const data = awards_data.data;
+ const x = data.map(item=>item.attributes)
+
+// const image_links = [
+//     {id:1, src:"https://res.cloudinary.com/du9w3xgvx/image/upload/v1665312789/lawyer/super_ivaxzt.webp", alt:"suver_lawyer"},
+//     {id:2, src:"https://res.cloudinary.com/du9w3xgvx/image/upload/v1665312783/lawyer/avvo_nrvy7h.webp", alt:"avvo"},
+//     {id:3, src:"https://res.cloudinary.com/du9w3xgvx/image/upload/v1665312779/lawyer/yelp_w3qrp1.webp", alt:"yelp"},
+//     {id:4, src:"https://res.cloudinary.com/du9w3xgvx/image/upload/v1665312772/lawyer/google_gepo67.webp", alt:"google_rewiews"},
+// ]
+
 ---
 
 <Layout title="Kancelaria adwokacka">
   <Prime/>
-  <Awards client:visible />
+  <Awards images={x} client:visible  />
   <section class="px-2">  
   <p class="text-black bg-white text-[14px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl purus in mollis nunc. Maecenas ultricies mi eget mauris pharetra et ultrices. Ac felis donec et odio pellentesque diam volutpat commodo sed. Varius duis at consectetur lorem. Molestie nunc non blandit massa enim nec dui nunc mattis. At auctor urna nunc id. Interdum varius sit amet mattis vulputate enim nulla. Scelerisque felis imperdiet proin fermentum. Facilisi nullam vehicula ipsum a arcu cursus vitae. Lacus vestibulum sed arcu non. Cursus metus aliquam eleifend mi in nulla. Diam in arcu cursus euismod quis viverra nibh. Iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui. Lacus sed viverra tellus in hac. Posuere ac ut consequat semper viverra nam libero justo. Urna id volutpat lacus laoreet non curabitur. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi.
 

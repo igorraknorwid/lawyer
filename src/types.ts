@@ -5,3 +5,15 @@ export interface IProduct {
   image: string;
   description: string;
 }
+
+
+export type TAward = { id: number; src: string; alt: string };
+
+interface dataType {
+  id: number;
+  attributes: TAward ;
+};
+
+export interface AwardsData {
+  data: dataType[];
+}
