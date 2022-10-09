@@ -1,23 +1,23 @@
 .burger-btn{
     --btn-primary: #ffffff;
-    --btn-size:90px;
+    --btn-size:120px;
   }
 
 
 .burger-btn{
     width: var(--btn-size);
     height: var(--btn-size);
-    margin-left: 10px;
+    margin-left: 0;
     position: relative;
     cursor: pointer;
-    padding: 5px;
+    padding: 0;
   }  
   
   .burger-btn:before,.burger-btn:after,.burger-btn span{  
     position: absolute;
     width: var(--btn-size);
     background-color: var(--btn-primary);
-    height: 2px; 
+    height: 16px; 
     transition: all 0.3s ease 0s; 
   }
   

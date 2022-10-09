@@ -15,10 +15,36 @@
 
 html,
 body {
-  font-family: "GemunuLibre-Regular", sans-serif;
+  font-family: "Pathway Gothic One", sans-serif;
+  overflow-x: hidden;
 
 }
 
 h1 {
   font-family: "GemunuLibre-Regular", sans-serif;
 }
+
+.top_menu{
+  right: -1000px;
+}
+
+.top_menu.active{
+  display: block;
+  right: 0;
+  animation: top_in linear 0.8s;
+}
+
+.hide{
+  animation: top_out linear 0.8s;
+}
+
+@keyframes top_in {
+  0%   {right:-1000px} 
+  100% {right:0}
+}
+
+@keyframes top_out {
+  0%   {right:0 } 
+  100% {right:-1000px}
+}
+
