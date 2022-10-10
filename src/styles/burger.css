@@ -1,59 +1,76 @@
-.burger-btn{
-    --btn-primary: #ffffff;
-    --btn-size:120px;
-  }
+.burger-btn {
+  --btn-primary: #ffffff;
+  --btn-size: 120px;
+  --btn-mini: 60px;
+}
 
+.burger-btn {
+  width: var(--btn-size);
+  height: var(--btn-size);
+  margin-left: 0;
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
 
-.burger-btn{
-    width: var(--btn-size);
-    height: var(--btn-size);
+.burger-btn:before,
+.burger-btn:after,
+.burger-btn span {
+  position: absolute;
+  width: var(--btn-size);
+  background-color: var(--btn-primary);
+  height: 16px;
+  transition: all 0.3s ease 0s;
+}
+
+.burger-btn:before {
+  content: "";
+  top: 0;
+}
+.burger-btn:after {
+  content: "";
+  bottom: 0;
+}
+.burger-btn span {
+  top: 50%;
+  transform: scale(1) translate(0px, -50%);
+}
+
+.burger-btn.active:before,
+.burger-btn.active:after,
+.burger-btn.active span {
+  background-color: var(--btn-primary);
+}
+
+.burger-btn.active:before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0px, -50%);
+}
+.burger-btn.active:after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(0px, 50%);
+}
+.burger-btn.active span {
+  transform: scale(0) translate(0px, -50%);
+}
+
+@media only screen and (max-width: 1024px) {
+  .burger-btn {
+    width: var(--btn-mini);
+    height: var(--btn-mini);
     margin-left: 0;
     position: relative;
     cursor: pointer;
     padding: 0;
-  }  
-  
-  .burger-btn:before,.burger-btn:after,.burger-btn span{  
-    position: absolute;
-    width: var(--btn-size);
-    background-color: var(--btn-primary);
-    height: 16px; 
-    transition: all 0.3s ease 0s; 
-  }
-  
-  .burger-btn:before{  
-    content: "";
-    top: 0;
-  }
-  .burger-btn:after{ 
-    content: ""; 
-    bottom: 0; 
-  }
-  .burger-btn span{
-    top:50%;
-    transform: scale(1) translate(0px, -50%);
-  }
-  
-  
-  .burger-btn.active:before,.burger-btn.active:after,.burger-btn.active span{  
-      background-color: var(--btn-primary);    
-  }
-  
-  .burger-btn.active:before{  
-      top: 50%;
-          transform: rotate(-45deg) translate(0px, -50%);
-  }
-  .burger-btn.active:after{ 
-      bottom: 50%;
-          transform: rotate(45deg) translate(0px, 50%);
-  }
-  .burger-btn.active span{
-    transform: scale(0) translate(0px, -50%);
   }
 
-/* @media only screen and (min-width: 1024px) {
-  .burger-btn{
-   display: none;
-    
+  .burger-btn:before,
+  .burger-btn:after,
+  .burger-btn span {
+    position: absolute;
+    width: var(--btn-mini);
+    background-color: var(--btn-primary);
+    height: 3px;
+    transition: all 0.3s ease 0s;
   }
-} */
+}

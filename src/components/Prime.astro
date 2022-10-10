@@ -1,32 +1,32 @@
 ---
-import Burger from "./Burger"
+import Burger from "./Burger";
 ---
 
-<div class="prime">
-    <Burger client:load/>
-    <div class="absolute top-10 left-0 right-0 flex justify-between items-center  h-[230px]  pr-[300px] pl-10">      
-          <img src="https://res.cloudinary.com/du9w3xgvx/image/upload/v1665328990/lawyer/logo_urgmkq.svg" alt="logo"/>
-          <div class="flex">
-              <a class="text-[40px] text-white" href="tel:123-456-7890">123-456-7890</a>           
-          </div>
-     
+<div class='prime'>
+  <Burger client:load />
+  <div
+    class='absolute xl:top-10 left-0 right-0 flex gap-x-4 xl:gap-x-0 xl:justify-between items-center xl:h-[180px] pr-[90px] xl:pr-[300px] pl-4 xl:pl-10'
+  >
+    <a href='/'
+      ><img src='/logo.svg' alt='logo' class='w-[100px] xl:w-[400px]' />
+    </a>
+    <div class='flex flex-col xl:text-[60px] text-white my-stroke'>
+      <div class='uppercase'>Telefon do kontaktu:</div>
+      <a class='' href='tel:123-456-7890'>123-456-7890</a>
     </div>
-   
-    </div>
-
+  </div>
+</div>
 
 <style>
-
   .prime {
-   height: 100vh;
-   background: url(/hero-lg.webp) no-repeat center / cover;
+    height: 100vh;
+    background: url(/hero-lg.webp) no-repeat center / cover;
   }
 
-  @media (max-width: 767px){
-    .prime{
-      height: 700px;      
+  @media (max-width: 767px) {
+    .prime {
+      height: 700px;
       background: url(/hero-mini.webp) no-repeat center / cover;
+    }
   }
-    } 
-  
-  </style>
+</style>
