@@ -30,11 +30,11 @@ h1 {
 .top_menu.active {
   display: block;
   right: 0;
-  animation: top_in linear 0.8s;
+  animation: top_in linear 0.8s forwards;
 }
 
 .hide {
-  animation: top_out linear 0.8s;
+  animation: top_out linear 0.8s backwards;
 }
 
 @keyframes top_in {
