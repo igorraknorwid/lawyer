@@ -50,23 +50,11 @@ export default function TopNavbar() {
         </div>
       </div>
 
-      {/* <div
-        className={`absolute xl:top-5  z-10 w-[80%] xl:w-[500px] bg-[#0e1c39] pt-[90px]   xl:pt-[180px] pb-10 px-10 ${
-          init && "hidden"
-        }  top_menu ${state ? "active" : "hide"} `}
-      >
-        <ul className='text-white text-xl xl:text-3xl'>
-          <li className='mb-3 mt-3 '>Witam</li>
-          <li className='mb-3'>O nas</li>
-          <li className=''>Kontakty</li>
-        </ul>
-      </div> */}
-
       <div
         className={`fixed top-0 right-0 xl:top-5  z-10 w-[80%] xl:w-[500px] bg-[#0e1c39] pt-[90px]   xl:pt-[180px] pb-10 px-10 ${
           state
-            ? "translate-x-0 transition-all duration-1000"
-            : "translate-x-full transition-all duration-1000"
+            ? "translate-x-0 transition-all duration-700"
+            : "translate-x-full transition-all duration-700"
         } `}
       >
         <ul className='text-white text-xl xl:text-3xl'>
