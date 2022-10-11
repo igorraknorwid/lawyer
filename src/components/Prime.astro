@@ -23,15 +23,15 @@ const {title,subtitle,button} = awards_data.data.attributes;
   </div>
 
   <div
-    class='absolute top-[300px] flex flex-col justify-center text-white my-stroke ml-20 p-10'
+    class='absolute top-[500px] max-w-[50%] flex flex-col justify-center text-white my-stroke ml-20 p-10'
   >
-    <div class='text-center xl:text-[72px]'>
+    <div class='text-center xl:text-[96px] tracking-widest leading-none mb-20'>
      {title}
     </div>
-    <div class='text-center xl:text-[20px]'>    
+    <h1 class='text-center uppercase xl:text-[30px] mb-20 tracking-[6px]'>    
       {subtitle}
-    </div>
-    <a class='text-center py-4 px-8 bg-[#d8380d] max-w-max m-auto'
+    </h1>
+    <a class='text-center uppercase xl:text-[30px] py-8 px-16 bg-[#d8380d] hover:bg-yellow-400 hover:text-gray-800 cursor-pointer max-w-max m-auto'
       >{button}</a
     >
   </div>

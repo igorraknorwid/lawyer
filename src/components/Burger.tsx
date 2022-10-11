@@ -51,7 +51,7 @@ export default function TopNavbar() {
       </div>
 
       <div
-        className={`fixed top-0 right-0 xl:top-5  z-10 w-[80%] xl:w-[500px] bg-[#0e1c39] pt-[90px]   xl:pt-[180px] pb-10 px-10 ${
+        className={`fixed top-0 right-0 xl:top-5  z-10 w-[80%] xl:w-[30%] bg-[#0e1c39] pt-[90px]   xl:pt-[180px] pb-10 xl:pb-20 px-10 xl:px-20 ${
           state
             ? "translate-x-0 transition-all duration-700"
             : "translate-x-full transition-all duration-700"
