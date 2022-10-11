@@ -29,3 +29,15 @@ interface dataPrime {
 export interface PrimeData {
   data: dataPrime;
 }
+
+
+export type TContact = { number_phone: number; visible_phone: string; };
+
+interface dataContact {
+  id: number;
+  attributes: TContact ;
+};
+
+export interface ContactData {
+  data: dataContact;
+}
