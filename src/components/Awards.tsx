@@ -25,8 +25,8 @@ export default function Awards({ images }: IAward) {
     <section className='py-20 px-20'>
       <div style={{ height: "1px" }} ref={nextRef}></div>
       <ul className='flex justify-between items-center'>
-        {images.map((img) => (
-          <li key={img.id}>
+        {images.map((img,index) => (
+          <li key={index}>
             <img src={state ? img.src : ""} alt={img.alt} />
           </li>
         ))}

@@ -17,3 +17,15 @@ interface dataType {
 export interface AwardsData {
   data: dataType[];
 }
+
+
+export type TPrime = { title: number; subtitle: string; button: string };
+
+interface dataPrime {
+  id: number;
+  attributes: TPrime ;
+};
+
+export interface PrimeData {
+  data: dataPrime;
+}
