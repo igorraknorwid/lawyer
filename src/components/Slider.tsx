@@ -3,8 +3,7 @@ import Slider from "react-slick";
 import "../styles/slider.css";
 
 export default function SimpleSlider() {
-  var settings = {
-    // dots: true,
+  const settings = {
     infinite: true,
     speed: 500,
     slidesToShow: 2,
@@ -13,12 +12,7 @@ export default function SimpleSlider() {
   return (
     <Slider {...settings}>
       <div className='py-5 px-20  '>
-        <img
-          // style={{ objectPosition: "center", objectFit: "cover" }}
-          className=''
-          src={"/stars.png"}
-          alt={"starts"}
-        />
+        <img className='' src={"/stars.png"} alt={"starts"} />
         <div class='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>
         <p className='text-center  text-xl'>
           Firma przeprowadziła mnie przez bardzo trudny okres w moim życiu. Pan
@@ -30,12 +24,7 @@ export default function SimpleSlider() {
       </div>
       <div className='py-5 px-20'>
         <div className='flex justify-center items-center'>
-          <img
-            // style={{ objectPosition: "center", objectFit: "cover" }}
-            className=''
-            src={"/stars.png"}
-            alt={"starts"}
-          />
+          <img className='' src={"/stars.png"} alt={"starts"} />
         </div>
 
         <div class='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>
