@@ -22,12 +22,16 @@ export default function Awards({ images }: IAward) {
   }, []);
 
   return (
-    <section className='py-20 px-20 xl:px-40'>
+    <section className='pt-10 pb-10 px-20 xl:px-40 bg-[#f6f4f5]'>
       <div style={{ height: "1px" }} ref={nextRef}></div>
       <ul className='flex justify-between items-center gap-x-10'>
-        {images.map((img,index) => (
+        {images.map((img, index) => (
           <li key={index}>
-            <img src={state ? img.src : ""} alt={img.alt} />
+            <img
+              className='xl:max-h-32'
+              src={state ? img.src : ""}
+              alt={img.alt}
+            />
           </li>
         ))}
       </ul>
