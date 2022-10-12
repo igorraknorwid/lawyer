@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Awards from "../components/Awards";
 import Prime from "../components/Prime.astro";
 import Lawyer from "../components/Lawyer";
+import Testimonial from "../components/Testimonial.astro";
 import { AwardsData } from "../types";
 const response = await fetch(
   "https://sheltered-river-97651.herokuapp.com/api/awards"
@@ -22,7 +23,8 @@ const x = data.map((item) => item.attributes);
     image_src='https://res.cloudinary.com/zielona-g-ra/image/upload/v1665553138/attorney_owcg1l.webp'
     image_alt='lawyer'
   />
-  <section class='px-2'>
+  <Testimonial />
+  <section class='px-2 my-20'>
     <p class='text-black bg-white text-[14px]'>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl purus in

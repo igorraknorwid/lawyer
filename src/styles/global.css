@@ -69,3 +69,8 @@ h1 {
 .grayscale {
   filter: grayscale(60%);
 }
+
+.slick-prev:before,
+.slick-next:before {
+  color: #881798;
+}
