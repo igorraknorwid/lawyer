@@ -62,6 +62,22 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 
+const Slide = () => {
+  return (
+    <div className='py-5 px-20  '>
+      <img className='' src={"/stars.png"} alt={"starts"} />
+      <div class='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>
+      <p className='text-center  text-xl'>
+        Firma przeprowadziła mnie przez bardzo trudny okres w moim życiu. Pan
+        Berenji towarzyszył mi na każdym kroku i udzielał mi niesamowitych porad
+        prawnych.
+      </p>
+      <div class='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>
+      <p className='text-center'>Paulina K.</p>
+    </div>
+  );
+};
+
 export default () => {
   return (
     <Swiper
@@ -70,10 +86,18 @@ export default () => {
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
     >
-      <SwiperSlide>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
+      <SwiperSlide>
+        <Slide />
+      </SwiperSlide>
+      <SwiperSlide>
+        <Slide />
+      </SwiperSlide>
+      <SwiperSlide>
+        <Slide />
+      </SwiperSlide>
+      <SwiperSlide>
+        <Slide />
+      </SwiperSlide>
       ...
     </Swiper>
   );
