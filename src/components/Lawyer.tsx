@@ -9,7 +9,8 @@ interface ILawyer {
 export default function Lawyer({ image_src, image_alt }: ILawyer) {
   const [state, setState] = React.useState(false);
 
-  const nextRef = React.useRef<HTMLDivElement>(null);
+  const topRef = React.useRef<HTMLDivElement>(null);
+  const bottomRef = React.useRef<HTMLDivElement>(null);
   React.useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
@@ -17,14 +18,17 @@ export default function Lawyer({ image_src, image_alt }: ILawyer) {
         setState(true);
       }
     });
-    if (nextRef.current) {
-      observer.observe(nextRef.current);
+    if (topRef.current) {
+      observer.observe(topRef.current);
+    }
+    if (bottomRef.current) {
+      observer.observe(bottomRef.current);
     }
   }, []);
 
   return (
-    <section className='py-24 xl:w-10/12 m-auto'>
-      <div style={{ height: "1px" }} ref={nextRef}></div>
+    <section className=' py-10 xl:py-24 xl:w-10/12 m-auto'>
+      <div style={{ height: "1px" }} ref={topRef}></div>
       <div className='xl:flex'>
         <img
           style={{ objectPosition: "center", objectFit: "cover" }}
@@ -32,7 +36,7 @@ export default function Lawyer({ image_src, image_alt }: ILawyer) {
           src={state ? image_src : ""}
           alt={image_alt}
         />
-        <div className='pl-24'>
+        <div className='xl:pl-24'>
           <h1 className='text-6xl'>GDAŃSKI PRAWNIK ROZWODOWY</h1>
           <div className='w-10 h-1 bg-[#cdb171] my-10'></div>
           <div className='text-2xl xl:max-w-3xl'>
@@ -68,6 +72,7 @@ export default function Lawyer({ image_src, image_alt }: ILawyer) {
           </div>
         </div>
       </div>
+      <div style={{ height: "1px" }} ref={bottomRef}></div>
     </section>
   );
 }
