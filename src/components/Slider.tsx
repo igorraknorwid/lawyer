@@ -2,15 +2,15 @@ import React from "react";
 import Slider from "react-slick";
 import "../styles/slider.css";
 
-export default function SimpleSlider() {
-  // const settings = {
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 2,
-  //   slidesToScroll: 1,
-  // };
+export default function MySlider() {
+  const settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+  };
   return (
-    <Slider infinite={true} speed={500} slidesToShow={2} slidesToScroll={1}>
+    <Slider {...settings}>
       <div className='py-5 px-20  '>
         <img className='' src={"/stars.png"} alt={"starts"} />
         <div class='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>

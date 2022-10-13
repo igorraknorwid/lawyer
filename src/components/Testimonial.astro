@@ -13,7 +13,7 @@
 // const contact_data = (await response_contact.json()) as ContactData;
 // const { number_phone, visible_phone } = contact_data.data.attributes;
 
-import Slider from "../components/Slider";
+import MySlider from "../components/Slider";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 ---
@@ -22,7 +22,7 @@ import "slick-carousel/slick/slick-theme.css";
   <h1 class='text-6xl text-center'>CO MÓWIĄ NASI KLIENCI</h1>
   <div class='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>
   <div class='bg-white w-9/12 mx-auto'>
-    <Slider client:visible />
+    <MySlider client:load />
   </div>
 </section>
 
