@@ -5,6 +5,7 @@ import Prime from "../components/Prime.astro";
 import Lawyer from "../components/Lawyer";
 import Testimonial from "../components/Testimonial.astro";
 import { AwardsData } from "../types";
+import Why from "../components/Why";
 const response = await fetch(
   "https://sheltered-river-97651.herokuapp.com/api/awards"
 );
@@ -24,6 +25,7 @@ const x = data.map((item) => item.attributes);
     image_alt='lawyer'
   />
   <Testimonial />
+  <Why client:visible />
   <section class='px-2 my-20'>
     <p class='text-black bg-white text-[14px]'>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
