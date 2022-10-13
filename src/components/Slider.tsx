@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "../styles/slider.css";
 
-export default function MySlider() {
+const MySlider = () => {
   const customSlider = React.useRef<Slider>(null);
   const settings = {
     infinite: true,
@@ -51,4 +51,6 @@ export default function MySlider() {
       </div>
     </Slider>
   );
-}
+};
+
+export default React.memo(MySlider);
