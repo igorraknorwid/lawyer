@@ -66,13 +66,13 @@ const Slide = () => {
   return (
     <div className='py-5 px-20  '>
       <img className='' src={"/stars.png"} alt={"starts"} />
-      <div class='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>
+      <div className='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>
       <p className='text-center  text-xl'>
         Firma przeprowadziła mnie przez bardzo trudny okres w moim życiu. Pan
         Berenji towarzyszył mi na każdym kroku i udzielał mi niesamowitych porad
         prawnych.
       </p>
-      <div class='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>
+      <div className='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>
       <p className='text-center'>Paulina K.</p>
     </div>
   );
