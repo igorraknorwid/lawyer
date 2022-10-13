@@ -27,7 +27,7 @@ export default function Lawyer({ image_src, image_alt }: ILawyer) {
   }, []);
 
   return (
-    <section className=' py-10 xl:py-24 xl:w-10/12 m-auto'>
+    <section className='xl:py-24 xl:w-10/12 m-auto'>
       <div style={{ height: "1px" }} ref={topRef}></div>
       <div className='xl:flex'>
         <img
@@ -37,7 +37,7 @@ export default function Lawyer({ image_src, image_alt }: ILawyer) {
           alt={image_alt}
         />
         <div className='xl:pl-24'>
-          <h1 className='text-6xl'>GDAŃSKI PRAWNIK ROZWODOWY</h1>
+          <h1 className='text-6xl pt-8 xl:pt-0'>GDAŃSKI PRAWNIK ROZWODOWY</h1>
           <div className='w-10 h-1 bg-[#cdb171] my-10'></div>
           <div className='text-2xl xl:max-w-3xl'>
             <p className='mb-5'>
