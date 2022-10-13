@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "../styles/slider.css";
 
 export default function MySlider() {
+  const customSlider = React.useRef<Slider>(null);
   const settings = {
     infinite: true,
     speed: 500,
@@ -10,7 +11,7 @@ export default function MySlider() {
     slidesToScroll: 1,
   };
   return (
-    <Slider {...settings}>
+    <Slider ref={customSlider} {...settings}>
       <div className='py-5 px-20  '>
         <img className='' src={"/stars.png"} alt={"starts"} />
         <div class='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>
