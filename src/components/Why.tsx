@@ -1,5 +1,6 @@
 import React from "react";
 import { TAward } from "../types";
+import InsideWhy from "./InsideWhy";
 
 export default function Why() {
   const [state, setState] = React.useState(false);
@@ -26,11 +27,13 @@ export default function Why() {
       <div style={{ height: "1px" }} ref={topRef}></div>
       {state ? (
         <div
-          className='h-[1500px] w-full '
+          className='relative h-[1500px] w-full '
           style={{
             background: `url( "https://res.cloudinary.com/zielona-g-ra/image/upload/v1665663718/why-bg_2_gbx6d5.webp") no-repeat center/cover`,
           }}
-        ></div>
+        >
+          <InsideWhy />
+        </div>
       ) : (
         <div></div>
       )}
