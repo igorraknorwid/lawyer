@@ -51,7 +51,7 @@ const MySlider = () => {
       </div>
     </Slider>
   );
-  return <div>{wishImage}</div>;
+  return <div>{/* {wishImage} */} hello</div>;
 };
 
 export default React.memo(MySlider);
