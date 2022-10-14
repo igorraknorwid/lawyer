@@ -13,13 +13,31 @@ const awards_data = (await response.json()) as AwardsData;
 const data = awards_data.data;
 const x = data.map((item) => item.attributes);
 const cards = [
-  {src:"https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/25_chqo4a.png", text:"Handling family law matters over 25 years"},
-  {src:"https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/person_tdxxke.png", text:"Constant communication with you throughout the process"},
-  {src:"https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/maze_guhtnv.png", text:"Experience with complex custody issues and high-conflict divorce"},
-  {src:"https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/gavel_lykgwg.png", text:"Knowledge of the local family courts"},
-  {src:"https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/trophy_h3op8x.png", text:"Skilled representation designed to improve your position and reduce litigation"},
-  {src:"https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/megaphone_nsy7lu.png", text:"Award-winning attorneys ready to litigate on your behalf"},
-]
+  {
+    src: "https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/25_chqo4a.png",
+    text: "Handling family law matters over 25 years",
+  },
+  {
+    src: "https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/person_tdxxke.png",
+    text: "Constant communication with you throughout the process",
+  },
+  {
+    src: "https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/maze_guhtnv.png",
+    text: "Experience with complex custody issues and high-conflict divorce",
+  },
+  {
+    src: "https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/gavel_lykgwg.png",
+    text: "Knowledge of the local family courts",
+  },
+  {
+    src: "https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/trophy_h3op8x.png",
+    text: "Skilled representation designed to improve your position and reduce litigation",
+  },
+  {
+    src: "https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/megaphone_nsy7lu.png",
+    text: "Award-winning attorneys ready to litigate on your behalf",
+  },
+];
 ---
 
 <Layout
@@ -34,65 +52,6 @@ const cards = [
   />
   <Testimonial />
   <Why cards={cards} client:visible />
-  <section class='px-2 my-20'>
-    <p class='text-black bg-white text-[14px]'>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl purus in
-      mollis nunc. Maecenas ultricies mi eget mauris pharetra et ultrices. Ac
-      felis donec et odio pellentesque diam volutpat commodo sed. Varius duis at
-      consectetur lorem. Molestie nunc non blandit massa enim nec dui nunc
-      mattis. At auctor urna nunc id. Interdum varius sit amet mattis vulputate
-      enim nulla. Scelerisque felis imperdiet proin fermentum. Facilisi nullam
-      vehicula ipsum a arcu cursus vitae. Lacus vestibulum sed arcu non. Cursus
-      metus aliquam eleifend mi in nulla. Diam in arcu cursus euismod quis
-      viverra nibh. Iaculis at erat pellentesque adipiscing commodo elit at
-      imperdiet dui. Lacus sed viverra tellus in hac. Posuere ac ut consequat
-      semper viverra nam libero justo. Urna id volutpat lacus laoreet non
-      curabitur. Aenean vel elit scelerisque mauris pellentesque pulvinar
-      pellentesque habitant morbi. Nec nam aliquam sem et tortor consequat id
-      porta nibh. Id consectetur purus ut faucibus. Eget gravida cum sociis
-      natoque penatibus et magnis dis parturient. Quis auctor elit sed
-      vulputate. Erat nam at lectus urna duis convallis convallis tellus id.
-      Proin fermentum leo vel orci porta non. Leo urna molestie at elementum eu
-      facilisis. Enim nec dui nunc mattis enim ut tellus. Sagittis id
-      consectetur purus ut faucibus pulvinar elementum integer. Arcu felis
-      bibendum ut tristique et. Id donec ultrices tincidunt arcu. Gravida dictum
-      fusce ut placerat orci nulla pellentesque. Pharetra convallis posuere
-      morbi leo urna molestie at elementum eu. Dolor sit amet consectetur
-      adipiscing elit duis tristique sollicitudin nibh. Risus viverra adipiscing
-      at in tellus integer. Felis imperdiet proin fermentum leo vel orci porta.
-      Rhoncus mattis rhoncus urna neque viverra justo nec ultrices. At varius
-      vel pharetra vel turpis. Consequat mauris nunc congue nisi vitae. Turpis
-      egestas sed tempus urna et pharetra pharetra. Nibh nisl condimentum id
-      venenatis. Consequat nisl vel pretium lectus quam id leo in. Tellus rutrum
-      tellus pellentesque eu tincidunt tortor aliquam nulla. Auctor eu augue ut
-      lectus arcu bibendum at varius vel. Eleifend quam adipiscing vitae proin
-      sagittis nisl rhoncus. Dolor purus non enim praesent elementum facilisis
-      leo vel fringilla. Id eu nisl nunc mi ipsum. Egestas sed sed risus pretium
-      quam vulputate dignissim suspendisse. Eget mauris pharetra et ultrices
-      neque ornare. Felis eget nunc lobortis mattis. Sapien eget mi proin sed
-      libero enim sed. Arcu ac tortor dignissim convallis aenean et tortor at.
-      Vitae auctor eu augue ut lectus. Pharetra vel turpis nunc eget lorem
-      dolor. Sed arcu non odio euismod. Pellentesque elit eget gravida cum. Nunc
-      faucibus a pellentesque sit amet porttitor eget dolor morbi. Urna molestie
-      at elementum eu facilisis sed odio morbi. Pellentesque massa placerat duis
-      ultricies. Praesent tristique magna sit amet purus gravida. Mollis nunc
-      sed id semper risus in. Euismod elementum nisi quis eleifend quam
-      adipiscing vitae proin. Libero justo laoreet sit amet cursus. Platea
-      dictumst quisque sagittis purus sit amet volutpat consequat mauris. Urna
-      porttitor rhoncus dolor purus non enim praesent. Arcu non sodales neque
-      sodales ut etiam sit. Ipsum suspendisse ultrices gravida dictum fusce ut
-      placerat orci. Rhoncus aenean vel elit scelerisque mauris. In iaculis nunc
-      sed augue lacus viverra vitae. Ridiculus mus mauris vitae ultricies leo
-      integer. Vestibulum morbi blandit cursus risus at ultrices mi. Iaculis
-      urna id volutpat lacus laoreet non curabitur gravida. Augue mauris augue
-      neque gravida in fermentum et. Euismod elementum nisi quis eleifend quam
-      adipiscing. Elit duis tristique sollicitudin nibh sit amet commodo.
-      Viverra nibh cras pulvinar mattis. Lorem dolor sed viverra ipsum nunc
-      aliquet. Accumsan sit amet nulla facilisi. A condimentum vitae sapien
-      pellentesque habitant morbi tristique. Volutpat est velit egestas dui id.
-    </p>
-  </section>
 </Layout>
 
 <style></style>

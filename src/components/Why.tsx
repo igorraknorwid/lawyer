@@ -3,12 +3,11 @@ import { TAward } from "../types";
 import InsideWhy from "./InsideWhy";
 import { TCard } from "../types";
 
-
 interface IWhy {
-  cards:TCard[]
+  cards: TCard[];
 }
 
-export default function Why({cards}: IWhy) {
+export default function Why({ cards }: IWhy) {
   const [state, setState] = React.useState(false);
 
   const topRef = React.useRef<HTMLDivElement>(null);
@@ -38,10 +37,12 @@ export default function Why({cards}: IWhy) {
             background: `url( "https://res.cloudinary.com/zielona-g-ra/image/upload/v1665663718/why-bg_2_gbx6d5.webp") no-repeat center/cover`,
           }}
         >
-          <InsideWhy cards={cards}/>
+          <InsideWhy cards={cards} />
         </div>
       ) : (
-        <div></div>
+        <div className='relative h-[1500px] w-full '>
+          <InsideWhy cards={cards} />
+        </div>
       )}
     </section>
   );
