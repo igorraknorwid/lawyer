@@ -4,6 +4,7 @@ import Awards from "../components/Awards";
 import Prime from "../components/Prime.astro";
 import Lawyer from "../components/Lawyer";
 import Testimonial from "../components/Testimonial.astro";
+import Divorce from "../components/Diworce";
 import { AwardsData } from "../types";
 import Why from "../components/Why";
 const response = await fetch(
@@ -52,6 +53,11 @@ const cards = [
   />
   <Testimonial />
   <Why cards={cards} client:visible />
+  <Divorce
+    client:visible
+    image_src='https://res.cloudinary.com/zielona-g-ra/image/upload/v1665732310/family_eitlg7.jpg'
+    image_alt='famaly'
+  />
 </Layout>
 
 <style></style>
