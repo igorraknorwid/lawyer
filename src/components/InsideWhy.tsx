@@ -9,7 +9,7 @@ interface IInsideWhy {
 export default function InsideWhy({ cards }: IInsideWhy) {
   return (
     <div className='absolute top-24 w-8/12 left-0 right-0 m-auto text-center text-white '>
-      <div className='text-6xl text-black'>
+      <div className='text-6xl '>
         DLACZEGO NALEŻY WYNAJMOWAĆ BERENJI I WSPÓŁPRACOWNIKÓW DO PROWADZENIA
         MOJEGO ROZWODU?
       </div>
