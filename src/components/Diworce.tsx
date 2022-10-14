@@ -35,10 +35,10 @@ export default function Divorce({ image_src, image_alt }: IDivorce) {
   return (
     <section className='xl:py-24 xl:w-10/12 m-auto'>
       <div style={{ height: "1px" }} ref={topRef}></div>
-      <h1 className='text-6xl pt-8 xl:pt-0'>
+      <h2 className='text-6xl pt-8 xl:pt-0'>
         NASI PRAWNICY ROZWODNI Z LOS ANGELES ZAPEWNIAJĄ DOSTOSOWANĄ
         REPREZENTACJĘ
-      </h1>
+      </h2>
       <div className='w-10 h-1 bg-[#cdb171] my-10'></div>
       <div className='xl:flex mb-10'>
         <div className=''>
@@ -84,7 +84,7 @@ export default function Divorce({ image_src, image_alt }: IDivorce) {
         </div>
       </div>
       <div className='flex justify-center'>
-        <a class='text-center uppercase xl:text-[2vh] py-4 px-8 bg-[#d8380d] hover:bg-yellow-400 hover:text-gray-800 cursor-pointer max-w-max mx-auto'>
+        <a className='text-center uppercase xl:text-[2vh] py-4 px-8 bg-[#d8380d] hover:bg-yellow-400 hover:text-gray-800 cursor-pointer max-w-max mx-auto'>
           skontaktuj się z nami
         </a>
       </div>

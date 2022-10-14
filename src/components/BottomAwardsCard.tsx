@@ -1,11 +1,11 @@
 import React from "react";
-import { TCard } from "../types";
+import { TAward } from "../types";
 
 interface IWhyCard {
-  card: TCard;
+  card: TAward;
 }
 
-export default function WhyCard({ card }: IWhyCard) {
+export default function BottomAwardsCard({ card }: IWhyCard) {
   const [state, setState] = React.useState(false);
 
   const topRef = React.useRef<HTMLDivElement>(null);
@@ -27,8 +27,7 @@ export default function WhyCard({ card }: IWhyCard) {
   return (
     <>
       <div style={{ height: "1px" }} ref={topRef}></div>
-      <img src={state ? card.src : ""} alt='icon' className='max-h-11' />
-      <p className='text-black'>{card.text}</p>
+      <img className='award_img' src={state ? card.src : ""} alt={card.myalt} />
       <div style={{ height: "1px" }} ref={bottomRef}></div>
     </>
   );

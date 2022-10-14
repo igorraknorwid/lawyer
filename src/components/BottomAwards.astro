@@ -1,0 +1,41 @@
+---
+import { TAward } from "../types";
+import BottomAwards from "./BottomAwards";
+const images: TAward[] = [
+  {
+    id: 1,
+    src: "https://res.cloudinary.com/zielona-g-ra/image/upload/v1665742669/bhb-e1559340676678_zn14zy.webp",
+    myalt: "prise",
+  },
+  {
+    id: 2,
+    src: "https://res.cloudinary.com/zielona-g-ra/image/upload/v1665742669/avvo-1-e1559340726397_tehg5e.webp",
+    myalt: "prise",
+  },
+  {
+    id: 3,
+    src: "https://res.cloudinary.com/zielona-g-ra/image/upload/v1665742669/lod-e1559340698152_b3iwm0.webp",
+    myalt: "prise",
+  },
+  {
+    id: 4,
+    src: "https://res.cloudinary.com/zielona-g-ra/image/upload/v1665742669/super-1-e1559340630753_azb2wz.webp",
+    myalt: "prise",
+  },
+  {
+    id: 5,
+    src: "https://res.cloudinary.com/zielona-g-ra/image/upload/v1665742669/ntl-e1559340657703_td2q5b.webp",
+    myalt: "prise",
+  },
+];
+---
+
+<div class='bottom_awards'>
+  <BottomAwards cards={images} client:visible />
+</div>
+
+<style>
+  .award_img {
+    max-height: 130px;
+  }
+</style>

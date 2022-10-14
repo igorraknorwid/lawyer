@@ -56,6 +56,6 @@ h1 {
   }
 }
 
-/* .my-stroke {
-  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
-} */
+.award_img {
+  max-height: 130px;
+}

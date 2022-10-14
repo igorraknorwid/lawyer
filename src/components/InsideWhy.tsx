@@ -28,7 +28,12 @@ export default function InsideWhy({ cards }: IInsideWhy) {
       </p>
       <div className='grid xl:grid-cols-3 gap-4'>
         {cards.map((card, index) => (
-          <WhyCard card={card} />
+          <div
+            key={index}
+            className='flex flex-col justify-center items-center py-10 px-20 gap-10 bg-white'
+          >
+            <WhyCard card={card} />
+          </div>
         ))}
       </div>
     </div>
