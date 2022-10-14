@@ -18,11 +18,17 @@ export default function Divorce({ image_src, image_alt }: IDivorce) {
         setState(true);
       }
     });
+    const bottomObserver = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting) {
+        setState(true);
+      }
+    });
     if (topRef.current) {
       observer.observe(topRef.current);
     }
     if (bottomRef.current) {
-      observer.observe(bottomRef.current);
+      bottomObserver.observe(bottomRef.current);
     }
   }, []);
 
@@ -34,7 +40,7 @@ export default function Divorce({ image_src, image_alt }: IDivorce) {
         REPREZENTACJĘ
       </h1>
       <div className='w-10 h-1 bg-[#cdb171] my-10'></div>
-      <div className='xl:flex'>
+      <div className='xl:flex mb-10'>
         <div className=''>
           <div className='text-2xl xl:max-w-3xl'>
             <p className='mb-5'>
@@ -76,6 +82,11 @@ export default function Divorce({ image_src, image_alt }: IDivorce) {
             alt={image_alt}
           />
         </div>
+      </div>
+      <div className='flex justify-center'>
+        <a class='text-center uppercase xl:text-[2vh] py-4 px-8 bg-[#d8380d] hover:bg-yellow-400 hover:text-gray-800 cursor-pointer max-w-max mx-auto'>
+          skontaktuj się z nami
+        </a>
       </div>
       <div style={{ height: "1px" }} ref={bottomRef}></div>
     </section>

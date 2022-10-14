@@ -19,11 +19,17 @@ export default function Why({ cards }: IWhy) {
         setState(true);
       }
     });
+    const bottomObserver = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting) {
+        setState(true);
+      }
+    });
     if (topRef.current) {
       observer.observe(topRef.current);
     }
     if (bottomRef.current) {
-      observer.observe(bottomRef.current);
+      bottomObserver.observe(bottomRef.current);
     }
   }, []);
 
@@ -44,6 +50,7 @@ export default function Why({ cards }: IWhy) {
           <InsideWhy cards={cards} />
         </div>
       )}
+      <div style={{ height: "1px" }} ref={bottomRef}></div>
     </section>
   );
 }
