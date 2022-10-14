@@ -41,3 +41,15 @@ interface dataContact {
 export interface ContactData {
   data: dataContact;
 }
+
+
+export type TCard = { id?: number; src: string; text: string };
+
+interface CardType {
+  id: number;
+  attributes: TCard[];
+};
+
+export interface CardsData {
+  data: CardType[];
+}

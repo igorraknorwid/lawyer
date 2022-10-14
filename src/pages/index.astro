@@ -12,6 +12,14 @@ const response = await fetch(
 const awards_data = (await response.json()) as AwardsData;
 const data = awards_data.data;
 const x = data.map((item) => item.attributes);
+const cards = [
+  {src:"https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/25_chqo4a.png", text:"Handling family law matters over 25 years"},
+  {src:"https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/person_tdxxke.png", text:"Constant communication with you throughout the process"},
+  {src:"https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/maze_guhtnv.png", text:"Experience with complex custody issues and high-conflict divorce"},
+  {src:"https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/gavel_lykgwg.png", text:"Knowledge of the local family courts"},
+  {src:"https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/trophy_h3op8x.png", text:"Skilled representation designed to improve your position and reduce litigation"},
+  {src:"https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/megaphone_nsy7lu.png", text:"Award-winning attorneys ready to litigate on your behalf"},
+]
 ---
 
 <Layout
@@ -25,7 +33,7 @@ const x = data.map((item) => item.attributes);
     image_alt='lawyer'
   />
   <Testimonial />
-  <Why client:visible />
+  <Why cards={cards} client:visible />
   <section class='px-2 my-20'>
     <p class='text-black bg-white text-[14px]'>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
