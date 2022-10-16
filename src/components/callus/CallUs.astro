@@ -1,0 +1,20 @@
+---
+import { TCase } from "../../types";
+import CallUs from "./CallUs"
+const data = {
+    title:"CALL  DIVORCE LAWYER TODAY",
+    src:"https://res.cloudinary.com/du9w3xgvx/image/upload/v1665822640/family2-1_x4pngj.jpg",
+    content:[
+        {id:1, paragraph:"Czy walczysz o podjęcie ważnej decyzji dotyczącej przyszłości swojej rodziny? Jeśli tak, ważne jest, aby mieć wszelką pomoc, jaką możesz uzyskać w tym trudnym czasie. Zatrudnienie doświadczonego prawnika rodzinnego z Los Angeles będzie miało ogromny wpływ na Twoją sprawę prawną."},
+        {id:2, paragraph:"W kancelarii będziemy dumnie reprezentować Cię w sporze rodzinnym i walczyć o jak najlepszy wynik dla Ciebie i Twoich bliskich. Zadzwoń do nas już dziś, aby umówić się na bezpłatną ocenę sprawy z naszym wykwalifikowanym zespołem prawnym. Wysłuchamy Twojej historii, przedstawimy wszystkie opcje prawne i określimy najlepszą strategię dla Twojej konkretnej sytuacji. Twoja pierwsza ocena przypadku jest bezpłatna, więc zadzwoń do nas, aby uzyskać pomoc już dziś."},
+
+    ],
+    
+}
+---
+
+<section class='test py-32 '>
+  <CallUs client:visible title={data.title} src={data.src} content={data.content}/>
+</section>
+
+<style></style>

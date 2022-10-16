@@ -60,3 +60,9 @@ interface CaseType {
 export interface CaseData {
   data: CaseType[];
 }
+
+
+export interface IPhone {
+  number_phone:string;
+  visible_phone:number;
+}

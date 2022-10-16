@@ -6,9 +6,11 @@ import Lawyer from "../components/Lawyer";
 import Testimonial from "../components/Testimonial.astro";
 import Divorce from "../components/Diworce";
 import BottomAwards from "../components/BottomAwards.astro";
-import { AwardsData } from "../types";
+import { AwardsData, ContactData } from "../types";
 import Why from "../components/Why";
 import Cases from "../components/cases/Cases.astro";
+import CallUs from "../components/callus/CallUs.astro";
+import Contacts from "../components/contacts/Contacts.astro";
 const response = await fetch(
   "https://sheltered-river-97651.herokuapp.com/api/awards"
 );
@@ -41,27 +43,40 @@ const cards = [
     text: "Award-winning attorneys ready to litigate on your behalf",
   },
 ];
+const response_contact = await fetch(
+  "https://sheltered-river-97651.herokuapp.com/api/contact"
+);
+const contact_data = (await response_contact.json()) as ContactData;
+const { number_phone, visible_phone } = contact_data.data.attributes;
 ---
 
 <Layout
-  title='Prawnik ds. rozwodów w Los Angeles | Bezpłatne konsultacje | Berenji i współpracownicy'
+  title="Prawnik ds. rozwodów w Los Angeles | Bezpłatne konsultacje | Berenji i współpracownicy"
 >
   <Prime />
   <Awards images={x} client:visible />
   <Lawyer
     client:visible
-    image_src='https://res.cloudinary.com/zielona-g-ra/image/upload/v1665553138/attorney_owcg1l.webp'
-    image_alt='lawyer'
+    image_src="https://res.cloudinary.com/zielona-g-ra/image/upload/v1665553138/attorney_owcg1l.webp"
+    image_alt="lawyer"
   />
   <Testimonial />
   <Why cards={cards} client:visible />
   <Divorce
     client:visible
-    image_src='https://res.cloudinary.com/zielona-g-ra/image/upload/v1665732310/family_eitlg7.jpg'
-    image_alt='famaly'
+    image_src="https://res.cloudinary.com/zielona-g-ra/image/upload/v1665732310/family_eitlg7.jpg"
+    image_alt="famaly"
   />
   <BottomAwards />
   <Cases />
+  <CallUs />
+  <div class="px-10 py-20 bg-yellow-500 text-white text-[80px] tracking-[8px]">
+    <div class="uppercase text-center">
+      Telefon do kontaktu: <a class="" href={`tel:${number_phone}`}
+        >{visible_phone}</a>
+    </div>
+  </div>
+  <Contacts/>
 </Layout>
 
 <style></style>
