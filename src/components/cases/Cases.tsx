@@ -12,9 +12,9 @@ interface ICase {
 
 function CasesModal({ c, closeModal }: ICase) {
   return (
-    <div className="fixed top-0 bottom-0 left-0 right-0 flex justify-center items-center bg-red-500 ">
-      <div className="bg-blue-600 text-xl text-white">
-        <button onClick={closeModal}>CLOSE</button>        
+    <div className='fixed top-0 bottom-0 left-0 right-0 flex justify-center items-center bg-red-500 '>
+      <div className='bg-blue-600 text-xl text-white'>
+        <button onClick={closeModal}>CLOSE</button>
         <h3>{c.title}</h3>
         <p>{c.text}</p>
         <a>More</a>
@@ -37,16 +37,17 @@ const Cases = ({ cases }: ICases) => {
     setModal(true);
     setState(c);
   };
-  console.log(cases);
+
   return (
-    <div className="w-8/12 m-auto">
+    <div className='w-8/12 m-auto'>
       {isModal && <CasesModal c={state} closeModal={closeModal} />}
-      <ul className="grid grid-cols-4 gap-x-8 gap-y-12">
+      <ul className='grid grid-cols-4 gap-x-8 gap-y-12'>
         {cases.map((c) => (
-          <li key={c.id} className="bg-white text-black py-10">
-            <div className="flex flex-col justify-center items-center">
-              <h3 className="text-3xl">{c.title}</h3>
-              <button className="text-3xl"
+          <li key={c.id} className='bg-white text-black py-10'>
+            <div className='flex flex-col justify-center items-center'>
+              <h3 className='text-3xl'>{c.title}</h3>
+              <button
+                className='text-3xl'
                 onClick={() => {
                   openModal(c);
                 }}
