@@ -33,16 +33,15 @@ export default function Divorce({ image_src, image_alt }: IDivorce) {
   }, []);
 
   return (
-    <section className='xl:py-24 xl:w-10/12 m-auto'>
+    <section className='xl:py-24 w-9/12 xl:w-10/12 m-auto my-32'>
       <div style={{ height: "1px" }} ref={topRef}></div>
-      <h2 className='text-6xl pt-8 xl:pt-0'>
-        NASI PRAWNICY ROZWODNI Z LOS ANGELES ZAPEWNIAJĄ DOSTOSOWANĄ
-        REPREZENTACJĘ
+      <h2 className='text-3xl xl:text-6xl pt-8 xl:pt-0'>
+        NASI PRAWNICY ROZWODNI Z GDAŃSKU ZAPEWNIAJĄ DOSTOSOWANĄ REPREZENTACJĘ
       </h2>
       <div className='w-10 h-1 bg-[#cdb171] my-10'></div>
       <div className='xl:flex mb-10'>
-        <div className=''>
-          <div className='text-2xl xl:max-w-3xl'>
+        <div className='mb-10'>
+          <div className='text-xl xl:text-2xl xl:max-w-3xl'>
             <p className='mb-5'>
               Żadne dwie rodziny nie są takie same. Z kolei nie ma dwóch
               identycznych rozwodów. Niektóre rodziny mogą być w stanie dość

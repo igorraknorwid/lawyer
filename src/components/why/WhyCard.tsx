@@ -1,5 +1,5 @@
 import React from "react";
-import { TCard } from "../types";
+import { TCard } from "../../types";
 
 interface IWhyCard {
   card: TCard;
@@ -27,7 +27,11 @@ export default function WhyCard({ card }: IWhyCard) {
   return (
     <>
       <div style={{ height: "1px" }} ref={topRef}></div>
-      <img src={state ? card.src : ""} alt='icon' className='max-h-11' />
+      <img
+        src={state ? card.src : ""}
+        alt='icon'
+        className=' max-h-5   lg:max-h-11'
+      />
       <p className='text-black'>{card.text}</p>
       <div style={{ height: "1px" }} ref={bottomRef}></div>
     </>

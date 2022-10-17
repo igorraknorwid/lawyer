@@ -37,7 +37,7 @@ export default function BottomAwards({ cards }: IBottopAwards) {
       <div style={{ height: "1px" }} ref={topRef}></div>
       {state ? (
         <div
-          className='relative h-[600px] w-full '
+          className='relative  '
           style={{
             background: `url( "https://res.cloudinary.com/zielona-g-ra/image/upload/v1665738394/award_eir6lp.webp") no-repeat center/cover`,
           }}

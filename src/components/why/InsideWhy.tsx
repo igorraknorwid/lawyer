@@ -1,20 +1,27 @@
 import React from "react";
-import { TCard } from "../types";
+import { TCard } from "../../types";
 import WhyCard from "./WhyCard";
 
 interface IInsideWhy {
   cards: TCard[];
+  isBackground: boolean;
 }
 
-export default function InsideWhy({ cards }: IInsideWhy) {
+export default function InsideWhy({ cards, isBackground }: IInsideWhy) {
   return (
-    <div className='absolute top-24 w-8/12 left-0 right-0 m-auto text-center text-white '>
-      <div className='text-6xl text-black  '>
-        DLACZEGO NALEŻY WYNAJMOWAĆ BERENJI I WSPÓŁPRACOWNIKÓW DO PROWADZENIA
-        MOJEGO ROZWODU?
+    <div className='w-11/12  xl:w-8/12  m-auto text-center text-white '>
+      <div
+        className={`xl:text-6xl ${isBackground ? "text-white" : "text-black"}`}
+      >
+        DLACZEGO NALEŻY WYNAJMOWAĆ KANCELARJE PRAWNICZĄ DO PROWADZENIA MOJEGO
+        ROZWODU?
       </div>
-      <div className='w-10 h-1 bg-white my-10'></div>
-      <p className='text-center mb-20 text-xl text-black'>
+      <div className='w-10 h-1 bg-white my-10 mx-auto'></div>
+      <p
+        className={`  text-center mb-20 xl:text-2xl ${
+          isBackground ? "text-white" : "text-black"
+        }`}
+      >
         Decyzje, które zmieniają lub zmieniają dynamikę Twojej rodziny, są
         trudne. Będziesz potrzebować adwokata po swojej stronie, który pomoże ci
         przejść przez te trudne czasy ze względną łatwością. Aby to zrobić, Twój
@@ -26,11 +33,11 @@ export default function InsideWhy({ cards }: IInsideWhy) {
         kancelarii nasi prawnicy wykazali się niesamowitymi umiejętnościami i
         sukcesami zarówno jako negocjatorzy, jak i arbitrzy.
       </p>
-      <div className='grid xl:grid-cols-3 gap-4'>
+      <div className='grid grid-cols-2 xl:grid-cols-3 gap-4'>
         {cards.map((card, index) => (
           <div
             key={index}
-            className='flex flex-col justify-center items-center py-10 px-20 gap-10 bg-white'
+            className='flex flex-col justify-center items-center gap-10 px-10 bg-white'
           >
             <WhyCard card={card} />
           </div>

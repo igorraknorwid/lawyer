@@ -39,9 +39,9 @@ const Cases = ({ cases }: ICases) => {
   };
 
   return (
-    <div className='w-8/12 m-auto'>
+    <div className=' w-11/12 xl:w-8/12 m-auto'>
       {isModal && <CasesModal c={state} closeModal={closeModal} />}
-      <ul className='grid grid-cols-4 gap-x-8 gap-y-12'>
+      <ul className='grid grid-cols-1  xl:grid-cols-4 xl:gap-x-8 gap-y-12'>
         {cases.map((c) => (
           <li key={c.id} className='bg-white text-black py-10'>
             <div className='flex flex-col justify-center items-center'>
