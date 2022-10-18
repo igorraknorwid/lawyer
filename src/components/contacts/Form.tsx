@@ -104,9 +104,9 @@ const Form: React.FC = () => {
 
   return (
     <div className='bg-white  '>
-      <h1 className='text-3xl text-center font-bold pb-5'>
+      <div className='text-3xl text-center font-bold pb-5'>
         Formularz kontaktowy
-      </h1>
+      </div>
       <form id='myform' onSubmit={handleSubmit(onSubmit)}>
         <div className={inputGroupStyles.div}>
           <label className={inputGroupStyles.label} htmlFor='name'>
