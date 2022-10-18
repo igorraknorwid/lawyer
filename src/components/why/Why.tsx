@@ -9,9 +9,7 @@ interface IWhy {
 
 export default function Why({ cards }: IWhy) {
   const [state, setState] = React.useState(false);
-
   const topRef = React.useRef<HTMLDivElement>(null);
-  const whyRef = React.useRef<HTMLDivElement>(null);
   const bottomRef = React.useRef<HTMLDivElement>(null);
   React.useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -43,7 +41,6 @@ export default function Why({ cards }: IWhy) {
           style={{
             background: `url( "https://res.cloudinary.com/zielona-g-ra/image/upload/v1665663718/why-bg_2_gbx6d5.webp") repeat center/cover`,
           }}
-          ref={whyRef}
         >
           <InsideWhy isBackground={true} cards={cards} />
         </div>

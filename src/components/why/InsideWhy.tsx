@@ -37,7 +37,7 @@ export default function InsideWhy({ cards, isBackground }: IInsideWhy) {
         {cards.map((card, index) => (
           <div
             key={index}
-            className='flex flex-col justify-center items-center gap-10 px-10 bg-white'
+            className='flex flex-col justify-center items-center gap-10 px-2 bg-white'
           >
             <WhyCard card={card} />
           </div>

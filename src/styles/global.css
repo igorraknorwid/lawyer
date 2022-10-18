@@ -25,6 +25,7 @@ html,
 body {
   font-family: "Oswald-Regular", sans-serif;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 h1 {
