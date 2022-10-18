@@ -1,38 +1,56 @@
 ---
 import { TCase } from "../../types";
-import Cases from "./Cases"
+import Cases from "./Cases";
 const cases = [
   {
-  id:1, title:"CHILD CUSTODY", text:"Parents share an equal right to be present in their child’s life and to make decisions that affect that child’s health and well-being. This can be difficult when parents split up, move away, and/or display behavior that could put the child in harm’s way. If you want to fight for custody of your child, you have the right to take your matter to court."
-},
-{
-  id:2, title:"CHILD SUPPORT", text:"As a parent, you have an obligation to make sure that your child is taken care of, financially. You do not shoulder this obligation alone. The child’s other parent also shares in this responsibility. If you do not believe that your child’s other parent is satisfying his or her financial obligations to your child, you can file a request for child support."
-},
-{
-  id:3, title:"DIVORCE", text:"Divorce is never easy. Our Los Angeles divorce attorneys are here to help you through this difficult time. In California, there are certain issues that must be resolved before your divorce can be finalized, including child custody, support obligations, and property division. How long the process takes will generally depend on how you and your soon-to-be-ex-spouse work together to finalize these details."
-},
-{
-  id:4, title:"DOMESTIC VIOLENCE", text:"Domestic violence, which can include physical abuse, emotional abuse, and even financial abuse, is a rising problem for families across Los Angeles. On a typical day, police will respond to more than 130 domestic violence calls. Statistics show that domestic violence mostly affects women and children. In fact, 40 percent of women in California will experience domestic violence at some point in their lives."
-},
-{
-  id:5, title:"HIGH-NET WORTH DIVORCE", text:"Money complicates everything. When you get a divorce, you’re required to figure out how you and your spouse will split your assets. In California, you’re each entitled to one-half of all community property. In high-net-worth situations, it’s not uncommon for spouses to have heated disputes over property allocation. Arguments about how property should be classified – community vs. separate – can erupt and make tensions run high."
-},
-{
-  id:6, title:"PROPERTY DIVISION", text:"When you end a marriage, you must figure out how to divide assets, property, and debts between you and your spouse. If you are not on the best terms, this can be a very difficult thing to accomplish. Fortunately, California law provides some property division guidelines."
-},
-{
-  id:7, title:"PATERNITY", text:"In California, both parents share equal rights and obligations in regard to their children. While it will be quite simple to identify a child’s mother, determining paternity can be more difficult. Generally speaking, Family Code §7541 presumes paternity when a child is born to parents who are married, living together, or romantically involved. Things can become complicated when there are rumors of infidelity, parents do not live together, or a father is impotent or sterile."
-},
-{
-  id:8, title:"MOVE-AWAY ORDERS", text:"Today, it is not uncommon for adults to pick up and move across the country. This could be for a new job opportunity, to take care of aging family, or even to pursue a new education. Things can be complicated, however, when a parent shares custody of their children. One parent may want to bring their child with them, but the child’s other parent may be concerned about uprooting the child’s life and losing contact."
-},
-]
+    id: 1,
+    title: "CHILD CUSTODY",
+    text: "Parents share an equal right to be present in their child’s life and to make decisions that affect that child’s health and well-being. This can be difficult when parents split up, move away, and/or display behavior that could put the child in harm’s way. If you want to fight for custody of your child, you have the right to take your matter to court.",
+  },
+  {
+    id: 2,
+    title: "CHILD SUPPORT",
+    text: "As a parent, you have an obligation to make sure that your child is taken care of, financially. You do not shoulder this obligation alone. The child’s other parent also shares in this responsibility. If you do not believe that your child’s other parent is satisfying his or her financial obligations to your child, you can file a request for child support.",
+  },
+  {
+    id: 3,
+    title: "DIVORCE",
+    text: "Divorce is never easy. Our Los Angeles divorce attorneys are here to help you through this difficult time. In California, there are certain issues that must be resolved before your divorce can be finalized, including child custody, support obligations, and property division. How long the process takes will generally depend on how you and your soon-to-be-ex-spouse work together to finalize these details.",
+  },
+  {
+    id: 4,
+    title: "DOMESTIC VIOLENCE",
+    text: "Domestic violence, which can include physical abuse, emotional abuse, and even financial abuse, is a rising problem for families across Los Angeles. On a typical day, police will respond to more than 130 domestic violence calls. Statistics show that domestic violence mostly affects women and children. In fact, 40 percent of women in California will experience domestic violence at some point in their lives.",
+  },
+  {
+    id: 5,
+    title: "HIGH-NET WORTH DIVORCE",
+    text: "Money complicates everything. When you get a divorce, you’re required to figure out how you and your spouse will split your assets. In California, you’re each entitled to one-half of all community property. In high-net-worth situations, it’s not uncommon for spouses to have heated disputes over property allocation. Arguments about how property should be classified – community vs. separate – can erupt and make tensions run high.",
+  },
+  {
+    id: 6,
+    title: "PROPERTY DIVISION",
+    text: "When you end a marriage, you must figure out how to divide assets, property, and debts between you and your spouse. If you are not on the best terms, this can be a very difficult thing to accomplish. Fortunately, California law provides some property division guidelines.",
+  },
+  {
+    id: 7,
+    title: "PATERNITY",
+    text: "In California, both parents share equal rights and obligations in regard to their children. While it will be quite simple to identify a child’s mother, determining paternity can be more difficult. Generally speaking, Family Code §7541 presumes paternity when a child is born to parents who are married, living together, or romantically involved. Things can become complicated when there are rumors of infidelity, parents do not live together, or a father is impotent or sterile.",
+  },
+  {
+    id: 8,
+    title: "MOVE-AWAY ORDERS",
+    text: "Today, it is not uncommon for adults to pick up and move across the country. This could be for a new job opportunity, to take care of aging family, or even to pursue a new education. Things can be complicated, however, when a parent shares custody of their children. One parent may want to bring their child with them, but the child’s other parent may be concerned about uprooting the child’s life and losing contact.",
+  },
+];
 ---
 
-<section class='test py-32 bg-gray-200'>
-  <h2 class='text-6xl pt-8 xl:pt-0 text-center'>SPRAWY RODZINNE, KTÓRE PROWADZIMY</h2>
+<section class='test py-24 bg-gray-200'>
+  <h2 class='text-3xl xl:text-6xl pt-8 xl:pt-0 text-center'>
+    SPRAWY RODZINNE, KTÓRE PROWADZIMY
+  </h2>
   <div class='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>
-  <Cases client:visible cases={cases}/>
+  <Cases client:visible cases={cases} />
 </section>
 
 <style></style>

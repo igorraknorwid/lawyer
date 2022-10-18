@@ -35,7 +35,7 @@ export default function Divorce({ image_src, image_alt }: IDivorce) {
   return (
     <section className='xl:py-24 w-9/12 xl:w-10/12 m-auto my-32'>
       <div style={{ height: "1px" }} ref={topRef}></div>
-      <h2 className='text-3xl xl:text-6xl pt-8 xl:pt-0'>
+      <h2 className='text-3xl xl:text-6xl pt-8 xl:pt-0 text-center'>
         NASI PRAWNICY ROZWODNI Z GDAŃSKU ZAPEWNIAJĄ DOSTOSOWANĄ REPREZENTACJĘ
       </h2>
       <div className='w-10 h-1 bg-[#cdb171] my-10'></div>
