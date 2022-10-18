@@ -45,9 +45,9 @@ const Cases = ({ cases }: ICases) => {
         {cases.map((c) => (
           <li key={c.id} className='bg-white text-black py-10'>
             <div className='flex flex-col justify-center items-center'>
-              <h3 className='text-3xl'>{c.title}</h3>
+              <h3 className='text-3xl text-center'>{c.title}</h3>
               <button
-                className='text-3xl'
+                className='text-3xl cursor-pointer'
                 onClick={() => {
                   openModal(c);
                 }}

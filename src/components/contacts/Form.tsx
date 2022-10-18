@@ -103,7 +103,7 @@ const Form: React.FC = () => {
   };
 
   return (
-    <div className='bg-white  px-10'>
+    <div className='bg-white  '>
       <h1 className='text-3xl text-center font-bold pb-5'>
         Formularz kontaktowy
       </h1>
