@@ -7,17 +7,30 @@ interface ICases {
 
 interface ICase {
   c: TCase;
-  closeModal(): void;
+  closeModal(e: any): void;
 }
 
 function CasesModal({ c, closeModal }: ICase) {
   return (
-    <div className='fixed top-0 bottom-0 left-0 right-0 flex justify-center items-center bg-red-500 '>
-      <div className='bg-blue-600 text-xl text-white'>
-        <button onClick={closeModal}>CLOSE</button>
-        <h3>{c.title}</h3>
-        <p>{c.text}</p>
-        <a>More</a>
+    <div
+      onClick={(e) => {
+        closeModal(e);
+      }}
+      className='myclose fixed top-0 bottom-0 left-0 right-0 flex justify-center items-center bg-black/80'
+    >
+      <div className='bg-blue-600 text-xl text-white w-1/2 mx-auto px-10 py-5 '>
+        <div className='flex justify-end items-center'>
+          <button onClick={closeModal} className='myclose text-center'>
+            ❌
+          </button>
+        </div>
+        <h3 className='mb-5 text-center'>{c.title}</h3>
+        <p className='mb-5'>{c.text}</p>
+        <div className='flex justify-center items-center'>
+          <button className=' border py-2 px-3 tracking-widest'>
+            <a className=''>More</a>
+          </button>
+        </div>
       </div>
     </div>
   );
@@ -30,8 +43,12 @@ const Cases = ({ cases }: ICases) => {
     text: "text",
     title: "title",
   });
-  const closeModal = () => {
-    setModal(false);
+  const closeModal = (e: any) => {
+    const arr = e.target.className.split(" ");
+    const myclose = arr.find((el) => el === "myclose");
+    if (myclose) {
+      setModal(false);
+    }
   };
   const openModal = (c: TCase) => {
     setModal(true);
@@ -40,12 +57,19 @@ const Cases = ({ cases }: ICases) => {
 
   return (
     <div className=' w-11/12 xl:w-8/12 m-auto'>
-      {isModal && <CasesModal c={state} closeModal={closeModal} />}
+      {isModal && (
+        <CasesModal
+          c={state}
+          closeModal={(e) => {
+            closeModal(e);
+          }}
+        />
+      )}
       <ul className='grid grid-cols-1  xl:grid-cols-4 xl:gap-x-8 gap-y-12'>
         {cases.map((c) => (
           <li key={c.id} className='bg-white text-black py-10'>
             <div className='flex flex-col justify-center items-center'>
-              <h3 className='text-3xl text-center'>{c.title}</h3>
+              <h3 className='text-3xl text-center p-5'>{c.title}</h3>
               <button
                 className='text-3xl cursor-pointer'
                 onClick={() => {

@@ -38,9 +38,33 @@ function SlidePrevButton() {
 }
 
 const Slide = () => {
+  const [state, setState] = React.useState(false);
+  const topRef = React.useRef<HTMLDivElement>(null);
+  const bottomRef = React.useRef<HTMLDivElement>(null);
+  React.useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting) {
+        setState(true);
+      }
+    });
+    const bottomObserver = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting) {
+        setState(true);
+      }
+    });
+    if (topRef.current) {
+      observer.observe(topRef.current);
+    }
+    if (bottomRef.current) {
+      bottomObserver.observe(bottomRef.current);
+    }
+  }, []);
   return (
     <div className='py-5 px-20  '>
-      <img className='' src={"/stars.png"} alt={"starts"} />
+      <div style={{ height: "1px" }} ref={topRef}></div>
+      <img className='' src={state ? "/stars.png" : ""} alt={"starts"} />
       <div className='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>
       <p className='text-center  text-xl'>
         Firma przeprowadziła mnie przez bardzo trudny okres w moim życiu. Pan
@@ -49,6 +73,7 @@ const Slide = () => {
       </p>
       <div className='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>
       <p className='text-center'>Paulina K.</p>
+      <div style={{ height: "1px" }} ref={bottomRef}></div>
     </div>
   );
 };

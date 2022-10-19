@@ -41,7 +41,7 @@ export default function CallUs({ title, src, content }: ICallUs) {
       <div style={{ height: "1px" }} ref={topRef}></div>
       <div>
         <h2 className='text-3xl lg:text-6xl text-center mb-10'>{title}</h2>
-        <div class='mb-10'>
+        <div className='mb-10'>
           {content.map((item, index) => (
             <p className='mb-5' key={index}>
               {item.paragraph}
