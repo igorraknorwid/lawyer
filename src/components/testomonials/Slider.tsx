@@ -43,11 +43,11 @@ const Slide = ({ id, name, text }: ITestimonial) => {
     }
   }, []);
   return (
-    <div className='py-5 px-20  '>
+    <div className='py-5 px-8 xl:px-20  '>
       <div style={{ height: "1px" }} ref={topRef}></div>
       <img className='' src={state ? "/stars.png" : ""} alt={"starts"} />
       <div className='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>
-      <p className='text-center  text-xl'>{text}</p>
+      <p className='text-center  xl:text-xl'>{text}</p>
       <div className='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>
       <p className='text-center'>{name}</p>
       <div style={{ height: "1px" }} ref={bottomRef}></div>
@@ -87,18 +87,6 @@ export default ({ items }: IMySlide) => {
             </SwiperSlide>
           </div>
         ))}
-        {/* <SwiperSlide>
-          <Slide />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Slide />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Slide />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Slide />
-        </SwiperSlide> */}
       </Swiper>
     </div>
   );

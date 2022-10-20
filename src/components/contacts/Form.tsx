@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 
 const inputGroupStyles = {
-  div: "w-full  px-3 mb-6 ",
+  div: "w-full  px-3 mb-4 ",
   label: "block uppercase tracking-wide text-gray-700 text-xs font-bold py-2",
   input:
     "appearance-none block w-full bg-gray-100 text-gray-700  focus:border  focus:border-grey-500 rounded p-5 mb-3 leading-tight focus:outline-none focus:bg-white",
@@ -103,56 +103,57 @@ const Form: React.FC = () => {
   };
 
   return (
-    <div className='bg-white  '>
+    <div className='bg-white my-5'>
       <div className='text-3xl text-center font-bold pb-5'>
         Formularz kontaktowy
       </div>
       <form id='myform' onSubmit={handleSubmit(onSubmit)}>
-        <div className={inputGroupStyles.div}>
-          <label className={inputGroupStyles.label} htmlFor='name'>
-            Imię i Nazwisko
-          </label>
-          <Input
-            placeholder='Imię i Nazwisko'
-            className={inputGroupStyles.input}
-            id='name'
-            type='text'
-            {...register("name", { required: true })}
-          />
-          {errors?.name?.type === "required" && (
-            <p className={inputGroupStyles.errorParagraf}>
-              Please fill out this field.
-            </p>
-          )}
-        </div>
+        <div class='lg:flex'>
+          <div className={inputGroupStyles.div}>
+            <label className={inputGroupStyles.label} htmlFor='name'>
+              Imię i Nazwisko
+            </label>
+            <Input
+              placeholder='Imię i Nazwisko'
+              className={inputGroupStyles.input}
+              id='name'
+              type='text'
+              {...register("name", { required: true })}
+            />
+            {errors?.name?.type === "required" && (
+              <p className={inputGroupStyles.errorParagraf}>
+                Please fill out this field.
+              </p>
+            )}
+          </div>
 
-        <div className={inputGroupStyles.div}>
-          <label className={inputGroupStyles.label} htmlFor='email'>
-            Email
-          </label>
-          <Input
-            placeholder='Email'
-            className={inputGroupStyles.input}
-            id='email'
-            type='text'
-            {...register("email", {
-              required: true,
-              pattern:
-                /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-            })}
-          />
-          {errors?.email?.type === "required" && (
-            <p className={inputGroupStyles.errorParagraf}>
-              Proszę wypełnić to pole
-            </p>
-          )}
-          {errors?.email?.type === "pattern" && (
-            <p className={inputGroupStyles.errorParagraf}>
-              Proszę podać prawidłowy adres email
-            </p>
-          )}
+          <div className={inputGroupStyles.div}>
+            <label className={inputGroupStyles.label} htmlFor='email'>
+              Email
+            </label>
+            <Input
+              placeholder='Email'
+              className={inputGroupStyles.input}
+              id='email'
+              type='text'
+              {...register("email", {
+                required: true,
+                pattern:
+                  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+              })}
+            />
+            {errors?.email?.type === "required" && (
+              <p className={inputGroupStyles.errorParagraf}>
+                Proszę wypełnić to pole
+              </p>
+            )}
+            {errors?.email?.type === "pattern" && (
+              <p className={inputGroupStyles.errorParagraf}>
+                Proszę podać prawidłowy adres email
+              </p>
+            )}
+          </div>
         </div>
-
         <div className={inputGroupStyles.div}>
           <label className={inputGroupStyles.label} htmlFor='phone'>
             Telefon kontaktowy
@@ -176,7 +177,7 @@ const Form: React.FC = () => {
           )}
         </div>
 
-        <div className={inputGroupStyles.div}>
+        {/* <div className={inputGroupStyles.div}>
           <label className={inputGroupStyles.label} htmlFor='status'>
             Status
           </label>
@@ -192,7 +193,7 @@ const Form: React.FC = () => {
               { label: "Nie jestem klientem", value: "neither" },
             ]}
           />
-        </div>
+        </div> */}
 
         <div className={inputGroupStyles.div}>
           <label className={inputGroupStyles.label} htmlFor='message'>
@@ -200,7 +201,7 @@ const Form: React.FC = () => {
           </label>
           <textarea
             placeholder='Wiadomość'
-            className='w-full h-40 appearance-none block bg-gray-100 focus:bg-white  text-gray-700 border border-grey-100 rounded py-5 px-5  leading-tight focus:outline-none '
+            className='w-full h-36 appearance-none block bg-gray-100 focus:bg-white  text-gray-700 border border-grey-100 rounded py-5 px-5  leading-tight focus:outline-none '
             id='message'
             {...register("message", { required: true })}
           />
