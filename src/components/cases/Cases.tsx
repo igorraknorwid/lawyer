@@ -18,17 +18,17 @@ function CasesModal({ c, closeModal }: ICase) {
       }}
       className='myclose fixed top-0 bottom-0 left-0 right-0 flex justify-center items-center bg-black/80'
     >
-      <div className='bg-blue-600 text-xl text-white w-1/2 mx-auto px-10 py-5 '>
+      <div className='bg-blue-600 text-xl text-white w-11/12 xl:w-1/2 mx-auto px-10 py-5 '>
         <div className='flex justify-end items-center'>
           <button onClick={closeModal} className='myclose text-center'>
             ❌
           </button>
         </div>
-        <h3 className='mb-5 text-center'>{c.title}</h3>
+        <h3 className='mb-5 text-center uppercase'>{c.title}</h3>
         <p className='mb-5'>{c.text}</p>
         <div className='flex justify-center items-center'>
           <button className=' border py-2 px-3 tracking-widest'>
-            <a className=''>More</a>
+            <a className='uppercase'>More</a>
           </button>
         </div>
       </div>

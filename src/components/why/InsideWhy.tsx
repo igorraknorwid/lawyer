@@ -11,10 +11,14 @@ export default function InsideWhy({ cards, isBackground }: IInsideWhy) {
   return (
     <div className='w-11/12  xl:w-8/12  m-auto text-center text-white '>
       <div
-        className={`xl:text-6xl ${isBackground ? "text-white" : "text-black"}`}
+        className={`text-3xl xl:text-6xl ${
+          isBackground ? "text-white" : "text-black"
+        }`}
       >
         DLACZEGO NALEŻY WYNAJMOWAĆ KANCELARJE PRAWNICZĄ DO PROWADZENIA MOJEGO
-        ROZWODU?
+        ROZWOD
+        <span />
+        U?
       </div>
       <div className='w-10 h-1 bg-white my-10 mx-auto'></div>
       <p
