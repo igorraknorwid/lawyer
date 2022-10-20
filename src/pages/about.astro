@@ -1,9 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Test from "../components/Test";
+import Second from "../components/Second.astro";
+import Contacts from "../components/contacts/Contacts.astro";
+import Footer from "../components/footer/Footer.astro";
+import AboutUs from "../components/AboutUs.astro";
 ---
 
 <Layout title='About page'>
-  <h1>About page</h1>
-  <Test client:load />
+  <Second />
+  <AboutUs />
+  <Contacts />
+  <Footer />
 </Layout>
