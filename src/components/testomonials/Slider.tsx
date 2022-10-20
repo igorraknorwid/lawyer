@@ -1,43 +1,24 @@
 import React from "react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-function SlideNextButton() {
-  const swiper = useSwiper();
-
-  return (
-    <button
-      className='absolute top-0 right-0 cursor-pointer z-50'
-      onClick={() => {
-        swiper.slideNext();
-      }}
-    >
-      Slide to the next slide
-    </button>
-  );
+interface ITestimonial {
+  id: number;
+  text: string;
+  name: string;
 }
 
-function SlidePrevButton() {
-  const swiper = useSwiper();
-  console.log(swiper);
-
-  return (
-    <button
-      className='absolute top-0 left-[-100px] cursor-pointer z-50'
-      onClick={() => swiper.slidePrev()}
-    >
-      Slide to the previous slide
-    </button>
-  );
+interface IMySlide {
+  items: ITestimonial[];
 }
 
-const Slide = () => {
+const Slide = ({ id, name, text }: ITestimonial) => {
   const [state, setState] = React.useState(false);
   const topRef = React.useRef<HTMLDivElement>(null);
   const bottomRef = React.useRef<HTMLDivElement>(null);
@@ -66,19 +47,15 @@ const Slide = () => {
       <div style={{ height: "1px" }} ref={topRef}></div>
       <img className='' src={state ? "/stars.png" : ""} alt={"starts"} />
       <div className='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>
-      <p className='text-center  text-xl'>
-        Firma przeprowadziła mnie przez bardzo trudny okres w moim życiu. Pan
-        Berenji towarzyszył mi na każdym kroku i udzielał mi niesamowitych porad
-        prawnych.
-      </p>
+      <p className='text-center  text-xl'>{text}</p>
       <div className='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>
-      <p className='text-center'>Paulina K.</p>
+      <p className='text-center'>{name}</p>
       <div style={{ height: "1px" }} ref={bottomRef}></div>
     </div>
   );
 };
 
-export default () => {
+export default ({ items }: IMySlide) => {
   return (
     <div>
       <Swiper
@@ -102,12 +79,15 @@ export default () => {
             spaceBetween: 50,
           },
         }}
-        // pagination={{ clickable: true }}
-        // scrollbar={{ draggable: true }}
-        // onSwiper={(swiper) => console.log(swiper)}
-        // onSlideChange={() => console.log("slide change")}
       >
-        <SwiperSlide>
+        {items.map((item) => (
+          <div key={item.id}>
+            <SwiperSlide>
+              <Slide id={item.id} name={item.name} text={item.text} />
+            </SwiperSlide>
+          </div>
+        ))}
+        {/* <SwiperSlide>
           <Slide />
         </SwiperSlide>
         <SwiperSlide>
@@ -118,8 +98,7 @@ export default () => {
         </SwiperSlide>
         <SwiperSlide>
           <Slide />
-        </SwiperSlide>
-        ...
+        </SwiperSlide> */}
       </Swiper>
     </div>
   );

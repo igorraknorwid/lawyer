@@ -17,9 +17,9 @@ export default function InsideBottopAwards({ cards }: IInsideBottopAwards) {
         Najważniejsze jest to, że jesteśmy nagradzanymi prawnikami, którzy są
         gotowi do prowadzenia postępowania sądowego w Twoim imieniu. Jako
         prawnicy zajmujący się prawem rodzinnym będziemy walczyć o osiągnięcie
-        pożądanego rezultatu i chronić Twoją rodzinę w tym procesie. Zadzwoń do
-        nas już dziś, aby umówić się na bezpłatną ocenę przypadku i dowiedzieć
-        się więcej.
+        pożądanego rezultatu i chronić Twoją rodzinę w tym procesie rozwodowem.
+        Zadzwoń do nas już dziś, aby umówić się na bezpłatną ocenę przypadku i
+        dowiedzieć się więcej.
       </p>
       <ul className='flex justify-between mt-20 '>
         {cards.map((card) => (

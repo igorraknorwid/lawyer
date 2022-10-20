@@ -1,0 +1,66 @@
+---
+// import Burger from "./Burger";
+// import { PrimeData, ContactData } from "../types";
+// const response = await fetch(
+//   "https://sheltered-river-97651.herokuapp.com/api/prime"
+// );
+// const awards_data = (await response.json()) as PrimeData;
+// const { title, subtitle, button } = awards_data.data.attributes;
+
+// const response_contact = await fetch(
+//   "https://sheltered-river-97651.herokuapp.com/api/contact"
+// );
+// const contact_data = (await response_contact.json()) as ContactData;
+// const { number_phone, visible_phone } = contact_data.data.attributes;
+
+import MySlider from "./Slider";
+
+const testimonials = [
+  {
+    id: 1,
+    text: "Firma przeprowadziła mnie przez bardzo trudny okres w moim życiu.Pan prawnik rozwodowy towarzyszył mi na każdym kroku  i udzielał mi niesamowitych porad prawnych.",
+    name: "Paulina K.",
+  },
+  {
+    id: 2,
+    text: "Pan prawnik przekazał mi plusy i minusy każdego działania, którego się spodziewaliśmy, upewniając się, że rozumiem proces rozwodowy i co jest zagrożone.",
+    name: "Ada G.",
+  },
+  {
+    id: 3,
+    text: "Miałem naprawdę złożoną sprawę, która obejmowała kilka aktywów, ale prawnicy z kancelarii poradzili sobie z tym pięknie.",
+    name: "Ola D.",
+  },
+  {
+    id: 4,
+    text: "Gorąco polecam tę kancelarię adwokacką !!! Udzielił mi wielu rad i porad podczas mojego rozwodu.",
+    name: "Aga M.",
+  },
+  {
+    id: 5,
+    text: "Firma przeprowadziła mnie przez bardzo trudny okres w moim życiu.Pan prawnik rozwodowy towarzyszył mi na każdym kroku i udzielał mi niesamowitych porad prawnych.",
+    name: "Paulina K.",
+  },
+];
+---
+
+<section class='test py-32'>
+  <h2 class='text-6xl text-center'>CO MÓWIĄ NASI KLIENCI</h2>
+  <div class='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>
+  <div class='bg-white w-9/12 mx-auto'>
+    <MySlider items={testimonials} client:visible />
+  </div>
+</section>
+
+<style>
+  .test {
+    /* height: 100vh; */
+    background: url(/testimonials.webp) no-repeat top/ cover;
+  }
+  @media (max-width: 767px) {
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    color: #881798;
+  }
+</style>

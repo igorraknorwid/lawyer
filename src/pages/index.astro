@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Awards from "../components/Awards";
 import Prime from "../components/Prime.astro";
 import Lawyer from "../components/Lawyer";
-import Testimonial from "../components/Testimonial.astro";
+import Testimonial from "../components/testomonials/Testimonial.astro";
 import Divorce from "../components/Diworce";
 import BottomAwards from "../components/BottomAwards.astro";
 import { AwardsData, ContactData } from "../types";
@@ -25,7 +25,7 @@ const cards = [
   },
   {
     src: "https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/person_tdxxke.png",
-    text: "Stała komunikacja z Tobą przez cały proces",
+    text: "Stała komunikacja z Tobą przez cały proces rozwodu",
   },
   {
     src: "https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/maze_guhtnv.png",
@@ -33,15 +33,15 @@ const cards = [
   },
   {
     src: "https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/gavel_lykgwg.png",
-    text: "Znajomość lokalnych sądów rodzinnych",
+    text: "Znajomość lokalnych sądów rodzinnych ",
   },
   {
     src: "https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/trophy_h3op8x.png",
-    text: "Wykwalifikowana reprezentacja mająca na celu poprawę Twojej pozycji i ograniczenie sporów",
+    text: "Wykwalifikowana reprezentacja mająca na celu poprawę Twojej pozycji i ograniczenie sporów pod czas rozwodu",
   },
   {
     src: "https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/megaphone_nsy7lu.png",
-    text: "Award-winning attorneys ready to litigate on your behalf",
+    text: "Wielokrotnie nagradzani prawnicy gotowi do wszczęcia postępowania sądowegopod czas rozwodu",
   },
 ];
 const response_contact = await fetch(
@@ -70,11 +70,12 @@ const { number_phone, visible_phone } = contact_data.data.attributes;
   <Cases />
   <CallUs />
   <div
-    class='px-10 py-24 bg-yellow-500 text-white text-3xl xl:text-[80px] tracking-[8px]'
+    class='px-10 py-24 bg-yellow-500 text-white text-3xl xl:text-[60px] tracking-[8px] leading-[70px]'
   >
     <div class='uppercase text-center'>
-      Telefon do kontaktu: <a class='' href={`tel:${number_phone}`}
-        >{visible_phone}</a
+      Telefon do kontaktu przy rozwodzie: <a
+        class=''
+        href={`tel:${number_phone}`}>{visible_phone}</a
       >
     </div>
   </div>

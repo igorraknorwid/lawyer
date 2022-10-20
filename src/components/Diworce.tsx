@@ -49,16 +49,16 @@ export default function Divorce({ image_src, image_alt }: IDivorce) {
               prawników. Inni mogą nie być w stanie spojrzeć w oczy i będą
               musieli użyć pełnej siły systemu prawnego, aby rozwiązać swój
               spór. Ważne jest, aby Twój adwokat to rozpoznał i dostosował się
-              do unikalnych potrzeb Twojej indywidualnej sprawy.
+              do unikalnych potrzeb Twojej indywidualnej sprawy rowodowej.
             </p>
             <p className='mb-5'>
               W kancelarii nasi prawnicy rozumieją to i starają się dostosować
               naszą reprezentację prawną do Twoich konkretnych potrzeb i
-              pragnień. Kładziemy duży nacisk na określenie Twoich priorytetów i
-              opracowanie strategii, która będzie dla Ciebie najlepsza. Jesteśmy
-              w stanie dostosować naszą reprezentację prawną do Twoich potrzeb,
-              aktywnie wsłuchując się w Twoje potrzeby i osobiście prowadząc
-              Twoją sprawę w czasie jej trwania..
+              pragnień pod czas rozwodu. Kładziemy duży nacisk na określenie
+              Twoich priorytetów i opracowanie strategii, która będzie dla
+              Ciebie najlepsza. Jesteśmy w stanie dostosować naszą reprezentację
+              prawną do Twoich potrzeb, aktywnie wsłuchując się w Twoje potrzeby
+              i osobiście prowadząc Twoją sprawę w czasie jej trwania..
             </p>
             <p>
               W przeciwieństwie do wielu innych kancelarii rozwodowych nasi
