@@ -22,18 +22,18 @@ interface IMenu {
 
 function Menu({ links, url_cuted_param }: IMenu) {
   const [state, setState] = React.useState(0);
+
   return (
     <ul className='topmenu text-white text-xl xl:text-3xl'>
       {links.map((link, index) => {
         if (url_cuted_param) {
+          const isIncludes = url_cuted_param.includes(link.slug);
           return (
             <li className='topmenu_item' key={link.id}>
               <div className='topmenu_div flex justify-start items-center'>
                 <div
                   className={`topmenu_target w-2 h-8 ${
-                    link.slug === url_cuted_param
-                      ? "bg-blue-500"
-                      : "bg-transparent"
+                    isIncludes ? "bg-blue-500" : "bg-transparent"
                   } `}
                 ></div>
                 <div className='pl-10'>
