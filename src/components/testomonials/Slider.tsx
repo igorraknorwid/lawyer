@@ -50,7 +50,7 @@ const Slide = ({ id, name, text }: ITestimonial) => {
       <img className='' src={"/stars.png"} alt={"starts"} />
 
       <div className='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>
-      <p className='text-center  xl:text-xl'>{text}</p>
+      <p className='text-center  xl:text-lg'>{text}</p>
       <div className='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>
       <p className='text-center'>{name}</p>
       {/* <div style={{ height: "1px" }} ref={bottomRef}></div> */}

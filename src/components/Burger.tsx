@@ -27,7 +27,8 @@ function Menu({ links, url_cuted_param }: IMenu) {
     <ul className='topmenu text-white text-xl xl:text-3xl'>
       {links.map((link, index) => {
         if (url_cuted_param) {
-          const isIncludes = url_cuted_param === link.slug + "/";
+          const isIncludes = url_cuted_param === link.slug + "/"; //It does not work locally
+
           return (
             <li className='topmenu_item' key={link.id}>
               <div className='topmenu_div flex justify-start items-center'>

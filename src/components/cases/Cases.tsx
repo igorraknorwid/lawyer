@@ -24,7 +24,7 @@ function CasesModal({ c, closeModal }: ICase) {
             ❌
           </button>
         </div>
-        <h3 className='mb-5 text-center uppercase'>{c.title}</h3>
+        <h3 className='mb-5 lg:text-3xl text-center uppercase'>{c.title}</h3>
         <p className='mb-5'>{c.text}</p>
         <div className='flex justify-center items-center'>
           <button className=' border py-2 px-3 tracking-widest'>
@@ -69,7 +69,7 @@ const Cases = ({ cases }: ICases) => {
         {cases.map((c) => (
           <li key={c.id} className='bg-white text-black py-10'>
             <div className='flex flex-col justify-center items-center'>
-              <h3 className='text-3xl text-center p-5'>{c.title}</h3>
+              <h3 className='text-xl text-center p-5'>{c.title}</h3>
               <button
                 className='text-3xl cursor-pointer'
                 onClick={() => {

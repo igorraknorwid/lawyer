@@ -22,7 +22,7 @@ export default function InsideWhy({ cards, isBackground }: IInsideWhy) {
       </div>
       <div className='w-10 h-1 bg-white my-10 mx-auto'></div>
       <p
-        className={`  text-center mb-20 xl:text-2xl ${
+        className={`text-center mb-20 xl:text-xl ${
           isBackground ? "text-white" : "text-black"
         }`}
       >

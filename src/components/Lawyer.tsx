@@ -37,10 +37,12 @@ export default function Lawyer({ image_src, image_alt }: ILawyer) {
           alt={image_alt}
         />
         <div className='xl:pl-24'>
-          <h1 className='text-6xl pt-8 xl:pt-0'>GDAŃSKI PRAWNIK ROZWODOWY</h1>
+          <h1 className='text-3xl text-6xl pt-8 xl:pt-0'>
+            GDAŃSKI PRAWNIK ROZWODOWY
+          </h1>
           <div className='w-10 h-1 bg-[#cdb171] my-10'></div>
-          <div className='text-2xl xl:max-w-3xl'>
-            <p className='mb-5'>
+          <div className='text-xl xl:max-w-3xl'>
+            <p className='mb-8'>
               W kancelarii nasi prawnicy zajmujący się rozwodami w Gdańsku
               rozumieją, że spór prawny z rodziną jest prawdopodobnie
               najtrudniejszym wyzwaniem, z jakim kiedykolwiek będziesz musiał
@@ -52,7 +54,7 @@ export default function Lawyer({ image_src, image_alt }: ILawyer) {
               pomoże Ci przejść przez te trudne czasy, pomoże Ci zapewnić
               najlepszy wynik dla Ciebie i Twoich bliskich.
             </p>
-            <p className='mb-5'>
+            <p className='mb-8'>
               W kancelarii mamy ponad dwie dekady doświadczenia w prowadzeniu
               najbardziej skomplikowanych spraw z zakresu prawa rodzinnego w Los
               Angeles. Agresywnie bronimy interesów naszych klientów i walczymy

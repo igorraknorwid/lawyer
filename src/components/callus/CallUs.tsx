@@ -37,11 +37,11 @@ export default function CallUs({ title, src, content }: ICallUs) {
     }
   }, []);
   return (
-    <div className='w-11/12 lg:w-8/12 m-auto lg:flex'>
+    <div className='w-11/12 lg:w-9/12 m-auto lg:flex lg:gap-x-20'>
       <div style={{ height: "1px" }} ref={topRef}></div>
       <div>
         <h2 className='text-3xl lg:text-6xl text-center mb-10'>{title}</h2>
-        <div className='mb-10'>
+        <div className='mb-10 lg:text-lg'>
           {content.map((item, index) => (
             <p className='mb-5' key={index}>
               {item.paragraph}

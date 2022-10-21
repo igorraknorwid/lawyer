@@ -34,7 +34,11 @@ export default function BottomAwards({ cards }: IBottopAwards) {
 
   return (
     <section>
-      <div style={{ height: "1px" }} ref={topRef}></div>
+      <div
+        style={{ height: "1px" }}
+        className='bg-slate-300'
+        ref={topRef}
+      ></div>
       {state ? (
         <div
           className='relative  '
