@@ -82,7 +82,7 @@ h1 {
   right: 0 !important;
 }
 
-.text_shadow {
+/* .text_shadow {
   text-shadow: 1px 2px rgba(0, 0, 0, 0.8);
 }
 
@@ -92,4 +92,4 @@ h1 {
 
 .topmenu_item:hover > .topmenu_div > .topmenu_target {
   background-color: rgb(59 130 246);
-}
+} */
