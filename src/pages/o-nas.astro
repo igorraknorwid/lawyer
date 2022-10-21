@@ -1,12 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Burger from "../components/Burger";
 import Second from "../components/Second.astro";
+import AboutUs from "../components/AboutUs.astro";
 import Contacts from "../components/contacts/Contacts.astro";
 import Footer from "../components/footer/Footer.astro";
-import AboutUs from "../components/AboutUs.astro";
+
+const menu = [
+  { id: 1, slug: " ", title: "Witam" },
+  { id: 2, slug: "o-nas", title: "O nas" },
+];
 ---
 
-<Layout title='About page'>
+<Layout title='Prawnik ds. rozwodów w Gdańsku | O nas'>
+  <Burger links={menu} client:load />
   <Second />
   <AboutUs />
   <Contacts />

@@ -12,14 +12,18 @@ interface ILink {
   slug: string;
   title: string;
   children?: ILinkCildren[];
-  open: false;
+  open?: false;
 }
 
-function Menu(links: ILink[]) {
+interface IMenu {
+  links: ILink[];
+}
+
+function Menu({ links }: IMenu) {
   return (
-    <ul>
+    <ul className='topmenu text-white text-xl xl:text-3xl'>
       {links.map((link) => (
-        <li key={link.id}>
+        <li className='' key={link.id}>
           <a href={link.slug}>{link.title}</a>
         </li>
       ))}
@@ -27,7 +31,11 @@ function Menu(links: ILink[]) {
   );
 }
 
-export default function TopNavbar() {
+interface ITopNavbar {
+  links: ILink[];
+}
+
+export default function TopNavbar({ links }: ITopNavbar) {
   const [state, setState] = React.useState(false);
   const [init, setInit] = React.useState(true);
   return (
@@ -57,11 +65,12 @@ export default function TopNavbar() {
             : "translate-x-full transition-all duration-700"
         } `}
       >
-        <ul className='text-white text-xl xl:text-3xl'>
+        {/* <ul className='text-white text-xl xl:text-3xl'>
           <li className='mb-3 mt-3 '>Witam</li>
           <li className='mb-3'>O nas</li>
           <li className=''>Kontakty</li>
-        </ul>
+        </ul> */}
+        <Menu links={links} />
       </div>
     </div>
   );

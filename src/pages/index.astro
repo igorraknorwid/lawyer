@@ -19,7 +19,10 @@ const response = await fetch(
 const awards_data = (await response.json()) as AwardsData;
 const data = awards_data.data;
 const x = data.map((item) => item.attributes);
-const menu = [{ id: 1 }];
+const menu = [
+  { id: 1, slug: " ", title: "Witam" },
+  { id: 2, slug: "o-nas", title: "O nas" },
+];
 const cards = [
   {
     src: "https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/25_chqo4a.png",
@@ -54,7 +57,7 @@ const { number_phone, visible_phone } = contact_data.data.attributes;
 ---
 
 <Layout title='Prawnik ds. rozwodów w Gdańsku | Bezpłatne konsultacje '>
-  <Burger client:load />
+  <Burger links={menu} client:load />
   <Prime />
   <Awards images={x} client:visible />
   <Lawyer

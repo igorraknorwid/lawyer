@@ -19,38 +19,41 @@ interface IMySlide {
 }
 
 const Slide = ({ id, name, text }: ITestimonial) => {
-  const [state, setState] = React.useState(false);
-  const topRef = React.useRef<HTMLDivElement>(null);
-  const bottomRef = React.useRef<HTMLDivElement>(null);
-  React.useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      if (entry.isIntersecting) {
-        setState(true);
-      }
-    });
-    const bottomObserver = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      if (entry.isIntersecting) {
-        setState(true);
-      }
-    });
-    if (topRef.current) {
-      observer.observe(topRef.current);
-    }
-    if (bottomRef.current) {
-      bottomObserver.observe(bottomRef.current);
-    }
-  }, []);
+  // const [state, setState] = React.useState(false);
+  // const topRef = React.useRef<HTMLDivElement>(null);
+  // const bottomRef = React.useRef<HTMLDivElement>(null);
+  // React.useEffect(() => {
+  //   const observer = new IntersectionObserver((entries) => {
+  //     const entry = entries[0];
+  //     if (entry.isIntersecting) {
+  //       setState(true);
+  //     }
+  //   });
+  //   const bottomObserver = new IntersectionObserver((entries) => {
+  //     const entry = entries[0];
+  //     if (entry.isIntersecting) {
+  //       setState(true);
+  //     }
+  //   });
+  //   if (topRef.current) {
+  //     observer.observe(topRef.current);
+  //   }
+  //   if (bottomRef.current) {
+  //     bottomObserver.observe(bottomRef.current);
+  //   }
+  // }, []);
   return (
-    <div className='py-5 px-8 xl:px-20  '>
-      <div style={{ height: "1px" }} ref={topRef}></div>
-      <img className='' src={state ? "/stars.png" : ""} alt={"starts"} />
+    <div className='relative py-5 px-8 xl:px-20  '>
+      {/* <div style={{ height: "1px" }} ref={topRef}></div> */}
+      {/* <img className='' src={state ? "/stars.png" : ""} 
+      alt={"starts"} /> */}
+      <img className='' src={"/stars.png"} alt={"starts"} />
+
       <div className='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>
       <p className='text-center  xl:text-xl'>{text}</p>
       <div className='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>
       <p className='text-center'>{name}</p>
-      <div style={{ height: "1px" }} ref={bottomRef}></div>
+      {/* <div style={{ height: "1px" }} ref={bottomRef}></div> */}
     </div>
   );
 };
