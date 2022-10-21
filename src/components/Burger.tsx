@@ -20,11 +20,21 @@ interface IMenu {
 }
 
 function Menu({ links }: IMenu) {
+  const [state, setState] = React.useState(0);
   return (
     <ul className='topmenu text-white text-xl xl:text-3xl'>
-      {links.map((link) => (
-        <li className='' key={link.id}>
-          <a href={link.slug}>{link.title}</a>
+      {links.map((link, index) => (
+        <li className='topmenu_item' key={link.id}>
+          <div className='topmenu_div flex justify-start items-center'>
+            <div
+              className={`topmenu_target w-2 h-8 ${
+                index === 0 ? "bg-sky-500" : "bg-transparent"
+              } `}
+            ></div>
+            <div className='pl-10'>
+              <a href={link.slug}>{link.title}</a>
+            </div>
+          </div>
         </li>
       ))}
     </ul>
@@ -59,17 +69,12 @@ export default function TopNavbar({ links }: ITopNavbar) {
       </div>
 
       <div
-        className={`fixed top-0 right-0 xl:top-5  z-10 w-[80%] xl:w-[30%] bg-[#0e1c39] pt-[90px]   xl:pt-[180px] pb-10 xl:pb-20 px-10 xl:px-20 ${
+        className={`fixed top-0 right-0 xl:top-5  z-10 w-[80%] xl:w-[30%] bg-[#0e1c39] pt-[90px]   xl:pt-[180px] pb-10 xl:pb-20  ${
           state
             ? "translate-x-0 transition-all duration-700"
             : "translate-x-full transition-all duration-700"
         } `}
       >
-        {/* <ul className='text-white text-xl xl:text-3xl'>
-          <li className='mb-3 mt-3 '>Witam</li>
-          <li className='mb-3'>O nas</li>
-          <li className=''>Kontakty</li>
-        </ul> */}
         <Menu links={links} />
       </div>
     </div>
