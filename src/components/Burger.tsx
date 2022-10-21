@@ -38,7 +38,8 @@ function Menu({ links, url_cuted_param }: IMenu) {
                   } `}
                 ></div>
                 <div className='pl-10'>
-                  <a href={`/${link.slug}`}>{link.title}</a>
+                  {/* <a href={`/${link.slug}`}>{link.title}</a> */}
+                  <div>{link.title}</div>
                 </div>
               </div>
             </li>
@@ -53,7 +54,8 @@ function Menu({ links, url_cuted_param }: IMenu) {
                   } `}
                 ></div>
                 <div className='pl-10'>
-                  <a href={`/${link.slug}`}>{link.title}</a>
+                  {/* <a href={`/${link.slug}`}>{link.title}</a> */}
+                  <div>{link.title}</div>
                 </div>
               </div>
             </li>
