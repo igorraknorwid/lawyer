@@ -37,11 +37,11 @@ export default function Lawyer({ image_src, image_alt }: ILawyer) {
           alt={image_alt}
         />
         <div className='xl:pl-24'>
-          <h1 className='text-3xl text-6xl pt-8 xl:pt-0'>
+          <h1 className='text-3xl lg:text-6xl pt-8 xl:pt-0'>
             GDAŃSKI PRAWNIK ROZWODOWY
           </h1>
           <div className='w-10 h-1 bg-[#cdb171] my-10'></div>
-          <div className='text-xl xl:max-w-3xl'>
+          <div className='text-lg lg:text-xl xl:max-w-3xl'>
             <p className='mb-8'>
               W kancelarii nasi prawnicy zajmujący się rozwodami w Gdańsku
               rozumieją, że spór prawny z rodziną jest prawdopodobnie

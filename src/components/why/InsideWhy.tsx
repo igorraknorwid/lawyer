@@ -9,9 +9,9 @@ interface IInsideWhy {
 
 export default function InsideWhy({ cards, isBackground }: IInsideWhy) {
   return (
-    <div className='w-11/12  xl:w-8/12  m-auto text-center text-white '>
+    <div className=' w-11/12  xl:w-8/12  m-auto text-center text-white '>
       <div
-        className={`text-3xl xl:text-6xl ${
+        className={`text_shadow text-3xl xl:text-6xl ${
           isBackground ? "text-white" : "text-black"
         }`}
       >
