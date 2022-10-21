@@ -108,7 +108,7 @@ const Form: React.FC = () => {
         Formularz kontaktowy
       </div>
       <form id='myform' onSubmit={handleSubmit(onSubmit)}>
-        <div class='lg:flex'>
+        <div className='lg:flex'>
           <div className={inputGroupStyles.div}>
             <label className={inputGroupStyles.label} htmlFor='name'>
               Imię i Nazwisko
