@@ -17,35 +17,58 @@ interface ILink {
 
 interface IMenu {
   links: ILink[];
+  url_cuted_param?: string;
 }
 
-function Menu({ links }: IMenu) {
+function Menu({ links, url_cuted_param }: IMenu) {
   const [state, setState] = React.useState(0);
   return (
     <ul className='topmenu text-white text-xl xl:text-3xl'>
-      {links.map((link, index) => (
-        <li className='topmenu_item' key={link.id}>
-          <div className='topmenu_div flex justify-start items-center'>
-            <div
-              className={`topmenu_target w-2 h-8 ${
-                index === 0 ? "bg-sky-500" : "bg-transparent"
-              } `}
-            ></div>
-            <div className='pl-10'>
-              <a href={link.slug}>{link.title}</a>
-            </div>
-          </div>
-        </li>
-      ))}
+      {links.map((link, index) => {
+        if (url_cuted_param) {
+          return (
+            <li className='topmenu_item' key={link.id}>
+              <div className='topmenu_div flex justify-start items-center'>
+                <div
+                  className={`topmenu_target w-2 h-8 ${
+                    link.slug === url_cuted_param
+                      ? "bg-blue-500"
+                      : "bg-transparent"
+                  } `}
+                ></div>
+                <div className='pl-10'>
+                  <a href={link.slug}>{link.title}</a>
+                </div>
+              </div>
+            </li>
+          );
+        } else {
+          return (
+            <li className='topmenu_item' key={link.id}>
+              <div className='topmenu_div flex justify-start items-center'>
+                <div
+                  className={`topmenu_target w-2 h-8 ${
+                    index === 0 ? "bg-blue-500" : "bg-transparent"
+                  } `}
+                ></div>
+                <div className='pl-10'>
+                  <a href={link.slug}>{link.title}</a>
+                </div>
+              </div>
+            </li>
+          );
+        }
+      })}
     </ul>
   );
 }
 
 interface ITopNavbar {
   links: ILink[];
+  url_cuted_param?: string;
 }
 
-export default function TopNavbar({ links }: ITopNavbar) {
+export default function TopNavbar({ links, url_cuted_param }: ITopNavbar) {
   const [state, setState] = React.useState(false);
   const [init, setInit] = React.useState(true);
   return (
@@ -75,7 +98,7 @@ export default function TopNavbar({ links }: ITopNavbar) {
             : "translate-x-full transition-all duration-700"
         } `}
       >
-        <Menu links={links} />
+        <Menu links={links} url_cuted_param={url_cuted_param} />
       </div>
     </div>
   );
