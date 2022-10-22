@@ -38,19 +38,7 @@ function Menu({ links, url_cuted_param }: IMenu) {
                   } `}
                 ></div>
                 <div className="pl-10">
-                  {/* <a href='https://radca-test.pl/o-nas'>{link.title}</a> */}
-                  {/* <div>{link.title}</div> */}
-                  {/* {index ? (
-                    <a href="https://radca-test.pl" title="Strona domowa">Witam                     
-                    </a>
-                  ) : (
-                    <a href={`/${link.slug}/`} title={link.title}>
-                      {link.title}
-                    </a>
-                  )} */}
-                   {/* <a href={`/${link.slug}/`} title={link.title}>
-                      {link.title}
-                    </a> */}
+                 
                       {index === 0 ? <a href='/'>Witam</a> : <a href={`/${link.slug}`}>{link.title}</a>  }
                 </div>
               </div>
@@ -66,10 +54,7 @@ function Menu({ links, url_cuted_param }: IMenu) {
                   } `}
                 ></div>
                 <div className="pl-10">
-                  {index === 0 ? <a href='/'>Witam</a> : <a href={`/${link.slug}/`}>{link.title}</a>  }
-                  {/* <a href={`/${link.slug}`}>{link.title}</a>  */}
-                  {/* <a href="/o-nas/">{link.title}</a>
-                  {/* <a href='https://radca-test.pl/o-nas'>{link.title}</a> */}
+                  {index === 0 ? <a href='/'>Witam</a> : <a href={`/${link.slug}/`}>{link.title}</a>  }               
                 </div>
               </div>
             </li>
