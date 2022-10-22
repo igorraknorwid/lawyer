@@ -97,7 +97,7 @@ h1 {
 
 #preloader{
   background: #000 url(lader.gif) no-repeat center center;
-  background-size: 20%;
+  background-size: 40%;
   height: 100vh;
   width: 100%;
   position: fixed;
