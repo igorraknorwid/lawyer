@@ -20,7 +20,7 @@ const awards_data = (await response.json()) as AwardsData;
 const data = awards_data.data;
 const x = data.map((item) => item.attributes);
 const menu = [
-  { id: 1, slug: " ", title: "Witam" },
+  { id: 1, slug: "/", title: "Witam" },
   { id: 2, slug: "o-nas", title: "O nas" },
 ];
 const cards = [
@@ -57,7 +57,7 @@ const { number_phone, visible_phone } = contact_data.data.attributes;
 ---
 
 <Layout title='Prawnik ds. rozwodów w Gdańsku | Bezpłatne konsultacje '>
-  <!-- <Burger links={menu} client:visible /> -->
+  <Burger links={menu} client:load />
   <Prime />
   <Awards images={x} client:visible />
   <Lawyer
