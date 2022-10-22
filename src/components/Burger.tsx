@@ -66,7 +66,7 @@ function Menu({ links, url_cuted_param }: IMenu) {
                   } `}
                 ></div>
                 <div className="pl-10">
-                  {index === 0 ? <a href='/'>Witam</a> : <a href={`/${link.slug}`}>{link.title}</a>  }
+                  {index === 0 ? <a href='/'>Witam</a> : <a href={`/${link.slug}/`}>{link.title}</a>  }
                   {/* <a href={`/${link.slug}`}>{link.title}</a>  */}
                   {/* <a href="/o-nas/">{link.title}</a>
                   {/* <a href='https://radca-test.pl/o-nas'>{link.title}</a> */}
