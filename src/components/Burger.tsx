@@ -40,7 +40,7 @@ function Menu({ links, url_cuted_param }: IMenu) {
                 <div className='pl-10'>
                   {/* <a href='https://radca-test.pl/o-nas'>{link.title}</a> */}
                   {/* <div>{link.title}</div> */}
-                  <a href='/o-nas/'>{link.title}</a>
+                  <a href={`/o-nas/`}>{link.title}</a>
                 </div>
               </div>
             </li>
