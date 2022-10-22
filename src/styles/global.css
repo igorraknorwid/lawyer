@@ -93,3 +93,13 @@ h1 {
 .topmenu_item:hover > .topmenu_div > .topmenu_target {
   background-color: rgb(59 130 246);
 } */
+
+
+#preloader{
+  background: #000 url(lader.gif) no-repeat center center;
+  background-size: 20%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}

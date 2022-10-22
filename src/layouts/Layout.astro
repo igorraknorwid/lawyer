@@ -23,8 +23,16 @@ import "../styles/global.css";
     <title>{title}</title>
   </head>
   <body>
-    <div class=''>
+    <div id="preloader"></div>
+  
       <slot />
-    </div>
+   <script>
+    var loader = document.getElementById("preloader")   
+    window.addEventListener("load",()=>{
+      loader.style.display="none"
+    })
+   </script>
   </body>
 </html>
+
+<
