@@ -1,5 +1,4 @@
 import React from "react";
-import { TAward } from "../../types";
 import InsideWhy from "./InsideWhy";
 import { TCard } from "../../types";
 

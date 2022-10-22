@@ -14,6 +14,7 @@
 // const { number_phone, visible_phone } = contact_data.data.attributes;
 
 import MySlider from "./Slider";
+import Testimonial from "./Testimonial";
 
 const testimonials = [
   {
@@ -44,23 +45,9 @@ const testimonials = [
 ];
 ---
 
-<section class='test py-32'>
-  <h2 class='text-3xl xl:text-6xl text-center'>CO MÓWIĄ NASI KLIENCI</h2>
-  <div class='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>
-  <div class='bg-white w-9/12 mx-auto'>
-    <MySlider items={testimonials} client:visible />
-  </div>
-</section>
+<Testimonial testimonials={testimonials} client:visible />
+
 
 <style>
-  .test {
-    /* height: 100vh; */
-    background: url(/testimonials.webp) no-repeat top/ cover;
-  }
-  @media (max-width: 767px) {
-  }
-  .slick-prev:before,
-  .slick-next:before {
-    color: #881798;
-  }
+
 </style>

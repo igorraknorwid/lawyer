@@ -66,3 +66,10 @@ export interface IPhone {
   number_phone:string;
   visible_phone:number;
 }
+
+
+export interface ITestimonial {
+  id: number;
+  text: string;
+  name: string;
+}

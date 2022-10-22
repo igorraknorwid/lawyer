@@ -7,58 +7,36 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { ITestimonial } from "../../types";
 
-interface ITestimonial {
-  id: number;
-  text: string;
-  name: string;
-}
 
 interface IMySlide {
-  items: ITestimonial[];
+  item: ITestimonial;
+  state:boolean
 }
 
-const Slide = ({ id, name, text }: ITestimonial) => {
-  // const [state, setState] = React.useState(false);
-  // const topRef = React.useRef<HTMLDivElement>(null);
-  // const bottomRef = React.useRef<HTMLDivElement>(null);
-  // React.useEffect(() => {
-  //   const observer = new IntersectionObserver((entries) => {
-  //     const entry = entries[0];
-  //     if (entry.isIntersecting) {
-  //       setState(true);
-  //     }
-  //   });
-  //   const bottomObserver = new IntersectionObserver((entries) => {
-  //     const entry = entries[0];
-  //     if (entry.isIntersecting) {
-  //       setState(true);
-  //     }
-  //   });
-  //   if (topRef.current) {
-  //     observer.observe(topRef.current);
-  //   }
-  //   if (bottomRef.current) {
-  //     bottomObserver.observe(bottomRef.current);
-  //   }
-  // }, []);
-  return (
-    <div className='relative py-5 px-8 xl:px-20  '>
-      {/* <div style={{ height: "1px" }} ref={topRef}></div> */}
-      {/* <img className='' src={state ? "/stars.png" : ""} 
-      alt={"starts"} /> */}
-      <img className='' src={"/stars.png"} alt={"starts"} />
+interface IMySlider {
+  items: ITestimonial[];
+  state:boolean
+}
 
+
+const Slide = ({ item,state }: IMySlide) => {
+ 
+  return (
+    <div className='relative py-5 px-8 xl:px-20  '>  
+      <img className='' src={state ? "/stars.png" : ""} 
+      alt={"starts"} />
       <div className='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>
-      <p className='text-center  xl:text-lg'>{text}</p>
+      <p className='text-center  xl:text-lg'>{item.text}</p>
       <div className='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>
-      <p className='text-center'>{name}</p>
-      {/* <div style={{ height: "1px" }} ref={bottomRef}></div> */}
+      <p className='text-center'>{item.name}</p>
+     
     </div>
   );
 };
 
-export default ({ items }: IMySlide) => {
+export default ({ items,state }: IMySlider ) => {
   return (
     <div>
       <Swiper
@@ -86,7 +64,7 @@ export default ({ items }: IMySlide) => {
         {items.map((item) => (
           <div key={item.id}>
             <SwiperSlide>
-              <Slide id={item.id} name={item.name} text={item.text} />
+              <Slide item={item} state={state}/>
             </SwiperSlide>
           </div>
         ))}
