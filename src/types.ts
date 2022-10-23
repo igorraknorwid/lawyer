@@ -39,7 +39,7 @@ export interface ContactData {
   data: dataContact;
 }
 
-export type TCard = { id?: number; src: string; text: string };
+export interface TCard { id?: number;src: string; text: string };
 
 interface CardType {
   id: number;
@@ -50,7 +50,7 @@ export interface CardsData {
   data: CardType[];
 }
 
-export type TCase = { id: number; title: string; text: string };
+export type TCase = { id: number; slug:string,  title: string; text: string };
 
 interface CaseType {
   id: number;

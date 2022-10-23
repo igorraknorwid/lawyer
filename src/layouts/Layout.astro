@@ -2,6 +2,7 @@
 import Navigation from "../components/Navigation.astro";
 interface Props {
   title: string;
+  description:string;
 }
 const { title = "Astro default" } = Astro.props as Props;
 import "../styles/global.css";
@@ -23,8 +24,7 @@ import "../styles/global.css";
     <title>{title}</title>
   </head>
   <body>
-    <div id="preloader"></div>
-  
+    <div id="preloader"></div>  
       <slot />
    <script>
     var loader = document.getElementById("preloader")   

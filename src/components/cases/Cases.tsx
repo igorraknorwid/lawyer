@@ -27,9 +27,9 @@ function CasesModal({ c, closeModal }: ICase) {
         <h3 className='mb-5 lg:text-3xl text-center uppercase'>{c.title}</h3>
         <p className='mb-5'>{c.text}</p>
         <div className='flex justify-center items-center'>
-          <button className=' border py-2 px-3 tracking-widest'>
-            <a className='uppercase'>More</a>
-          </button>
+          <div className=' border py-2 px-3 tracking-widest'>
+            <a href={`/case/${c.slug}/`} className='uppercase cursor-pointer'>Węncej</a>
+           </div>
         </div>
       </div>
     </div>
