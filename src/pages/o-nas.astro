@@ -3,21 +3,31 @@ import Layout from "../layouts/Layout.astro";
 import Burger from "../components/Burger";
 import Second from "../components/Second.astro";
 import AboutUs from "../components/AboutUs.astro";
+import Onas from "../components/onas/Onas";
 import Contacts from "../components/contacts/Contacts.astro";
 import Footer from "../components/footer/Footer.astro";
+import { AboutData } from "../types";
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1);
+
+const resAbout = await fetch("https://sheltered-river-97651.herokuapp.com/api/about");
+const about:AboutData = await resAbout.json();
+
+
 
 const menu = [
   { id: 1, slug: "/", title: "Witam" },
   { id: 2, slug: "o-nas", title: "O nas" },
 ];
+
+
 ---
 
-<Layout title='Prawnik ds. rozwodów w Gdańsku | O nas'>
+<Layout title='Prawnik ds. rozwodów w Gdańsku | O nas' description="Zadzwoń do adwokata rozwodowego i jego zespół ma ponad 25-letnie doświadczenie. Bezpłatna konsultacja pod numerem 123-456-789">
   <Burger links={menu} url_cuted_param={currentPath} client:load />
   <Second />
   <AboutUs />
+  <Onas about={about} client:load/>
   <Contacts />
   <Footer />
 </Layout>

@@ -40,6 +40,7 @@ const Cases = ({ cases }: ICases) => {
   const [isModal, setModal] = React.useState(false);
   const [state, setState] = React.useState<TCase>({
     id: 100,
+    slug:"zxzxc",
     text: "text",
     title: "title",
   });

@@ -73,3 +73,16 @@ export interface ITestimonial {
   text: string;
   name: string;
 }
+
+
+export type aboutAtributes = { job: string; name: string; about:string };
+
+
+export type adoutDataType = {
+  id: number;
+  attributes: aboutAtributes;
+};
+
+export interface AboutData {
+  data:  adoutDataType;
+}

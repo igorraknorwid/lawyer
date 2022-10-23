@@ -96,10 +96,21 @@ h1 {
 
 
 #preloader{
-  background: #000 url(lader.gif) no-repeat center center;
+  background: #000 url("https://res.cloudinary.com/du9w3xgvx/image/upload/v1666523093/lader_krlo9p.gif") no-repeat center center;
   background-size: 40%;
   height: 100vh;
   width: 100%;
   position: fixed;
   z-index: 100;
+}
+
+.markdown > p{
+
+  padding-bottom: 10px;
+
+
+}
+
+.markdown > blockquote{
+  color: brown;
 }
