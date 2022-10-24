@@ -28,8 +28,10 @@ function CasesModal({ c, closeModal }: ICase) {
         <p className='mb-5'>{c.text}</p>
         <div className='flex justify-center items-center'>
           <div className=' border py-2 px-3 tracking-widest'>
-            <a href={`/case/${c.slug}/`} className='uppercase cursor-pointer'>Węncej</a>
-           </div>
+            <a href={`/${c.slug}/`} className='uppercase cursor-pointer'>
+              Węncej
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -40,7 +42,7 @@ const Cases = ({ cases }: ICases) => {
   const [isModal, setModal] = React.useState(false);
   const [state, setState] = React.useState<TCase>({
     id: 100,
-    slug:"zxzxc",
+    slug: "zxzxc",
     text: "text",
     title: "title",
   });

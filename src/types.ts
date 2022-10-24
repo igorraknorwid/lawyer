@@ -39,7 +39,11 @@ export interface ContactData {
   data: dataContact;
 }
 
-export interface TCard { id?: number;src: string; text: string };
+export interface TCard {
+  id?: number;
+  src: string;
+  text: string;
+}
 
 interface CardType {
   id: number;
@@ -50,7 +54,13 @@ export interface CardsData {
   data: CardType[];
 }
 
-export type TCase = { id: number; slug:string,  title: string; text: string };
+export type TCase = {
+  id: number;
+  slug: string;
+  title: string;
+  text: string;
+  content: string;
+};
 
 interface CaseType {
   id: number;
@@ -61,12 +71,10 @@ export interface CaseData {
   data: CaseType[];
 }
 
-
 export interface IPhone {
-  number_phone:string;
-  visible_phone:number;
+  number_phone: string;
+  visible_phone: number;
 }
-
 
 export interface ITestimonial {
   id: number;
@@ -74,9 +82,7 @@ export interface ITestimonial {
   name: string;
 }
 
-
-export type aboutAtributes = { job: string; name: string; about:string };
-
+export type aboutAtributes = { job: string; name: string; about: string };
 
 export type adoutDataType = {
   id: number;
@@ -84,5 +90,5 @@ export type adoutDataType = {
 };
 
 export interface AboutData {
-  data:  adoutDataType;
+  data: adoutDataType;
 }
