@@ -92,3 +92,12 @@ export type adoutDataType = {
 export interface AboutData {
   data: adoutDataType;
 }
+
+export interface IBook {
+  id: number;
+  slug: string;
+  title: string;
+  subtitle: string;
+  content: string;
+  image: string;
+}
