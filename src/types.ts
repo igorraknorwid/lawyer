@@ -95,6 +95,7 @@ export interface AboutData {
 
 export interface IBook {
   id: number;
+  data: string;
   slug: string;
   title: string;
   subtitle: string;
