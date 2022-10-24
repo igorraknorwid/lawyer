@@ -58,27 +58,31 @@ const blog = [
 >
   <!-- <Burger links={menu} url_cuted_param={currentPath} client:load /> -->
   <Second />
-  <ul>
+  <ul
+    class='grid grid-cols-2 gap-x-10 gap-y-10 w-8/12 mx-auto py-24 items-center justify-center'
+  >
     {
       blog.map((item, index) => {
         const short = [...item.content].slice(0, 200).join("") + "...";
         return (
           <>
-            <li class={`${index === 0 ? "" : "mt-4"}`}>
+            <li class={`${index === 0 ? "col-span-full" : ""}`}>
               <img src={item.image} />
-              <div>
+              <div class='mt-2'>
                 <a
                   href={`/blog/${item.slug}/`}
                   class='uppercase cursor-pointer'
                 >
                   <h3>{item.title}</h3>
                 </a>
-                <div>{short}</div>
+                <div class='mt-2'>{short}</div>
                 <a
                   href={`/blog/${item.slug}/`}
                   class='uppercase cursor-pointer'
                 >
-                  <h3>Czytaj dalej</h3>
+                  <div class='mt-8 text-blue-300 hover:text-blue-700'>
+                    Czytaj dalej
+                  </div>
                 </a>
               </div>
             </li>
