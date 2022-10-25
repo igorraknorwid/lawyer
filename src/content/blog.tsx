@@ -1,7 +1,6 @@
 import { IBlog } from "../types";
 
-
-export const blog:IBlog[] = [
+export const blog: IBlog[] = [
   {
     id: 1,
     data: "04-09-2022",
@@ -34,5 +33,115 @@ export const blog:IBlog[] = [
       "Majątek wspólny nazywany jest inaczej wspólnotą majątkowa. Wspólnota taka powstaje w momencie zawarcia małżeństwa (wyjątkiem  jest ustalenie rozdzielności majątkowej między małżonkami), a wspólność ustawowa ustaje w kilku przypadkach, jednym z nich jest rozwód. W skład majątku wspólnego wchodzą: przedmioty majątkowe nabyte w czasie trwania wspólnoty majątkowej przez oboje małżonków lub przez jednego z nich, pobrane wynagrodzenie za pracę i dochody z innej działalności zarobkowej każdego z małżonków,  dochody z majątku wspólnego, jak również z majątku osobistego każdego z małżonków, środki zgromadzone na rachunku otwartego lub pracowniczego funduszu emerytalnego każdego z małżonków.Gdy strony po rozwodzie nie są w stanie wypracować ugody, podziału majątku może dokonać sąd. Sądem właściwym  jest sąd miejsca położenia majątku. Jedna ze stron musi złożyć do sądu wniosek o podział majątku, wniosek powinien zawierać opis majątku podlegającemu podziałowi. Co ważne nie ma określonych terminów, podziału majątku można dokonać kilka lat po rozwodzie (sprawy o podział majątku nie ulegają przedawnieniu). Jednak z biegiem lat dowody mające istotny wpływ na podział majątku mogą ulec zniszczeniu lub zaginąć, dlatego nie warto czekać z podziałem majątku. Brak zgody drugiej strony nie jest przeszkodą do przeprowadzenie sądowego podziału majątku.Jeśli chcesz rozpocząć umowny podział majątku, zacznij od napisania i wysłania do drugiej strony wezwania do podziału majątku wspólnego. Pismo możesz sporządzić samodzielnie, ale takie wezwanie opatrzone podpisem adwokata może zrobić na drugiej stronie większe wrażenie. Strony mogą negocjować warunki podziału. Dokumentem spisywanym przy takim podziale majątku jest umowa między stronami, strony same określają, według jakich zasad podzielą majątek. Jednak gdy do majątku wspólnego wchodzą dobra o znacznej wartości, najlepszym rozwiązaniem jest podpisanie aktu notarialnego. Forma aktu notarialnego jest wymagana przy podziale nieruchomości.",
     image:
       "https://res.cloudinary.com/zielona-g-ra/image/upload/v1666611351/alimenty-na-malzonka-adwokat-1024x681_vowwg3.jpg",
+  },
+  {
+    id: 4,
+    data: "21-11-2022",
+    title: "Pozew o podwyższenie alimentów",
+    subtitle: "Z jakich powodów można starać się o podwyższenie alimentów?",
+    content:
+      "Obowiązek alimentacyjny dotyczy jednego z rodziców, z którym nie zamieszkuje stale. Rodzic jest zobowiązany wnosić określoną wysokość wpłat na konto drugiego rodzica, który jest opiekunem dziecka. Pieniądze te przeznaczone są na bieżące i przyszłe potrzeby dziecka. Czasem jednak zdarza się tak, że na początku ustalona kwota przestaje być wystarczająca. Może tak być z wielu powodów. Jednak w tym przypadku rodzic opiekun ma prawo do wniesienia pozwu o podwyższenie alimentów. Jeśli zastanawiasz się jak to zrobić koniecznie przeczytaj nasz artykuł. A może jesteś drugą stroną i uważasz podwyższenie alimentów za nieuzasadnione – dowiedz się w jaki sposób możesz się bronić.Obowiązek alimentacyjny rodziców wobec dzieci określają przepisy Kodeksu rodzinnego i opiekuńczego. O samym obowiązku mówi art. 133 §1 – „Rodzice obowiązani są do świadczeń alimentacyjnych względem dziecka, które nie jest jeszcze w stanie utrzymać się samodzielnie, chyba że dochody z majątku dziecka wystarczają na pokrycie kosztów jego utrzymania i wychowania”.      Kodeks rodzinny i opiekuńczy reguluje także zakres świadczeń, który według art. 135 §1 zależy od usprawiedliwionych potrzeb dziecka i zarobkowych a także majątkowych możliwości osoby zobowiązanej do ich wypłacania.  Natomiast art. 138 k.r.o. mówi, że: „W razie zmiany stosunków można żądać zmiany orzeczenia lub umowy dotyczącej obowiązku alimentacyjnego”. Przepis ten jest podstawą do podwyższenia, obniżenia lub wygaśnięcia obowiązku alimentacyjnego.W przypadku pozwu o podwyższenie alimentów zawsze należy zwrócić uwagę na możliwości zarobkowe i majątkowe obu stron sporu. Są one głównym warunkiem podwyższenia alimentów. Taką przesłanką jest również zmiana zakresu uzasadnionych potrzeb uprawnionego do alimentów. Dlatego też o podwyższenie alimentów można starać się gdy ",
+    image:
+      "https://res.cloudinary.com/zielona-g-ra/image/upload/v1666677252/podwyzszenie-alimentow-1024x768_lsumcf.jpg",
+    slug: "podwyzszenie_alimentow",
+  },
+  {
+    id: 5,
+    data: "21-11-2022",
+    title: "Pozew o podwyższenie alimentów",
+    subtitle: "Z jakich powodów można starać się o podwyższenie alimentów?",
+    content:
+      "Obowiązek alimentacyjny dotyczy jednego z rodziców, z którym nie zamieszkuje stale. Rodzic jest zobowiązany wnosić określoną wysokość wpłat na konto drugiego rodzica, który jest opiekunem dziecka. Pieniądze te przeznaczone są na bieżące i przyszłe potrzeby dziecka. Czasem jednak zdarza się tak, że na początku ustalona kwota przestaje być wystarczająca. Może tak być z wielu powodów. Jednak w tym przypadku rodzic opiekun ma prawo do wniesienia pozwu o podwyższenie alimentów. Jeśli zastanawiasz się jak to zrobić koniecznie przeczytaj nasz artykuł. A może jesteś drugą stroną i uważasz podwyższenie alimentów za nieuzasadnione – dowiedz się w jaki sposób możesz się bronić.Obowiązek alimentacyjny rodziców wobec dzieci określają przepisy Kodeksu rodzinnego i opiekuńczego. O samym obowiązku mówi art. 133 §1 – „Rodzice obowiązani są do świadczeń alimentacyjnych względem dziecka, które nie jest jeszcze w stanie utrzymać się samodzielnie, chyba że dochody z majątku dziecka wystarczają na pokrycie kosztów jego utrzymania i wychowania”.      Kodeks rodzinny i opiekuńczy reguluje także zakres świadczeń, który według art. 135 §1 zależy od usprawiedliwionych potrzeb dziecka i zarobkowych a także majątkowych możliwości osoby zobowiązanej do ich wypłacania.  Natomiast art. 138 k.r.o. mówi, że: „W razie zmiany stosunków można żądać zmiany orzeczenia lub umowy dotyczącej obowiązku alimentacyjnego”. Przepis ten jest podstawą do podwyższenia, obniżenia lub wygaśnięcia obowiązku alimentacyjnego.W przypadku pozwu o podwyższenie alimentów zawsze należy zwrócić uwagę na możliwości zarobkowe i majątkowe obu stron sporu. Są one głównym warunkiem podwyższenia alimentów. Taką przesłanką jest również zmiana zakresu uzasadnionych potrzeb uprawnionego do alimentów. Dlatego też o podwyższenie alimentów można starać się gdy ",
+    image:
+      "https://res.cloudinary.com/zielona-g-ra/image/upload/v1666677252/podwyzszenie-alimentow-1024x768_lsumcf.jpg",
+    slug: "podwyzszenie_alimentow",
+  },
+  {
+    id: 6,
+    data: "21-11-2022",
+    title: "Pozew o podwyższenie alimentów",
+    subtitle: "Z jakich powodów można starać się o podwyższenie alimentów?",
+    content:
+      "Obowiązek alimentacyjny dotyczy jednego z rodziców, z którym nie zamieszkuje stale. Rodzic jest zobowiązany wnosić określoną wysokość wpłat na konto drugiego rodzica, który jest opiekunem dziecka. Pieniądze te przeznaczone są na bieżące i przyszłe potrzeby dziecka. Czasem jednak zdarza się tak, że na początku ustalona kwota przestaje być wystarczająca. Może tak być z wielu powodów. Jednak w tym przypadku rodzic opiekun ma prawo do wniesienia pozwu o podwyższenie alimentów. Jeśli zastanawiasz się jak to zrobić koniecznie przeczytaj nasz artykuł. A może jesteś drugą stroną i uważasz podwyższenie alimentów za nieuzasadnione – dowiedz się w jaki sposób możesz się bronić.Obowiązek alimentacyjny rodziców wobec dzieci określają przepisy Kodeksu rodzinnego i opiekuńczego. O samym obowiązku mówi art. 133 §1 – „Rodzice obowiązani są do świadczeń alimentacyjnych względem dziecka, które nie jest jeszcze w stanie utrzymać się samodzielnie, chyba że dochody z majątku dziecka wystarczają na pokrycie kosztów jego utrzymania i wychowania”.      Kodeks rodzinny i opiekuńczy reguluje także zakres świadczeń, który według art. 135 §1 zależy od usprawiedliwionych potrzeb dziecka i zarobkowych a także majątkowych możliwości osoby zobowiązanej do ich wypłacania.  Natomiast art. 138 k.r.o. mówi, że: „W razie zmiany stosunków można żądać zmiany orzeczenia lub umowy dotyczącej obowiązku alimentacyjnego”. Przepis ten jest podstawą do podwyższenia, obniżenia lub wygaśnięcia obowiązku alimentacyjnego.W przypadku pozwu o podwyższenie alimentów zawsze należy zwrócić uwagę na możliwości zarobkowe i majątkowe obu stron sporu. Są one głównym warunkiem podwyższenia alimentów. Taką przesłanką jest również zmiana zakresu uzasadnionych potrzeb uprawnionego do alimentów. Dlatego też o podwyższenie alimentów można starać się gdy ",
+    image:
+      "https://res.cloudinary.com/zielona-g-ra/image/upload/v1666677252/podwyzszenie-alimentow-1024x768_lsumcf.jpg",
+    slug: "podwyzszenie_alimentow",
+  },
+  {
+    id: 7,
+    data: "21-11-2022",
+    title: "Pozew o podwyższenie alimentów",
+    subtitle: "Z jakich powodów można starać się o podwyższenie alimentów?",
+    content:
+      "Obowiązek alimentacyjny dotyczy jednego z rodziców, z którym nie zamieszkuje stale. Rodzic jest zobowiązany wnosić określoną wysokość wpłat na konto drugiego rodzica, który jest opiekunem dziecka. Pieniądze te przeznaczone są na bieżące i przyszłe potrzeby dziecka. Czasem jednak zdarza się tak, że na początku ustalona kwota przestaje być wystarczająca. Może tak być z wielu powodów. Jednak w tym przypadku rodzic opiekun ma prawo do wniesienia pozwu o podwyższenie alimentów. Jeśli zastanawiasz się jak to zrobić koniecznie przeczytaj nasz artykuł. A może jesteś drugą stroną i uważasz podwyższenie alimentów za nieuzasadnione – dowiedz się w jaki sposób możesz się bronić.Obowiązek alimentacyjny rodziców wobec dzieci określają przepisy Kodeksu rodzinnego i opiekuńczego. O samym obowiązku mówi art. 133 §1 – „Rodzice obowiązani są do świadczeń alimentacyjnych względem dziecka, które nie jest jeszcze w stanie utrzymać się samodzielnie, chyba że dochody z majątku dziecka wystarczają na pokrycie kosztów jego utrzymania i wychowania”.      Kodeks rodzinny i opiekuńczy reguluje także zakres świadczeń, który według art. 135 §1 zależy od usprawiedliwionych potrzeb dziecka i zarobkowych a także majątkowych możliwości osoby zobowiązanej do ich wypłacania.  Natomiast art. 138 k.r.o. mówi, że: „W razie zmiany stosunków można żądać zmiany orzeczenia lub umowy dotyczącej obowiązku alimentacyjnego”. Przepis ten jest podstawą do podwyższenia, obniżenia lub wygaśnięcia obowiązku alimentacyjnego.W przypadku pozwu o podwyższenie alimentów zawsze należy zwrócić uwagę na możliwości zarobkowe i majątkowe obu stron sporu. Są one głównym warunkiem podwyższenia alimentów. Taką przesłanką jest również zmiana zakresu uzasadnionych potrzeb uprawnionego do alimentów. Dlatego też o podwyższenie alimentów można starać się gdy ",
+    image:
+      "https://res.cloudinary.com/zielona-g-ra/image/upload/v1666677252/podwyzszenie-alimentow-1024x768_lsumcf.jpg",
+    slug: "podwyzszenie_alimentow",
+  },
+  {
+    id: 8,
+    data: "21-11-2022",
+    title: "Pozew o podwyższenie alimentów",
+    subtitle: "Z jakich powodów można starać się o podwyższenie alimentów?",
+    content:
+      "Obowiązek alimentacyjny dotyczy jednego z rodziców, z którym nie zamieszkuje stale. Rodzic jest zobowiązany wnosić określoną wysokość wpłat na konto drugiego rodzica, który jest opiekunem dziecka. Pieniądze te przeznaczone są na bieżące i przyszłe potrzeby dziecka. Czasem jednak zdarza się tak, że na początku ustalona kwota przestaje być wystarczająca. Może tak być z wielu powodów. Jednak w tym przypadku rodzic opiekun ma prawo do wniesienia pozwu o podwyższenie alimentów. Jeśli zastanawiasz się jak to zrobić koniecznie przeczytaj nasz artykuł. A może jesteś drugą stroną i uważasz podwyższenie alimentów za nieuzasadnione – dowiedz się w jaki sposób możesz się bronić.Obowiązek alimentacyjny rodziców wobec dzieci określają przepisy Kodeksu rodzinnego i opiekuńczego. O samym obowiązku mówi art. 133 §1 – „Rodzice obowiązani są do świadczeń alimentacyjnych względem dziecka, które nie jest jeszcze w stanie utrzymać się samodzielnie, chyba że dochody z majątku dziecka wystarczają na pokrycie kosztów jego utrzymania i wychowania”.      Kodeks rodzinny i opiekuńczy reguluje także zakres świadczeń, który według art. 135 §1 zależy od usprawiedliwionych potrzeb dziecka i zarobkowych a także majątkowych możliwości osoby zobowiązanej do ich wypłacania.  Natomiast art. 138 k.r.o. mówi, że: „W razie zmiany stosunków można żądać zmiany orzeczenia lub umowy dotyczącej obowiązku alimentacyjnego”. Przepis ten jest podstawą do podwyższenia, obniżenia lub wygaśnięcia obowiązku alimentacyjnego.W przypadku pozwu o podwyższenie alimentów zawsze należy zwrócić uwagę na możliwości zarobkowe i majątkowe obu stron sporu. Są one głównym warunkiem podwyższenia alimentów. Taką przesłanką jest również zmiana zakresu uzasadnionych potrzeb uprawnionego do alimentów. Dlatego też o podwyższenie alimentów można starać się gdy ",
+    image:
+      "https://res.cloudinary.com/zielona-g-ra/image/upload/v1666677252/podwyzszenie-alimentow-1024x768_lsumcf.jpg",
+    slug: "podwyzszenie_alimentow",
+  },
+  {
+    id: 9,
+    data: "21-11-2022",
+    title: "Pozew o podwyższenie alimentów",
+    subtitle: "Z jakich powodów można starać się o podwyższenie alimentów?",
+    content:
+      "Obowiązek alimentacyjny dotyczy jednego z rodziców, z którym nie zamieszkuje stale. Rodzic jest zobowiązany wnosić określoną wysokość wpłat na konto drugiego rodzica, który jest opiekunem dziecka. Pieniądze te przeznaczone są na bieżące i przyszłe potrzeby dziecka. Czasem jednak zdarza się tak, że na początku ustalona kwota przestaje być wystarczająca. Może tak być z wielu powodów. Jednak w tym przypadku rodzic opiekun ma prawo do wniesienia pozwu o podwyższenie alimentów. Jeśli zastanawiasz się jak to zrobić koniecznie przeczytaj nasz artykuł. A może jesteś drugą stroną i uważasz podwyższenie alimentów za nieuzasadnione – dowiedz się w jaki sposób możesz się bronić.Obowiązek alimentacyjny rodziców wobec dzieci określają przepisy Kodeksu rodzinnego i opiekuńczego. O samym obowiązku mówi art. 133 §1 – „Rodzice obowiązani są do świadczeń alimentacyjnych względem dziecka, które nie jest jeszcze w stanie utrzymać się samodzielnie, chyba że dochody z majątku dziecka wystarczają na pokrycie kosztów jego utrzymania i wychowania”.      Kodeks rodzinny i opiekuńczy reguluje także zakres świadczeń, który według art. 135 §1 zależy od usprawiedliwionych potrzeb dziecka i zarobkowych a także majątkowych możliwości osoby zobowiązanej do ich wypłacania.  Natomiast art. 138 k.r.o. mówi, że: „W razie zmiany stosunków można żądać zmiany orzeczenia lub umowy dotyczącej obowiązku alimentacyjnego”. Przepis ten jest podstawą do podwyższenia, obniżenia lub wygaśnięcia obowiązku alimentacyjnego.W przypadku pozwu o podwyższenie alimentów zawsze należy zwrócić uwagę na możliwości zarobkowe i majątkowe obu stron sporu. Są one głównym warunkiem podwyższenia alimentów. Taką przesłanką jest również zmiana zakresu uzasadnionych potrzeb uprawnionego do alimentów. Dlatego też o podwyższenie alimentów można starać się gdy ",
+    image:
+      "https://res.cloudinary.com/zielona-g-ra/image/upload/v1666677252/podwyzszenie-alimentow-1024x768_lsumcf.jpg",
+    slug: "podwyzszenie_alimentow",
+  },
+  {
+    id: 10,
+    data: "21-11-2022",
+    title: "Pozew o podwyższenie alimentów",
+    subtitle: "Z jakich powodów można starać się o podwyższenie alimentów?",
+    content:
+      "Obowiązek alimentacyjny dotyczy jednego z rodziców, z którym nie zamieszkuje stale. Rodzic jest zobowiązany wnosić określoną wysokość wpłat na konto drugiego rodzica, który jest opiekunem dziecka. Pieniądze te przeznaczone są na bieżące i przyszłe potrzeby dziecka. Czasem jednak zdarza się tak, że na początku ustalona kwota przestaje być wystarczająca. Może tak być z wielu powodów. Jednak w tym przypadku rodzic opiekun ma prawo do wniesienia pozwu o podwyższenie alimentów. Jeśli zastanawiasz się jak to zrobić koniecznie przeczytaj nasz artykuł. A może jesteś drugą stroną i uważasz podwyższenie alimentów za nieuzasadnione – dowiedz się w jaki sposób możesz się bronić.Obowiązek alimentacyjny rodziców wobec dzieci określają przepisy Kodeksu rodzinnego i opiekuńczego. O samym obowiązku mówi art. 133 §1 – „Rodzice obowiązani są do świadczeń alimentacyjnych względem dziecka, które nie jest jeszcze w stanie utrzymać się samodzielnie, chyba że dochody z majątku dziecka wystarczają na pokrycie kosztów jego utrzymania i wychowania”.      Kodeks rodzinny i opiekuńczy reguluje także zakres świadczeń, który według art. 135 §1 zależy od usprawiedliwionych potrzeb dziecka i zarobkowych a także majątkowych możliwości osoby zobowiązanej do ich wypłacania.  Natomiast art. 138 k.r.o. mówi, że: „W razie zmiany stosunków można żądać zmiany orzeczenia lub umowy dotyczącej obowiązku alimentacyjnego”. Przepis ten jest podstawą do podwyższenia, obniżenia lub wygaśnięcia obowiązku alimentacyjnego.W przypadku pozwu o podwyższenie alimentów zawsze należy zwrócić uwagę na możliwości zarobkowe i majątkowe obu stron sporu. Są one głównym warunkiem podwyższenia alimentów. Taką przesłanką jest również zmiana zakresu uzasadnionych potrzeb uprawnionego do alimentów. Dlatego też o podwyższenie alimentów można starać się gdy ",
+    image:
+      "https://res.cloudinary.com/zielona-g-ra/image/upload/v1666677252/podwyzszenie-alimentow-1024x768_lsumcf.jpg",
+    slug: "podwyzszenie_alimentow",
+  },
+  {
+    id: 11,
+    data: "21-11-2022",
+    title: "Pozew o podwyższenie alimentów",
+    subtitle: "Z jakich powodów można starać się o podwyższenie alimentów?",
+    content:
+      "Obowiązek alimentacyjny dotyczy jednego z rodziców, z którym nie zamieszkuje stale. Rodzic jest zobowiązany wnosić określoną wysokość wpłat na konto drugiego rodzica, który jest opiekunem dziecka. Pieniądze te przeznaczone są na bieżące i przyszłe potrzeby dziecka. Czasem jednak zdarza się tak, że na początku ustalona kwota przestaje być wystarczająca. Może tak być z wielu powodów. Jednak w tym przypadku rodzic opiekun ma prawo do wniesienia pozwu o podwyższenie alimentów. Jeśli zastanawiasz się jak to zrobić koniecznie przeczytaj nasz artykuł. A może jesteś drugą stroną i uważasz podwyższenie alimentów za nieuzasadnione – dowiedz się w jaki sposób możesz się bronić.Obowiązek alimentacyjny rodziców wobec dzieci określają przepisy Kodeksu rodzinnego i opiekuńczego. O samym obowiązku mówi art. 133 §1 – „Rodzice obowiązani są do świadczeń alimentacyjnych względem dziecka, które nie jest jeszcze w stanie utrzymać się samodzielnie, chyba że dochody z majątku dziecka wystarczają na pokrycie kosztów jego utrzymania i wychowania”.      Kodeks rodzinny i opiekuńczy reguluje także zakres świadczeń, który według art. 135 §1 zależy od usprawiedliwionych potrzeb dziecka i zarobkowych a także majątkowych możliwości osoby zobowiązanej do ich wypłacania.  Natomiast art. 138 k.r.o. mówi, że: „W razie zmiany stosunków można żądać zmiany orzeczenia lub umowy dotyczącej obowiązku alimentacyjnego”. Przepis ten jest podstawą do podwyższenia, obniżenia lub wygaśnięcia obowiązku alimentacyjnego.W przypadku pozwu o podwyższenie alimentów zawsze należy zwrócić uwagę na możliwości zarobkowe i majątkowe obu stron sporu. Są one głównym warunkiem podwyższenia alimentów. Taką przesłanką jest również zmiana zakresu uzasadnionych potrzeb uprawnionego do alimentów. Dlatego też o podwyższenie alimentów można starać się gdy ",
+    image:
+      "https://res.cloudinary.com/zielona-g-ra/image/upload/v1666677252/podwyzszenie-alimentow-1024x768_lsumcf.jpg",
+    slug: "podwyzszenie_alimentow",
+  },
+  {
+    id: 12,
+    data: "21-11-2022",
+    title: "Pozew o podwyższenie alimentów",
+    subtitle: "Z jakich powodów można starać się o podwyższenie alimentów?",
+    content:
+      "Obowiązek alimentacyjny dotyczy jednego z rodziców, z którym nie zamieszkuje stale. Rodzic jest zobowiązany wnosić określoną wysokość wpłat na konto drugiego rodzica, który jest opiekunem dziecka. Pieniądze te przeznaczone są na bieżące i przyszłe potrzeby dziecka. Czasem jednak zdarza się tak, że na początku ustalona kwota przestaje być wystarczająca. Może tak być z wielu powodów. Jednak w tym przypadku rodzic opiekun ma prawo do wniesienia pozwu o podwyższenie alimentów. Jeśli zastanawiasz się jak to zrobić koniecznie przeczytaj nasz artykuł. A może jesteś drugą stroną i uważasz podwyższenie alimentów za nieuzasadnione – dowiedz się w jaki sposób możesz się bronić.Obowiązek alimentacyjny rodziców wobec dzieci określają przepisy Kodeksu rodzinnego i opiekuńczego. O samym obowiązku mówi art. 133 §1 – „Rodzice obowiązani są do świadczeń alimentacyjnych względem dziecka, które nie jest jeszcze w stanie utrzymać się samodzielnie, chyba że dochody z majątku dziecka wystarczają na pokrycie kosztów jego utrzymania i wychowania”.      Kodeks rodzinny i opiekuńczy reguluje także zakres świadczeń, który według art. 135 §1 zależy od usprawiedliwionych potrzeb dziecka i zarobkowych a także majątkowych możliwości osoby zobowiązanej do ich wypłacania.  Natomiast art. 138 k.r.o. mówi, że: „W razie zmiany stosunków można żądać zmiany orzeczenia lub umowy dotyczącej obowiązku alimentacyjnego”. Przepis ten jest podstawą do podwyższenia, obniżenia lub wygaśnięcia obowiązku alimentacyjnego.W przypadku pozwu o podwyższenie alimentów zawsze należy zwrócić uwagę na możliwości zarobkowe i majątkowe obu stron sporu. Są one głównym warunkiem podwyższenia alimentów. Taką przesłanką jest również zmiana zakresu uzasadnionych potrzeb uprawnionego do alimentów. Dlatego też o podwyższenie alimentów można starać się gdy ",
+    image:
+      "https://res.cloudinary.com/zielona-g-ra/image/upload/v1666677252/podwyzszenie-alimentow-1024x768_lsumcf.jpg",
+    slug: "podwyzszenie_alimentow",
+  },
+  {
+    id: 13,
+    data: "21-11-2022",
+    title: "Pozew o podwyższenie alimentów",
+    subtitle: "Z jakich powodów można starać się o podwyższenie alimentów?",
+    content:
+      "Obowiązek alimentacyjny dotyczy jednego z rodziców, z którym nie zamieszkuje stale. Rodzic jest zobowiązany wnosić określoną wysokość wpłat na konto drugiego rodzica, który jest opiekunem dziecka. Pieniądze te przeznaczone są na bieżące i przyszłe potrzeby dziecka. Czasem jednak zdarza się tak, że na początku ustalona kwota przestaje być wystarczająca. Może tak być z wielu powodów. Jednak w tym przypadku rodzic opiekun ma prawo do wniesienia pozwu o podwyższenie alimentów. Jeśli zastanawiasz się jak to zrobić koniecznie przeczytaj nasz artykuł. A może jesteś drugą stroną i uważasz podwyższenie alimentów za nieuzasadnione – dowiedz się w jaki sposób możesz się bronić.Obowiązek alimentacyjny rodziców wobec dzieci określają przepisy Kodeksu rodzinnego i opiekuńczego. O samym obowiązku mówi art. 133 §1 – „Rodzice obowiązani są do świadczeń alimentacyjnych względem dziecka, które nie jest jeszcze w stanie utrzymać się samodzielnie, chyba że dochody z majątku dziecka wystarczają na pokrycie kosztów jego utrzymania i wychowania”.      Kodeks rodzinny i opiekuńczy reguluje także zakres świadczeń, który według art. 135 §1 zależy od usprawiedliwionych potrzeb dziecka i zarobkowych a także majątkowych możliwości osoby zobowiązanej do ich wypłacania.  Natomiast art. 138 k.r.o. mówi, że: „W razie zmiany stosunków można żądać zmiany orzeczenia lub umowy dotyczącej obowiązku alimentacyjnego”. Przepis ten jest podstawą do podwyższenia, obniżenia lub wygaśnięcia obowiązku alimentacyjnego.W przypadku pozwu o podwyższenie alimentów zawsze należy zwrócić uwagę na możliwości zarobkowe i majątkowe obu stron sporu. Są one głównym warunkiem podwyższenia alimentów. Taką przesłanką jest również zmiana zakresu uzasadnionych potrzeb uprawnionego do alimentów. Dlatego też o podwyższenie alimentów można starać się gdy ",
+    image:
+      "https://res.cloudinary.com/zielona-g-ra/image/upload/v1666677252/podwyzszenie-alimentow-1024x768_lsumcf.jpg",
+    slug: "podwyzszenie_alimentow",
   },
 ];

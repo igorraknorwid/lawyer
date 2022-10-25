@@ -1,0 +1,77 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Burger from "../../components/Burger";
+import Second from "../../components/Second.astro";
+import AboutUs from "../../components/AboutUs.astro";
+import Onas from "../../components/onas/Onas";
+import Contacts from "../../components/contacts/Contacts.astro";
+import Footer from "../../components/footer/Footer.astro";
+import { AboutData } from "../../types";
+import { blog } from "../../content/blog";
+
+export async function getStaticPaths({ paginate }) {
+  const astronautPages = [
+    {
+      astronaut: "Neil Armstrong",
+    },
+    {
+      astronaut: "Buzz Aldrin",
+    },
+    {
+      astronaut: "Sally Ride",
+    },
+    {
+      astronaut: "John Glenn",
+    },
+  ];
+
+  const blogPages = blog.map((item) => {
+    const short = [...item.content].slice(0, 200).join("") + "...";
+    return {
+      image: item.image,
+      slug: item.slug,
+      title: item.title,
+      short,
+    };
+  });
+  // Generate pages from our array of astronauts, with 2 to a page
+  return paginate(blogPages, { pageSize: 5 });
+}
+// All paginated data is passed on the "page" prop
+const { page } = Astro.props;
+---
+
+<Layout
+  title='Prawnik ds. rozwodów w Gdańsku | O nas'
+  description='Zadzwoń do adwokata rozwodowego i jego zespół ma ponad 25-letnie doświadczenie. Bezpłatna konsultacja pod numerem 123-456-789'
+>
+  <Second />
+  <section class='w-8/12 mx-auto py-24'>
+    <h1>Page {page.currentPage}</h1>
+    <ul
+      class='grid grid-cols-2 gap-x-10 gap-y-10 py-24 items-center justify-center'
+    >
+      {
+        page.data.map(({ image, slug, title, short }, index) => (
+          <li class={`${index === 0 ? "col-span-full" : ""}`}>
+            <img src={image} />
+            <div class='mt-2'>
+              <a href={`/blog/${slug}/`} class='uppercase cursor-pointer'>
+                <h3>{title}</h3>
+              </a>
+              <div class='mt-2'>{short}</div>
+              <a href={`/blog/${slug}/`} class='uppercase cursor-pointer'>
+                <div class='mt-8 text-blue-300 hover:text-blue-700'>
+                  Czytaj dalej
+                </div>
+              </a>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <Contacts />
+  <Footer />
+</Layout>

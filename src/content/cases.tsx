@@ -1,13 +1,6 @@
----
-import Layout from "../layouts/Layout.astro";
 import { TCase } from "../types";
-import Burger from "../components/Burger";
-import Second from "../components/Second.astro";
-import Contacts from "../components/contacts/Contacts.astro";
-import Footer from "../components/footer/Footer.astro";
-import { cases } from "../content/cases";
 
-const myCases: TCase[] = [
+export const cases: TCase[] = [
   {
     id: 1,
     slug: "opieka-nad-dzieckiem",
@@ -73,63 +66,3 @@ const myCases: TCase[] = [
       "Sprawa o zaprzeczenie ojcostwa ma sens w momencie, w którym mąż matki nie jest biologicznym ojcem jej dziecka. W takiej sytuacji zachodzi domniemanie, iż ojcem malucha jest właśnie wskazany wyżej mąż. Taki przepis widnieje w art. 62 Kodeksu rodzinnego i opiekuńczego. Oczywiście można to skutecznie obalić, ale konieczne jest przeprowadzenie wspomnianej sprawy. Dopiero, gdy sprawa się zakończy w dokumentach pojawi się nazwisko ojca biologicznego. Wcześniej, w świetle prawa, ojcem dziecka będzie mąż matki. Dla niektórych może to być dość skomplikowane, ale w sądach jest wiele takich spraw i są one przeprowadzane w dość szybkim tempie. Wszystko to ma na celu chronić dobro narodzonego dziecka. Zasada domniemania obowiązuje wtedy, gdy dziecko urodzi się w trakcie trwania danego małżeństwa lub przed upływem trzystu dni od jego ustania.Pozew o zaprzeczenie ojcostwa powinien być złożony w ciągu maksymalnie dwunastu miesięcy od dnia, kiedy mąż matki dowiedział się o tym, iż na świat przyszło dziecko jego żony (nie później niż do dnia osiągnięcia przez wskazane dziecko pełnoletności). Nie jest jednak powiedziane, iż z takim wnioskiem może wystąpić jedynie mąż. Zaprzeczenia ojcostwa może również żądać. Jeśli mąż matki decyduje się na pozew o zaprzeczenie ojcostwa może z nim wystąpić przeciwko matce dziecka lub dziecku. Najlepiej współpracować z adwokatem, który specjalizuje się w przeprowadzaniu takich spraw, aby wiedzieć, jakie czynności wykonywać krok po kroku. W takich sprawach najważniejsze jest to, aby wykazać, iż mąż matki nie jest ojcem biologicznym narodzonego dziecka. Niekiedy nie jest to trudne, ponieważ wystarczą zeznania obu zainteresowanych stron (np. w momencie, w którym obie strony nie miały ze sobą kontaktu przez kilkanaście miesięcy, a w tym czasie urodziło się dziecko).Mąż może też wykazać, że nie jest w stanie posiadać dzieci ze względów zdrowotnych. Oczywiście najpewniejsze są badania DNA, ale są one wykonywane w ostateczności. Wydłużają całą procedurę i nie zawsze okazują się koniecznością. Problem występuje wtedy, gdy jedna ze stron odmawia poddaniu się badaniom DNA. Wtedy należy ubiegać się o zgodę na ich przeprowadzenie od sądu opiekuńczego.",
   },
 ];
-
-export async function getStaticPaths() {
-  // const response = await fetch('https://fakestoreapi.com/products')
-
-  return cases.map((item) => ({
-    params: { slug: item.slug },
-    props: { item },
-  }));
-}
-
-interface Props {
-  item: TCase;
-}
-
-const { slug } = Astro.params;
-const { item } = Astro.props as Props;
-
-const menu = [
-  { id: 1, slug: "/", title: "Witam" },
-  { id: 2, slug: "o-nas", title: "O nas" },
-];
----
-
-<Layout title={` ${item.title}`} description={`Radca prawny | ${item.title}`}>
-  <!-- <Burger links={menu} url_cuted_param={currentPath} client:load /> -->
-  <Second />
-  <section class='cases w-full lg:w-9/12 mx-auto py-24'>
-    <div class='lg:flex lg:gap-x-10'>
-      <div class='lg:basis-3/4'>
-        <h1 class='text-3xl font-bold'>{item.title}</h1>
-        <div class='text-2xl font-bold mt-4'>{item.text}</div>
-        <div class='text-lg mt-4'>{item.content}</div>
-      </div>
-      <div class='lg:basis-1/4'>
-        <ul>
-          {
-            myCases.map((item, index) => (
-              <>
-                <li class={`${index === 0 ? "" : "mt-4"}`}>
-                  <a href={`/${item.slug}/`} class='uppercase cursor-pointer'>
-                    {item.title}
-                  </a>
-                </li>
-              </>
-            ))
-          }
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <Contacts />
-  <Footer />
-</Layout>
-
-<style>
-  .cases > * + * {
-    margin-top: 20px;
-  }
-</style>
