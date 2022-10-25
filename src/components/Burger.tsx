@@ -23,7 +23,7 @@ interface IMenu {
 
 function Menu({ links }: IMenu) {
   return (
-    <ul className='topmenu topmenu_text text-white text-xl xl:text-3xl font-light'>
+    <ul className='topmenu topmenu_text text-white text-xl xl:text-2xl font-light'>
       {links.map((link, index) => {
         return (
           <li className='topmenu_item' key={link.id}>
