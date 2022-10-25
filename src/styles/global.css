@@ -1,22 +1,15 @@
 @font-face {
-  font-family: "Pathway Gothic One";
-  src: url("/fonts/PathwayGothicOne-Regular.ttf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "GemunuLibre-Regular";
-  src: url("/fonts/GemunuLibre-Regular.ttf") format("opentype");
+  font-family: "Oswald-Regular";
+  src: url("/fonts/Oswald-Regular.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Oswald-Regular";
-  src: url("/fonts/Oswald-Regular.ttf") format("opentype");
-  font-weight: normal;
+  font-family: "Oswald-Light";
+  src: url("/fonts/Oswald-Light.ttf") format("opentype");
+  font-weight: light;
   font-style: normal;
   font-display: swap;
 }
@@ -69,6 +62,8 @@ h1 {
   max-height: 130px;
 }
 
+/* Swiper */
+
 .swiper-button-next::after,
 .swiper-button-prev::after {
   font-size: 20px !important;
@@ -82,8 +77,16 @@ h1 {
   right: 0 !important;
 }
 
+/* Text shadow */
+
 .text_shadow {
   text-shadow: 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Menu */
+
+.topmenu_text {
+  font-family: "Oswald-Light", sans-serif;
 }
 
 .topmenu > li + li {
@@ -94,7 +97,7 @@ h1 {
   background-color: rgb(59 130 246);
 }
 
-/* Loade */
+/* Loader */
 
 #preloader {
   background: rgb(11, 88, 177);
