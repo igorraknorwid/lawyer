@@ -6,25 +6,18 @@ import AboutUs from "../../components/AboutUs.astro";
 import Onas from "../../components/onas/Onas";
 import Contacts from "../../components/contacts/Contacts.astro";
 import Footer from "../../components/footer/Footer.astro";
-import { AboutData } from "../../types";
+import { AboutData, AwardsData } from "../../types";
 import { blog } from "../../content/blog";
+import Awards from "../../components/Awards";
+
+const response = await fetch(
+  "https://sheltered-river-97651.herokuapp.com/api/awards"
+);
+const awards_data = (await response.json()) as AwardsData;
+const data = awards_data.data;
+const x = data.map((item) => item.attributes);
 
 export async function getStaticPaths({ paginate }) {
-  const astronautPages = [
-    {
-      astronaut: "Neil Armstrong",
-    },
-    {
-      astronaut: "Buzz Aldrin",
-    },
-    {
-      astronaut: "Sally Ride",
-    },
-    {
-      astronaut: "John Glenn",
-    },
-  ];
-
   const blogPages = blog.map((item) => {
     const short = [...item.content].slice(0, 200).join("") + "...";
     return {
@@ -39,6 +32,8 @@ export async function getStaticPaths({ paginate }) {
 }
 // All paginated data is passed on the "page" prop
 const { page } = Astro.props;
+const total = Math.ceil(page.total / page.size);
+const pageArray = Array.from({ length: total }, (v, i) => i + 1);
 ---
 
 <Layout
@@ -47,21 +42,26 @@ const { page } = Astro.props;
 >
   <Second />
   <section class='w-8/12 mx-auto py-24'>
-    <h1>Page {page.currentPage}</h1>
     <ul
       class='grid grid-cols-2 gap-x-10 gap-y-10 py-24 items-center justify-center'
     >
       {
         page.data.map(({ image, slug, title, short }, index) => (
-          <li class={`${index === 0 ? "col-span-full" : ""}`}>
-            <img src={image} />
-            <div class='mt-2'>
+          <li
+            class={`${
+              index === 0 ? "col-span-full" : ""
+            } flex flex-col border `}
+          >
+            <img class='' src={image} />
+            <div class='mt-5 p-5'>
               <a href={`/blog/${slug}/`} class='uppercase cursor-pointer'>
-                <h3>{title}</h3>
+                <h3 class='text-3xl hover:text-blue-700 transition-all'>
+                  {title}
+                </h3>
               </a>
               <div class='mt-2'>{short}</div>
               <a href={`/blog/${slug}/`} class='uppercase cursor-pointer'>
-                <div class='mt-8 text-blue-300 hover:text-blue-700'>
+                <div class='mt-2 text-slate-600 hover:text-blue-700 transition-all'>
                   Czytaj dalej
                 </div>
               </a>
@@ -70,8 +70,54 @@ const { page } = Astro.props;
         ))
       }
     </ul>
+    <div>
+      <ul class='flex gap-x-5 justify-center items-center'>
+        {
+          page.currentPage === 1 ? (
+            <li class='text-slate-400/80 cursor-auto pr-10'>
+              <i class='arrow_disabled left' />
+            </li>
+          ) : (
+            <li class='pr-10'>
+              <a href={`/blog/${page.currentPage - 1}/`}>
+                <i class='arrow left' />
+              </a>
+            </li>
+          )
+        }
+
+        {
+          pageArray.map((num) => (
+            <li>
+              <a
+                class={`px-4 py-2 ${
+                  num === page.currentPage ? "bg-blue-500 text-white" : ""
+                }`}
+                href={`/blog/${num}/`}
+              >
+                {num}
+              </a>
+            </li>
+          ))
+        }
+        {
+          page.currentPage === total ? (
+            <li class='text-slate-400/80 cursor-auto pl-10'>
+              <i class='arrow_disabled right' />
+            </li>
+          ) : (
+            <li>
+              <a class='pl-10' href={`/blog/${page.currentPage + 1}/`}>
+                <i class='arrow right' />
+              </a>
+            </li>
+          )
+        }
+      </ul>
+    </div>
   </section>
 
+  <Awards images={x} client:visible />
   <Contacts />
   <Footer />
 </Layout>
