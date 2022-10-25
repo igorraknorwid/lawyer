@@ -17,49 +17,31 @@ interface ILink {
 
 interface IMenu {
   links: ILink[];
-  url_cuted_param?: string;
+  // url_cuted_param?: string;
 }
 
-function Menu({ links, url_cuted_param }: IMenu) {
-  const [state, setState] = React.useState(0);
-
+function Menu({ links }: IMenu) {
   return (
-    <ul className="topmenu text-white text-xl xl:text-3xl">
+    <ul className='topmenu text-white text-xl xl:text-3xl'>
       {links.map((link, index) => {
-        if (url_cuted_param) {
-          const isIncludes = url_cuted_param === link.slug + "/"; //It does not work locally
-
-          return (
-            <li className="topmenu_item" key={link.id}>
-              <div className="topmenu_div flex justify-start items-center">
-                <div
-                  className={`topmenu_target w-2 h-8 ${
-                    isIncludes ? "bg-blue-500" : "bg-transparent"
-                  } `}
-                ></div>
-                <div className="pl-10">
-                 
-                      {index === 0 ? <a href='/'>Witam</a> : <a href={`/${link.slug}`}>{link.title}</a>  }
-                </div>
+        return (
+          <li className='topmenu_item' key={link.id}>
+            <div className='topmenu_div flex justify-start items-center'>
+              <div
+                className={`topmenu_target w-2 h-8 ${
+                  index === 0 ? "bg-blue-500" : "bg-transparent"
+                } `}
+              ></div>
+              <div className='pl-10'>
+                {index === 0 ? (
+                  <a href='/'>Witam</a>
+                ) : (
+                  <a href={`/${link.slug}/`}>{link.title}</a>
+                )}
               </div>
-            </li>
-          );
-        } else {
-          return (
-            <li className="topmenu_item" key={link.id}>
-              <div className="topmenu_div flex justify-start items-center">
-                <div
-                  className={`topmenu_target w-2 h-8 ${
-                    index === 0 ? "bg-blue-500" : "bg-transparent"
-                  } `}
-                ></div>
-                <div className="pl-10">
-                  {index === 0 ? <a href='/'>Witam</a> : <a href={`/${link.slug}/`}>{link.title}</a>  }               
-                </div>
-              </div>
-            </li>
-          );
-        }
+            </div>
+          </li>
+        );
       })}
     </ul>
   );
@@ -74,7 +56,7 @@ export default function TopNavbar({ links, url_cuted_param }: ITopNavbar) {
   const [state, setState] = React.useState(false);
   const [init, setInit] = React.useState(true);
   return (
-    <div className="">
+    <div className=''>
       <div
         className={`absolute xl:top-5 z-20 w-[90px] lg:w-[180px] h-[90px] lg:h-[180px] right-0 bg-cyan-900 flex justify-center items-center ${
           state ? "bg-cyan-400" : "bg-[#0e1c39]"
@@ -100,7 +82,7 @@ export default function TopNavbar({ links, url_cuted_param }: ITopNavbar) {
             : "translate-x-full transition-all duration-700"
         } `}
       >
-        <Menu links={links} url_cuted_param={url_cuted_param} />
+        <Menu links={links} />
       </div>
     </div>
   );
