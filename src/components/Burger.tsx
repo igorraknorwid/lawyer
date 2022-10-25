@@ -1,4 +1,5 @@
 import React from "react";
+import { cases } from "../content/cases";
 import "../styles/burger.css";
 
 interface ILinkCildren {
@@ -22,7 +23,7 @@ interface IMenu {
 
 function Menu({ links }: IMenu) {
   return (
-    <ul className='topmenu text-white text-xl xl:text-3xl'>
+    <ul className='topmenu text-white text-xl xl:text-3xl font-light'>
       {links.map((link, index) => {
         return (
           <li className='topmenu_item' key={link.id}>
@@ -38,6 +39,25 @@ function Menu({ links }: IMenu) {
                 ) : (
                   <a href={`/${link.slug}/`}>{link.title}</a>
                 )}
+              </div>
+            </div>
+          </li>
+        );
+      })}
+      <li className='topmenu_item'>
+        <div className='topmenu_div flex justify-start items-center'>
+          <div className={`topmenu_target w-2 h-8 `}></div>
+          <div className='pl-10 cursor-pointer'>Zakres Usług</div>
+        </div>
+      </li>
+
+      {cases.map((link) => {
+        return (
+          <li className=' topmenu_item lowercase' key={link.id}>
+            <div className='topmenu_div flex justify-start items-center'>
+              <div className={`topmenu_target w-6 h-8 `}></div>
+              <div className='pl-10'>
+                <a href={`/${link.slug}/`}>{link.title}</a>
               </div>
             </div>
           </li>
