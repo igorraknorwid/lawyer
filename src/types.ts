@@ -93,7 +93,7 @@ export interface AboutData {
   data: adoutDataType;
 }
 
-export interface IBook {
+export interface IBlog{
   id: number;
   data: string;
   slug: string;
