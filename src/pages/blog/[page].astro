@@ -9,6 +9,7 @@ import { AwardsData } from "../../types";
 
 import { blog } from "../../content/blog";
 import { menu } from "../../content/menu";
+import BlogCard from "../../components/blog/BlogCard";
 
 const response = await fetch(
   "https://sheltered-river-97651.herokuapp.com/api/awards"
@@ -43,32 +44,40 @@ const pageArray = Array.from({ length: total }, (v, i) => i + 1);
   <Burger links={menu} client:load />
   <Second />
   <section class='w-full lg:w-8/12 mx-auto lg:py-24'>
-    <p class='my-10 text-3xl text-center'>Nasz Blog</p>
+    <p class='text-3xl text-center uppercase'>Nasz Blog</p>
     <ul
       class='grid grid-cols-1 lg:grid-cols-2 lg:gap-x-10 lg:gap-y-10 lg:py-24 items-center justify-center'
     >
       {
         page.data.map(({ image, slug, title, short }, index) => (
-          <li
-            class={`${
-              index === 0 ? "col-span-full" : ""
-            } flex flex-col border `}
-          >
-            <img class='' src={image} />
-            <div class='mt-5 p-5'>
-              <a href={`/blog/${slug}/`} class='uppercase cursor-pointer'>
-                <h3 class='text-3xl hover:text-blue-700 transition-all'>
-                  {title}
-                </h3>
-              </a>
-              <div class='mt-2'>{short}</div>
-              <a href={`/blog/${slug}/`} class='uppercase cursor-pointer'>
-                <div class='mt-2 text-slate-600 hover:text-blue-700 transition-all'>
-                  Czytaj dalej
-                </div>
-              </a>
-            </div>
-          </li>
+          <BlogCard
+            client:visible
+            image={image}
+            slug={slug}
+            title={title}
+            short={short}
+            index={index}
+          />
+          // <li
+          //   class={`${
+          //     index === 0 ? "col-span-full" : ""
+          //   } flex flex-col border `}
+          // >
+          //   <img class='' src={image} />
+          //   <div class='mt-5 p-5'>
+          //     <a href={`/blog/${slug}/`} class='uppercase cursor-pointer'>
+          //       <h3 class='text-3xl hover:text-blue-700 transition-all'>
+          //         {title}
+          //       </h3>
+          //     </a>
+          //     <div class='mt-2'>{short}</div>
+          //     <a href={`/blog/${slug}/`} class='uppercase cursor-pointer'>
+          //       <div class='mt-2 text-slate-600 hover:text-blue-700 transition-all'>
+          //         Czytaj dalej
+          //       </div>
+          //     </a>
+          //   </div>
+          // </li>
         ))
       }
     </ul>
