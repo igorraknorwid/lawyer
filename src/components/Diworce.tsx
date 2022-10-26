@@ -85,7 +85,7 @@ export default function Divorce({ image_src, image_alt }: IDivorce) {
       <div className='flex justify-center'>
         <a
           href='#myform'
-          className='px-40 mt-10 basis-full text-center uppercase xl:text-[2vh] py-4  bg-[#d8380d] hover:bg-yellow-400 hover:text-gray-800 cursor-pointer max-w-max mx-auto'
+          className='px-40 mt-10 basis-full text-center uppercase xl:text-[2vh] py-4  bg-[#042748] hover:bg-[#037e78] cursor-pointer max-w-max mx-auto'
         >
           skontaktuj się z nami
         </a>
