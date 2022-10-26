@@ -9,34 +9,29 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { ITestimonial } from "../../types";
 
-
 interface IMySlide {
   item: ITestimonial;
-  state:boolean
+  state: boolean;
 }
 
 interface IMySlider {
   items: ITestimonial[];
-  state:boolean
+  state: boolean;
 }
 
-
-const Slide = ({ item,state }: IMySlide) => {
- 
+const Slide = ({ item, state }: IMySlide) => {
   return (
-    <div className='relative py-5 px-8 xl:px-20  '>  
-      <img className='' src={state ? "/stars.png" : ""} 
-      alt={"starts"} />
+    <div className='relative py-5 px-8 xl:px-20  '>
+      <img className='' src={state ? "/stars.png" : ""} alt={"starts"} />
       <div className='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>
       <p className='text-center  xl:text-lg'>{item.text}</p>
       <div className='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>
       <p className='text-center'>{item.name}</p>
-     
     </div>
   );
 };
 
-export default ({ items,state }: IMySlider ) => {
+export default ({ items, state }: IMySlider) => {
   return (
     <div>
       <Swiper
@@ -61,10 +56,10 @@ export default ({ items,state }: IMySlider ) => {
           },
         }}
       >
-        {items.map((item) => (
-          <div key={item.id}>
+        {items.map((item, index) => (
+          <div key={index}>
             <SwiperSlide>
-              <Slide item={item} state={state}/>
+              <Slide item={item} state={state} />
             </SwiperSlide>
           </div>
         ))}
