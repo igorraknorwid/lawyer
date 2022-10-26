@@ -30,7 +30,7 @@ export default function Awards({ images }: IAward) {
             <img
               className='xl:max-h-32'
               src={state ? img.src : ""}
-              alt={img.myalt}
+              alt='award'
             />
           </li>
         ))}
