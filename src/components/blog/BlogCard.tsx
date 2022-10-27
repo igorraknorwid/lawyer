@@ -41,7 +41,7 @@ export default function BlogCard({
   }, []);
 
   return (
-    <li
+    <div
       className={`${index === 0 ? "col-span-full" : ""} flex flex-col border `}
     >
       <div style={{ height: "1px" }} ref={topRef}></div>
@@ -58,6 +58,6 @@ export default function BlogCard({
         </a>
         <div style={{ height: "1px" }} ref={bottomRef}></div>
       </div>
-    </li>
+    </div>
   );
 }
