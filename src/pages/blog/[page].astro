@@ -70,7 +70,10 @@ const pageArray = Array.from({ length: total }, (v, i) => i + 1);
             </li>
           ) : (
             <li class='pr-10'>
-              <a href={`/blog/${page.currentPage - 1}/`}>
+              <a
+                href={`/blog/${page.currentPage - 1}/`}
+                aria-label='Go to the previous page'
+              >
                 <i class='arrow left' />
               </a>
             </li>
@@ -98,7 +101,11 @@ const pageArray = Array.from({ length: total }, (v, i) => i + 1);
             </li>
           ) : (
             <li>
-              <a class='pl-10' href={`/blog/${page.currentPage + 1}/`}>
+              <a
+                class='pl-10'
+                href={`/blog/${page.currentPage + 1}/`}
+                aria-label='Go to the next page'
+              >
                 <i class='arrow right' />
               </a>
             </li>
