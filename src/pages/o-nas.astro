@@ -7,8 +7,6 @@ import Onas from "../components/onas/Onas";
 import Contacts from "../components/contacts/Contacts.astro";
 import Footer from "../components/footer/Footer.astro";
 import { AboutData } from "../types";
-const pathname = new URL(Astro.request.url).pathname;
-const currentPath = pathname.slice(1);
 import { menu } from "../content/menu";
 
 const resAbout = await fetch(
@@ -21,7 +19,7 @@ const about: AboutData = await resAbout.json();
   title='Prawnik ds. rozwodów w Gdańsku | O nas'
   description='Zadzwoń do adwokata rozwodowego i jego zespół ma ponad 25-letnie doświadczenie. Bezpłatna konsultacja pod numerem 123-456-789'
 >
-  <!-- <Burger links={menu} url_cuted_param={currentPath} client:idle /> -->
+  <Burger links={menu} client:idle />
   <Second />
   <AboutUs />
   <Onas about={about} client:load />

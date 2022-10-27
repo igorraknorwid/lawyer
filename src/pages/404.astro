@@ -1,5 +1,21 @@
-<div id='main'>
-  <div class='fof'>
-    <h1>Error 404 test</h1>
+---
+import Layout from "../layouts/Layout.astro";
+import Second from "../components/Second.astro";
+import Onas from "../components/onas/Onas";
+import Contacts from "../components/contacts/Contacts.astro";
+import Footer from "../components/footer/Footer.astro";
+
+<Layout
+  title='Prawnik ds. rozwodów w Gdańsku | Ta strona nie istneje'
+  description='Zadzwoń do adwokata rozwodowego i jego zespół ma ponad 25-letnie doświadczenie. Bezpłatna konsultacja pod numerem 123-456-789'
+>
+  <Second />
+  <div id='main'>
+    <div class='fof'>
+      <h1 class='text-6xl'>Ta strona nie istneje</h1>
+    </div>
   </div>
-</div>
+  <Contacts />
+  <Footer />
+</Layout>;
+---
