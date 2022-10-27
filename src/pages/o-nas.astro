@@ -21,7 +21,7 @@ const about: AboutData = await resAbout.json();
   title='Prawnik ds. rozwodów w Gdańsku | O nas'
   description='Zadzwoń do adwokata rozwodowego i jego zespół ma ponad 25-letnie doświadczenie. Bezpłatna konsultacja pod numerem 123-456-789'
 >
-  <Burger links={menu} url_cuted_param={currentPath} client:load />
+  <Burger links={menu} url_cuted_param={currentPath} client:idle />
   <Second />
   <AboutUs />
   <Onas about={about} client:load />

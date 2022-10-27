@@ -35,7 +35,7 @@ const { item } = Astro.props as Props;
 ---
 
 <Layout title={` ${item.title}`} description={`Radca prawny | ${item.title}`}>
-  <Burger links={menu} client:load />
+  <Burger links={menu} client:idle />
   <Second />
   <section class='w-full lg:w-9/12 mx-auto py-12'>
     <div>
