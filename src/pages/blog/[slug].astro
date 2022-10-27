@@ -39,7 +39,9 @@ const { item } = Astro.props as Props;
   <Second />
   <section class='cases w-full lg:w-9/12 mx-auto py-12'>
     <div>
-      <h3 class='mb-24 text-3xl lg:text-6xl font-bold'>{item.title}</h3>
+      <h3 class='mb-24 text-3xl lg:text-6xl font-bold text-center'>
+        {item.title}
+      </h3>
       <div class='mt-10'>
         <img src={item.image} alt={item.subtitle} />
         <p class='my-4 text-xl lg:text-2xl font-bold'>{item.subtitle}</p>
