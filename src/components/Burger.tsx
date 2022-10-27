@@ -24,7 +24,7 @@ interface IMenu {
 function Menu({ links }: IMenu) {
   const [state, setState] = React.useState(true);
   return (
-    <ul className='topmenu topmenu_text text-white text-xl xl:text-2xl font-light'>
+    <ul className='topmenu topmenu_text text-white text-xl xl:text-2xl font-light '>
       {links.map((link, index) => {
         return (
           <li className='topmenu_item' key={link.id}>
@@ -87,7 +87,7 @@ export default function TopNavbar({ links, url_cuted_param }: ITopNavbar) {
   return (
     <div className=''>
       <div
-        className={`absolute xl:top-5 z-20 w-[90px] lg:w-[180px] h-[90px] lg:h-[180px] right-0 bg-cyan-900 flex justify-center items-center ${
+        className={`fixed xl:top-5 z-20 w-[90px] lg:w-[180px] h-[90px] lg:h-[180px] right-0 bg-cyan-900 flex justify-center items-center ${
           state ? "bg-cyan-400" : "bg-[#0e1c39]"
         }`}
       >
