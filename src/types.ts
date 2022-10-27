@@ -59,6 +59,7 @@ export type TCase = {
   slug: string;
   title: string;
   text: string;
+  content: string;
 };
 
 interface CaseType {
