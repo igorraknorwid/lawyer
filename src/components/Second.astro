@@ -28,21 +28,21 @@ const { number_phone, visible_phone } = contact_data.data.attributes;
   </div>
 
   <div
-    class='absolute top-[60vh] lg:top-[24vh] lg:left-[5vw] lg:max-w-[50%] flex flex-col justify-center text-white my-stroke'
+    class='absolute top-[50vh] lg:top-[24vh] lg:left-[5vw] mx-2 lg:max-w-[50%] flex flex-col justify-center text-white my-stroke'
   >
     <h1
       class='text-center text-xl lg:text-[7vh] tracking-widest lg:leading-[9vh] mb-5 lg:mb-5 xl:mb-10 bg-black/50 lg:bg-transparent mx-2 xl:mx-0 p-2 xl:p-0 uppercase'
     >
       Rozwód w Gdańsku
     </h1>
-    <h2
-      class='text-center text-xl xl:text-[4vh] mb-5 lg:mb-5 xl:mb-10 xl:tracking-[6px] mx-2 bg-black/50 lg:bg-transparent p-2'
+    <p
+      class='hidden lg:block text-center text-xl xl:text-[4vh] mb-5 lg:mb-5 xl:mb-10 xl:tracking-[6px] mx-2 bg-black/50 lg:bg-transparent p-2'
     >
       20 lat doświadczenia
-    </h2>
+    </p>
     <a
       href='#myform'
-      class='text-center uppercase xl:text-[2vh] py-2 lg:py-6 lg:px-10 bg-[#d8380d] hover:bg-yellow-400 hover:text-gray-800 cursor-pointer max-w-max mx-auto lg:tracking-[4px] xl:mx-0'
+      class='text-center uppercase xl:text-[2vh] py-2 lg:py-6 mx-2 lg:px-10 bg-[#d8380d] hover:bg-yellow-400 hover:text-gray-800 cursor-pointer max-w-max lg:mx-auto lg:tracking-[4px] xl:mx-0'
       >{button}</a
     >
   </div>
@@ -56,7 +56,7 @@ const { number_phone, visible_phone } = contact_data.data.attributes;
 
   @media (max-width: 767px) {
     .prime {
-      height: 700px;
+      height: 500px;
       background: url(/hero-mini.webp) no-repeat bottom / cover;
     }
   }

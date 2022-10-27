@@ -2,7 +2,7 @@
 import Navigation from "../components/Navigation.astro";
 interface Props {
   title: string;
-  description:string;
+  description: string;
 }
 const { title = "Astro default" } = Astro.props as Props;
 import "../styles/global.css";
@@ -24,15 +24,13 @@ import "../styles/global.css";
     <title>{title}</title>
   </head>
   <body>
-    <div id="preloader">     
-      <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
-      </div>  
-      <slot />
-   <script>
-    var loader = document.getElementById("preloader")   
-    loader.style.display="none"      
-   </script>
+    <div id='preloader'>
+      <div class='lds-ring'><div></div><div></div><div></div><div></div></div>
+    </div>
+    <slot />
+    <script>
+      var loader = document.getElementById("preloader");
+      loader.style.display = "none";
+    </script>
   </body>
 </html>
-
-<
