@@ -48,9 +48,7 @@ export default function BlogCard({
       <img src={state ? image : " "} alt={title} />
       <div className='mt-5 p-5'>
         <a href={`/blog/${slug}/`} className='uppercase cursor-pointer'>
-          <h3 className='text-3xl hover:text-blue-700 transition-all'>
-            {title}
-          </h3>
+          <p className='text-3xl hover:text-blue-700 transition-all'>{title}</p>
         </a>
         <div className='mt-2'>{short}</div>
         <a href={`/blog/${slug}/`} className='uppercase cursor-pointer'>
