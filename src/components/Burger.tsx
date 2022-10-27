@@ -22,7 +22,7 @@ interface IMenu {
 }
 
 function Menu({ links }: IMenu) {
-  const [state, setState] = React.useState(false);
+  const [state, setState] = React.useState(true);
   return (
     <ul className='topmenu topmenu_text text-white text-xl xl:text-2xl font-light'>
       {links.map((link, index) => {
