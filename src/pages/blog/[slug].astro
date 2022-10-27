@@ -32,7 +32,7 @@ const { item } = Astro.props as Props;
   <section class='cases w-full lg:w-9/12 mx-auto py-24'>
     <div>
       <div>
-        <img src={item.image} />
+        <img src={item.image} alt={item.subtitle} />
         <h3>{item.title}</h3>
         <p>{item.subtitle}</p>
         <div>{item.content}</div>

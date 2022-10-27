@@ -45,7 +45,7 @@ export default function BlogCard({
       className={`${index === 0 ? "col-span-full" : ""} flex flex-col border `}
     >
       <div style={{ height: "1px" }} ref={topRef}></div>
-      <img src={state ? image : " "} />
+      <img src={state ? image : " "} alt={title} />
       <div className='mt-5 p-5'>
         <a href={`/blog/${slug}/`} className='uppercase cursor-pointer'>
           <h3 className='text-3xl hover:text-blue-700 transition-all'>
