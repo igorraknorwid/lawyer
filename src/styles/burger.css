@@ -1,6 +1,6 @@
 .burger-btn {
   --btn-primary: #ffffff;
-  --btn-size: 120px;
+  --btn-size: 90px;
   --btn-mini: 60px;
 }
 
@@ -19,7 +19,7 @@
   position: absolute;
   width: var(--btn-size);
   background-color: var(--btn-primary);
-  height: 16px;
+  height: 8px;
   transition: all 0.3s ease 0s;
 }
 

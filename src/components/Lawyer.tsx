@@ -27,7 +27,7 @@ export default function Lawyer({ image_src, image_alt }: ILawyer) {
   }, []);
 
   return (
-    <section className='xl:py-24 w-11/12 xl:w-10/12 m-auto'>
+    <section className='xl:py-24  xl:w-10/12 m-auto'>
       <div style={{ height: "1px" }} ref={topRef}></div>
       <div className='xl:flex'>
         <img
@@ -36,7 +36,7 @@ export default function Lawyer({ image_src, image_alt }: ILawyer) {
           src={state ? image_src : ""}
           alt={image_alt}
         />
-        <div className='xl:pl-24'>
+        <div className='xl:ml-24 px-2 lg:px-0 '>
           <h1 className='text-3xl lg:text-6xl pt-8 xl:pt-0'>
             GDAŃSKI PRAWNIK ROZWODOWY
           </h1>

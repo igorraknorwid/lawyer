@@ -22,7 +22,7 @@ export default function Awards({ images }: IAward) {
   }, []);
 
   return (
-    <section className='py-8 xl:py-20 px-5 xl:px-40 bg-[#f6f4f5]'>
+    <section className='py-8 xl:py-20 px-2 xl:px-40 bg-[#f6f4f5]'>
       <div style={{ height: "1px" }} ref={nextRef}></div>
       <ul className='flex justify-between items-center gap-x-10'>
         {images.map((img, index) => (

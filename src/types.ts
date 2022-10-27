@@ -59,7 +59,6 @@ export type TCase = {
   slug: string;
   title: string;
   text: string;
-  content: string;
 };
 
 interface CaseType {
@@ -93,7 +92,7 @@ export interface AboutData {
   data: adoutDataType;
 }
 
-export interface IBlog{
+export interface IBlog {
   id: number;
   data: string;
   slug: string;

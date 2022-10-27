@@ -56,7 +56,7 @@ function Menu({ links }: IMenu) {
           <li className=' topmenu_item lowercase' key={link.id}>
             <div className='topmenu_div flex justify-start items-center'>
               <div className={`topmenu_target w-6 h-8 `}></div>
-              <div className='pl-10'>
+              <div className='pl-10 text-lg'>
                 <a href={`/${link.slug}/`}>{link.title}</a>
               </div>
             </div>

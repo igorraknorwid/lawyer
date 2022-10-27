@@ -33,14 +33,14 @@ export default function Divorce({ image_src, image_alt }: IDivorce) {
   }, []);
 
   return (
-    <section className=' w-9/12 xl:w-10/12 m-auto my-32'>
+    <section className='px-2 xl:w-10/12 mx-auto mt-24 lg:mt-0 lg:my-24'>
       <div style={{ height: "1px" }} ref={topRef}></div>
-      <h2 className='text-3xl xl:text-6xl pt-8 xl:pt-0 text-center'>
+      <h2 className='text-3xl xl:text-6xl xl:pt-0 text-center'>
         NASI PRAWNICY ROZWODNI Z GDAŃSKU ZAPEWNIAJĄ DOSTOSOWANĄ REPREZENTACJĘ
       </h2>
       <div className='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>
       <div className='xl:flex mb-10 xl:gap-x-10'>
-        <div className='mb-10'>
+        <div className='mb-10 basis-2/3'>
           <div className='text-xl xl:text-xl xl:max-w-3xl'>
             <p className='mb-5'>
               Żadne dwie rodziny nie są takie same. Z kolei nie ma dwóch
@@ -73,7 +73,7 @@ export default function Divorce({ image_src, image_alt }: IDivorce) {
             </p>
           </div>
         </div>
-        <div>
+        <div className='basis-1/3'>
           <img
             style={{ objectPosition: "center", objectFit: "cover" }}
             className=''
@@ -85,7 +85,7 @@ export default function Divorce({ image_src, image_alt }: IDivorce) {
       <div className='flex justify-center'>
         <a
           href='#myform'
-          className='px-40 mt-10 basis-full text-white text-center uppercase xl:text-[3vh] py-4  bg-[#042748] hover:bg-[#037e78] cursor-pointer max-w-max mx-auto lg:tracking-[4px]'
+          className='px-40 lg:mt-10 basis-full text-white text-center uppercase xl:text-[3vh] py-4  bg-[#042748] hover:bg-[#037e78] cursor-pointer max-w-max mx-auto lg:tracking-[4px]'
         >
           skontaktuj się z nami
         </a>
