@@ -37,7 +37,7 @@ const { item } = Astro.props as Props;
 <Layout title={` ${item.title}`} description={`Radca prawny | ${item.title}`}>
   <Burger links={menu} client:load />
   <Second />
-  <section class='cases w-full lg:w-9/12 mx-auto py-12'>
+  <section class='w-full lg:w-9/12 mx-auto py-12'>
     <div>
       <h3 class='mb-24 text-3xl lg:text-6xl font-bold text-center'>
         {item.title}
@@ -53,5 +53,3 @@ const { item } = Astro.props as Props;
   <Contacts />
   <Footer />
 </Layout>
-
-<style></style>
