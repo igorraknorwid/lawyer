@@ -78,12 +78,17 @@ function Menu({ links }: IMenu) {
 
 interface ITopNavbar {
   links: ILink[];
-  url_cuted_param?: string;
+
 }
 
-export default function TopNavbar({ links, url_cuted_param }: ITopNavbar) {
+export default function TopNavbar({ links }: ITopNavbar) {
   const [state, setState] = React.useState(false);
   const [init, setInit] = React.useState(true);
+  React.useEffect(()=>{
+    if(state){
+      document.body.classList.add("ex2")
+    } else { document.body.classList.remove("ex2")}
+  },[state])
   return (
     <div className=''>
       <div

@@ -21,6 +21,10 @@ body {
   scroll-behavior: smooth;
 }
 
+body.ex2 {
+  overflow-y: hidden;
+}
+
 h1 {
   font-family: "Oswald-Regular", sans-serif;
 }
