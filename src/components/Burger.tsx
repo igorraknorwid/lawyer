@@ -87,7 +87,7 @@ export default function TopNavbar({ links, url_cuted_param }: ITopNavbar) {
   return (
     <div className=''>
       <div
-        className={`fixed xl:top-5 z-20 w-[90px] lg:w-[180px] h-[90px] lg:h-[180px] right-0 bg-cyan-900 flex justify-center items-center ${
+        className={`fixed xl:top-5 z-20 w-[50px] lg:w-[150px] h-[50px] lg:h-[150px] right-0 bg-cyan-900 flex justify-center items-center ${
           state ? "bg-cyan-400" : "bg-[#0e1c39]"
         }`}
       >
@@ -105,7 +105,7 @@ export default function TopNavbar({ links, url_cuted_param }: ITopNavbar) {
       </div>
 
       <div
-        className={`fixed top-0 right-0 xl:top-5  z-10 w-[80%] xl:w-[30%] bg-[#0e1c39] pt-[90px]   xl:pt-[180px] pb-10 xl:pb-20  ${
+        className={`fixed top-0 right-0 xl:top-5  z-10 w-[80%] xl:w-[30%] bg-[#0e1c39] pt-[90px]   xl:pt-[150px] pb-10 xl:pb-20  ${
           state
             ? "translate-x-0 transition-all duration-700"
             : "translate-x-full transition-all duration-700"
