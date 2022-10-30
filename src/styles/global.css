@@ -177,6 +177,14 @@ h1 {
   transition: all 0.3s;
 }
 
+.arrow.topmenu {
+  border: solid rgb(255, 255, 255);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
+  transition: all 0.3s;
+}
+
 .arrow_disabled {
   border: solid rgba(43, 38, 38, 0.199);
   border-width: 0 3px 3px 0;
