@@ -2,6 +2,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import InputMask from "react-input-mask";
 
 const inputGroupStyles = {
   div: "w-full  px-3 mb-4 ",
@@ -17,7 +18,11 @@ type InputProps = React.DetailedHTMLProps<
 >;
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>((props, ref) => (
-  <input ref={ref} {...props} />
+  <input ref={ref} {...props} onChange= {(e) => {
+    if(e.target.id === "phone"){
+      e.target.value=999999999
+      console.log(e.target.value)}
+    }}/>
 ));
 
 type Option = {
@@ -73,10 +78,11 @@ const Form: React.FC = () => {
     handleSubmit,
     reset,
     formState: { errors },
+    control
   } = useForm<IFormInput>();
 
   const onSubmit = (data: IFormInput) => {
-    console.log(data);
+    
     const addMessage = () => {
       const response = axios.post(
         `https://sheltered-river-97651.herokuapp.com/api/forms`,
@@ -162,9 +168,31 @@ const Form: React.FC = () => {
             placeholder='Telefon'
             className={inputGroupStyles.input}
             id='phone'
-            type='text'
+            type='tel'
+        //      onChange={e => {
+        //   if (e.target.value) {
+        //     e.target.value = e.target.value.toUpperCase();
+        //   }
+        // }}
+        
+            // mask="999-999-999"
+            // defaultValue={"000000000"}
             {...register("phone", { required: true, pattern: /^\d{9}$/ })}
           />
+           {/* <input
+             placeholder='Telefon'
+             type='tel'
+        name="phone"
+        className={inputGroupStyles.input}
+        onChange={e => {
+          if (e.target.value) {
+            e.target.value = e.target.value;
+          }
+        }}
+        
+        id='phone'
+        ref={register("phone",{ required: true, pattern: /^\d{9}$/ })}
+      /> */}
           {errors?.phone?.type === "pattern" && (
             <p className={inputGroupStyles.errorParagraf}>
               Proszę wpisać poprawny numer telefonu
