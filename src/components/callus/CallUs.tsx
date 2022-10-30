@@ -43,7 +43,7 @@ export default function CallUs({ title, src, content }: ICallUs) {
           <h2 className='text-3xl lg:text-6xl text-center mb-10'>{title}</h2>
           <div className='lg:text-lg'>
             {content.map((item, index) => (
-              <p className={index !== 0 && "mt-5"} key={index}>
+              <p className={index !== 0 ? "mt-5" :""} key={index}>
                 {item.paragraph}
               </p>
             ))}

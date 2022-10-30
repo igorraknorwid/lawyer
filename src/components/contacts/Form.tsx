@@ -2,7 +2,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import InputMask from "react-input-mask";
+
 
 const inputGroupStyles = {
   div: "w-full  px-3 mb-4 ",
@@ -20,7 +20,7 @@ type InputProps = React.DetailedHTMLProps<
 const Input = React.forwardRef<HTMLInputElement, InputProps>((props, ref) => (
   <input ref={ref} {...props} onChange= {(e) => {
     if(e.target.id === "phone"){
-      e.target.value=999999999
+      e.target.value=e.target.value.replace(/\s/g, "").match(/.{1,3}/g)?.join(" ").substr(0, 11) || ""
       console.log(e.target.value)}
     }}/>
 ));
@@ -168,32 +168,11 @@ const Form: React.FC = () => {
             placeholder='Telefon'
             className={inputGroupStyles.input}
             id='phone'
-            type='tel'
-        //      onChange={e => {
-        //   if (e.target.value) {
-        //     e.target.value = e.target.value.toUpperCase();
-        //   }
-        // }}
-        
-            // mask="999-999-999"
-            // defaultValue={"000000000"}
-            {...register("phone", { required: true, pattern: /^\d{9}$/ })}
+            type='tel'       
+            {...register("phone", { required: true,  minLength: 11 })}
           />
-           {/* <input
-             placeholder='Telefon'
-             type='tel'
-        name="phone"
-        className={inputGroupStyles.input}
-        onChange={e => {
-          if (e.target.value) {
-            e.target.value = e.target.value;
-          }
-        }}
         
-        id='phone'
-        ref={register("phone",{ required: true, pattern: /^\d{9}$/ })}
-      /> */}
-          {errors?.phone?.type === "pattern" && (
+          {errors?.phone?.type === "minLength" && (
             <p className={inputGroupStyles.errorParagraf}>
               Proszę wpisać poprawny numer telefonu
             </p>
