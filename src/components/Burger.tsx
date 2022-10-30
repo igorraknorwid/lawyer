@@ -92,7 +92,7 @@ export default function TopNavbar({ links }: ITopNavbar) {
   return (
     <div className=''>
       <div
-        className={`fixed xl:top-5 z-20 w-[50px] lg:w-[150px] h-[50px] lg:h-[150px] right-0 bg-cyan-900 flex justify-center items-center ${
+        className={`fixed lg:top-5 z-20 w-[50px] lg:w-[150px] h-[50px] lg:h-[150px] right-0 bg-cyan-900 flex justify-center items-center ${
           state ? "bg-cyan-400" : "bg-[#0e1c39]"
         }`}
       >
