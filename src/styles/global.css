@@ -53,11 +53,11 @@ h1 {
 /* Menu */
 
 .topmenu_text {
-  font-family: "Oswald-Light", sans-serif;
+  font-family: "Oswald-Regular", sans-serif;
 }
 
 .topmenu > li + li {
-  margin-top: 10px;
+  margin-top: 2px;
 }
 
 .topmenu_item:hover > .topmenu_div > .topmenu_target {

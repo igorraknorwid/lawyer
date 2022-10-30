@@ -15,12 +15,12 @@ const { number_phone, visible_phone } = contact_data.data.attributes;
 
 <div class='prime'>
   <div
-    class='absolute lg:top-10 left-0 right-0 flex gap-x-4 xl:gap-x-0 xl:justify-between items-center xl:h-[180px] pr-[90px] xl:pr-[300px] pl-4 xl:pl-10'
+    class='absolute lg:top-2 left-0 right-0 flex gap-x-4 xl:gap-x-0 xl:justify-between items-center xl:h-[180px] pr-[90px] xl:pr-[300px] pl-4 xl:pl-10'
   >
     <a href='/'
-      ><img src='/logo.svg' alt='logo' class='w-[100px] lg:w-[400px]' />
+      ><img src='/logo.svg' alt='logo' class='w-[100px] lg:w-[200px]' />
     </a>
-    <div class='flex flex-col lg:text-[5vh] text-white bg-blue-900'>
+    <div  class='flex flex-col lg:text-[5vh] text-white my-stroke text_shadow px-4 py-2 mx-4 bg-[#19191aad]'>
       <div class='uppercase'>Telefon do kontaktu:</div>
       <a class='' href={`tel:${number_phone}`}>{visible_phone}</a>
     </div>
@@ -30,7 +30,7 @@ const { number_phone, visible_phone } = contact_data.data.attributes;
     class='absolute top-[60vh] lg:top-[24vh] lg:left-[5vw] mx-2 lg:max-w-[50%] flex flex-col justify-center text-white my-stroke'
   >
     <h1
-      class='text-center text-xl lg:text-[7vh] tracking-widest lg:leading-[9vh] mb-5 lg:mb-5 xl:mb-10 bg-black/50 lg:bg-transparent mx-2 xl:mx-0 p-2 xl:p-0 uppercase'
+      class='text-center text-xl lg:text-[5vh] tracking-widest lg:leading-[9vh] mb-5 lg:mb-5 xl:mb-10 bg-black/50 lg:bg-transparent mx-2 xl:mx-0 p-2 xl:p-0 uppercase'
     >
       Rozwód w Gdańsku
     </h1>
@@ -41,8 +41,7 @@ const { number_phone, visible_phone } = contact_data.data.attributes;
     </p>
     <a
       href='#myform'
-      class='text-center uppercase xl:text-[2vh] py-2 lg:py-6 mx-2 lg:px-10 bg-[#d8380d] hover:bg-yellow-400 hover:text-gray-800 cursor-pointer max-w-max lg:mx-auto lg:tracking-[4px] xl:mx-0'
-      >{button}</a
+      class='text-center uppercase xl:text-[3vh] py-2 lg:py-6 lg:px-10 bg-[#042748] hover:bg-[#9e6025] cursor-pointer max-w-max mx-6 lg:mx-auto lg:tracking-[4px] xl:mx-0'      >{button}</a
     >
   </div>
 </div>

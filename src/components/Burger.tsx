@@ -22,7 +22,7 @@ interface IMenu {
 }
 
 function Menu({ links }: IMenu) {
-  const [state, setState] = React.useState(true);
+  const [state, setState] = React.useState(false);
   return (
     <ul className='topmenu topmenu_text text-white text-xl xl:text-2xl'>
       {links.map((link, index) => {
@@ -60,7 +60,7 @@ function Menu({ links }: IMenu) {
         <>
           {cases.map((link) => {
             return (
-              <li className=' topmenu_item lowercase' key={link.id}>
+              <li className='topmenu_item lowercase' key={link.id}>
                 <div className='topmenu_div flex justify-start items-center'>
                   <div className={`topmenu_target w-6 h-8 `}></div>
                   <div className='pl-10 text-lg'>
