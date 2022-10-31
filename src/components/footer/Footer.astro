@@ -1,4 +1,5 @@
 ---
+import { cases } from "../../content/cases";
 ---
 
 <footer class='bg-slate-300'>
@@ -11,7 +12,20 @@
           ><img src='/logo.svg' alt='logo' class='w-[100px] xl:w-[200px]' />
         </a>
       </div>
-      <div>Rozwód – Test</div>
+      <div>
+        <p class='uppercase'>zakres usług:</p>
+        <ul>
+          {
+            cases.map((link) => {
+              return (
+                <li class=' lowercase'>
+                  <a href={`/${link.slug}/`}>{link.title}</a>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </div>
     </div>
   </div>
   <div class='text-black py-5 text-center'>
