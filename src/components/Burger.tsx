@@ -53,7 +53,9 @@ function Menu({ links }: IMenu) {
       >
         <div className='topmenu_div flex justify-start items-center'>
           <div className={`topmenu_target w-2 h-8 `}></div>
+
           <div className='pl-10 cursor-pointer flex justify-center items-center gap-x-5'><p>Zakres Usług</p> {state?<i className="arrow topmenu up"></i>:<i className="arrow topmenu down"></i>}</div>
+
         </div>
       </li>
       {state && (
@@ -78,17 +80,18 @@ function Menu({ links }: IMenu) {
 
 interface ITopNavbar {
   links: ILink[];
-
 }
 
 export default function TopNavbar({ links }: ITopNavbar) {
   const [state, setState] = React.useState(false);
   const [init, setInit] = React.useState(true);
-  React.useEffect(()=>{
-    if(state){
-      document.body.classList.add("ex2")
-    } else { document.body.classList.remove("ex2")}
-  },[state])
+  React.useEffect(() => {
+    if (state) {
+      document.body.classList.add("ex2");
+    } else {
+      document.body.classList.remove("ex2");
+    }
+  }, [state]);
   return (
     <div className=''>
       <div
@@ -110,7 +113,7 @@ export default function TopNavbar({ links }: ITopNavbar) {
       </div>
 
       <div
-        className={`fixed top-0 right-0 xl:top-5  z-10 w-[80%] xl:w-[30%] bg-[#0e1c39] pt-[90px]   xl:pt-[150px] pb-10 xl:pb-20  ${
+        className={`fixed top-0 right-0 xl:top-0  z-10 w-[80%] xl:w-[30%] bg-[#0e1c39] pt-[90px]   xl:pt-[150px] pb-10 xl:pb-20  ${
           state
             ? "translate-x-0 transition-all duration-700"
             : "translate-x-full transition-all duration-700"

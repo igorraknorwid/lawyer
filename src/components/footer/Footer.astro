@@ -1,17 +1,61 @@
 ---
+import { cases } from "../../content/cases";
+import { blog } from "../../content/blog";
 ---
 
 <footer class='bg-slate-300'>
   <div class='bg-[#0e1c39] text-white'>
     <div
-      class='flex w-11/12 xl:w-10/12 mx-auto py-5 justify-between items-center gap-x-10'
+      class='flex flex-col gap-y-5 lg:gap-y-0 lg:flex-row w-11/12 lg:w-10/12 mx-auto py-5 justify-between gap-x-10'
     >
       <div>
         <a href='/'
           ><img src='/logo.svg' alt='logo' class='w-[100px] xl:w-[200px]' />
         </a>
       </div>
-      <div>Rozwód – Porady prawne</div>
+      <div>
+        <p class='uppercase'>ostatnie artykuły:</p>
+        <ul>
+          {
+            blog.map((item) => {
+              return (
+                <a
+                  href={`/blog/${item.slug}/`}
+                  class='lowercase cursor-pointer'
+                >
+                  <p>{item.title}</p>
+                </a>
+              );
+            })
+          }
+        </ul>
+      </div>
+      <div>
+        <p class='uppercase'>zakres usług:</p>
+        <ul>
+          {
+            cases.map((link) => {
+              return (
+                <li class='lowercase'>
+                  <a href={`/${link.slug}/`}>{link.title}</a>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </div>
+      <div>
+        <p>Zobacz także:</p>
+        <ul>
+          <li>Prawnik rozwód Gdańsk – Żoliborz</li>
+          <li>Prawnik rozwód Gdańsk – Wola</li>
+          <li>Prawnik rozwód Gdańsk – Mokotów</li>
+          <li>Prawnik rozwód Gdańsk – Ursynów</li>
+          <li>Prawnik rozwód Gdańsk – Ochota</li>
+          <li>Prawnik rozwód Gdańsk – Białołęka</li>
+          <li>Prawnik rozwód Gdańsk – Praga południe</li>
+        </ul>
+      </div>
     </div>
   </div>
   <div class='text-black py-5 text-center'>

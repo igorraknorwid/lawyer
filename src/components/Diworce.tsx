@@ -68,8 +68,8 @@ export default function Divorce({ image_src, image_alt }: IDivorce) {
               zatrudnisz naszych doświadczonych prawników rozwodowych, nie
               będziesz musiał się martwić, że Twoja sprawa zostanie przekazana
               niedoświadczonym prawnikom lub personelowi pomocy prawnej.
-              Będziesz mieć doświadczonego prawnika zajmującego się Twoją sprawą
-              od początku do końca.
+              Będziesz mieć doświadczonego prawnika w Gdańsku zajmującego się
+              Twoją sprawą od początku do końca.
             </p>
           </div>
         </div>
