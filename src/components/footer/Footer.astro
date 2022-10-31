@@ -1,5 +1,6 @@
 ---
 import { cases } from "../../content/cases";
+import { blog } from "../../content/blog";
 ---
 
 <footer class='bg-slate-300'>
@@ -11,12 +12,26 @@ import { cases } from "../../content/cases";
         </a>
       </div>
       <div>
+        <p class='uppercase'>ostatnie artykuły:</p>
+        <ul>
+          {
+            blog.map((item) => {
+              return (
+                <li class='lowercase'>
+                  <a href={`/${item.slug}/`}>{item.title}</a>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </div>
+      <div>
         <p class='uppercase'>zakres usług:</p>
         <ul>
           {
             cases.map((link) => {
               return (
-                <li class=' lowercase'>
+                <li class='lowercase'>
                   <a href={`/${link.slug}/`}>{link.title}</a>
                 </li>
               );
