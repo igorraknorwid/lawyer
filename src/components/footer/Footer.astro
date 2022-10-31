@@ -17,9 +17,12 @@ import { blog } from "../../content/blog";
           {
             blog.map((item) => {
               return (
-                <li class='lowercase'>
-                  <a href={`/${item.slug}/`}>{item.title}</a>
-                </li>
+                <a
+                  href={`/blog/${item.slug}/`}
+                  class='lowercase cursor-pointer'
+                >
+                  <p>{item.title}</p>
+                </a>
               );
             })
           }
