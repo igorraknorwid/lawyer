@@ -53,7 +53,7 @@ function Menu({ links }: IMenu) {
       >
         <div className='topmenu_div flex justify-start items-center'>
           <div className={`topmenu_target w-2 h-8 `}></div>
-          <div className='pl-10 cursor-pointer flex justify-center items-center gap-x-5'><p>Zakres Usług</p> {state?<i class="arrow topmenu up"></i>:<i class="arrow topmenu down"></i>}</div>
+          <div className='pl-10 cursor-pointer flex justify-center items-center gap-x-5'><p>Zakres Usług</p> {state?<i className="arrow topmenu up"></i>:<i className="arrow topmenu down"></i>}</div>
         </div>
       </li>
       {state && (
