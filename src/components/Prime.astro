@@ -15,19 +15,21 @@ const { number_phone, visible_phone } = contact_data.data.attributes;
 
 <div class='prime'>
   <div
-    class='absolute lg:top-5 left-0 right-0 flex gap-x-4 xl:gap-x-0 xl:justify-between items-center xl:h-[180px] pr-[90px] xl:pr-[300px] pl-4 xl:pl-10'
+    class='absolute lg:top-5 left-0 right-0 flex gap-x-4 xl:gap-x-0 xl:justify-between xl:h-[180px] pr-[90px] xl:pr-[300px] pl-4 xl:pl-10'
   >
-  <div class="">
-    <a href='/' title='Strona domowa'
-      ><img src='/logo.svg' alt='logo' class='w-[100px] lg:w-[300px]' />
-    </a>
-  </div>
-    <div
-      class='flex flex-col lg:text-[5vh] text-white my-stroke text_shadow px-4 py-2 mx-4 bg-[#19191aad]'
-    >
-      <div class='uppercase'>Telefon:</div>
+    <div class=''>
+      <a href='/' title='Strona domowa'
+        ><img src='/logo.svg' alt='logo' class='w-[100px] lg:w-[250px]' />
+      </a>
+    </div>
+    <div>
+      <div
+        class='flex flex-col lg:text-[5vh] text-white my-stroke text_shadow px-4 py-2 mx-4 bg-[#19191aad]'
+      >
+        <div class='uppercase'>Telefon:</div>
 
-      <a class='' href={`tel:${number_phone}`}>{visible_phone}</a>
+        <a class='' href={`tel:${number_phone}`}>{visible_phone}</a>
+      </div>
     </div>
   </div>
 
@@ -35,12 +37,12 @@ const { number_phone, visible_phone } = contact_data.data.attributes;
     class='absolute top-[60vh] lg:top-[35vh] lg:left-[5vw] lg:max-w-[50%] flex flex-col justify-center text-white my-stroke'
   >
     <p
-      class='text-center text-xl lg:text-[7vh] tracking-widest lg:leading-[9vh] mb-5 lg:mb-10 bg-[#19191aad] lg:bg-transparent max-w-max mx-3 lg:mx-auto '
+      class='text-center text-xl lg:text-[7vh] tracking-widest lg:leading-[9vh] mb-5 lg:mb-10 bg-[#19191aad] lg:bg-transparent max-w-max mx-3 lg:mx-auto'
     >
       {title}
     </p>
     <h2
-      class='text-center text-lg xl:text-[3vh] mb-5 lg:mb-10 xl:mb-20 uppercase bg-[#19191aad] lg:bg-transparent max-w-max mx-3 lg:mx-auto '
+      class='text-center text-lg xl:text-[3vh] mb-5 lg:mb-10 xl:mb-20 uppercase bg-[#19191aad] lg:bg-transparent max-w-max mx-3 lg:mx-auto'
     >
       {subtitle}
     </h2>
