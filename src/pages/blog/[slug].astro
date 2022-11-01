@@ -41,7 +41,7 @@ const { attributes } = Astro.props as Props;
 <Layout title={` ${attributes.title}`} description={`Radca prawny | ${attributes.title}`}>
   <Burger links={menu} client:idle />
   <Second />
-  <section class='w-full lg:w-9/12 mx-auto py-12'>
+  <section class='w-full lg:w-8/12 mx-auto py-12'>
     <div>
       <h3 class='mb-24 text-3xl lg:text-6xl font-bold text-center'>
         {attributes.title}
@@ -50,7 +50,7 @@ const { attributes } = Astro.props as Props;
         <div class='flex justify-center'>
           <img src={attributes.image} alt={attributes.subtitle} />
         </div>
-        <p class='px-4 my-4 text-xl lg:text-2xl font-bold'>{attributes.subtitle}</p>
+        <p class='px-4 my-4 text-xl lg:text-3xl font-bold'>{attributes.subtitle}</p>
         <div class='px-4'><MyMarkdown content={attributes.content} client:load/></div>
       </div>
     </div>

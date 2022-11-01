@@ -1,6 +1,5 @@
-import React from "react";
 import ReactMarkdown from "react-markdown";
-import { AboutData } from "../../types";
+
 
 interface IMyMarkdown {
   content: string;
