@@ -45,9 +45,9 @@ export interface TCard {
   text: string;
 }
 
-interface CardType {
+export interface CardType {
   id: number;
-  attributes: TCard[];
+  attributes: TCard;
 }
 
 export interface CardsData {

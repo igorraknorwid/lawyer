@@ -6,14 +6,13 @@ import Lawyer from "../components/Lawyer";
 import Testimonial from "../components/testomonials/Testimonial.astro";
 import Divorce from "../components/Diworce";
 import BottomAwards from "../components/BottomAwards.astro";
-import { AwardsData, CaseData, ContactData } from "../types";
+import { AwardsData, CardsData, CaseData, ContactData } from "../types";
 import Why from "../components/why/Why";
 import Cases from "../components/cases/Cases.astro";
 import CallUs from "../components/callus/CallUs.astro";
 import Contacts from "../components/contacts/Contacts.astro";
 import Footer from "../components/footer/Footer.astro";
 import Burger from "../components/Burger";
-import Test from "../components/Test";
 import { menu } from "../content/menu";
 const response = await fetch(
   "https://sheltered-river-97651.herokuapp.com/api/awards"
@@ -22,32 +21,6 @@ const awards_data = (await response.json()) as AwardsData;
 const data = awards_data.data;
 const x = data.map((item) => item.attributes);
 
-const cards = [
-  {
-    src: "https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/25_chqo4a.png",
-    text: "Prowadzenie spraw z zakresu prawa rodzinnego powyżej 25 lat",
-  },
-  {
-    src: "https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/person_tdxxke.png",
-    text: "Stała komunikacja z Tobą przez cały proces rozwodu",
-  },
-  {
-    src: "https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/maze_guhtnv.png",
-    text: "Doświadczenie ze złożonymi kwestiami opieki i rozwodami o wysokim poziomie konfliktów",
-  },
-  {
-    src: "https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/gavel_lykgwg.png",
-    text: "Znajomość lokalnych sądów rodzinnych ",
-  },
-  {
-    src: "https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/trophy_h3op8x.png",
-    text: "Wykwalifikowana reprezentacja mająca na celu poprawę Twojej pozycji i ograniczenie sporów pod czas rozwodu",
-  },
-  {
-    src: "https://res.cloudinary.com/du9w3xgvx/image/upload/v1665675410/megaphone_nsy7lu.png",
-    text: "Wielokrotnie nagradzani prawnicy gotowi do wszczęcia postępowania sądowegopod czas rozwodu",
-  },
-];
 
 const response_contact = await fetch(
   "https://sheltered-river-97651.herokuapp.com/api/contact"
@@ -55,9 +28,15 @@ const response_contact = await fetch(
 const contact_data = (await response_contact.json()) as ContactData;
 const { number_phone, visible_phone } = contact_data.data.attributes;
 
+
 const response_cases = await fetch('https://sheltered-river-97651.herokuapp.com/api/lawyer-cases');
   const data_cases = (await response_cases.json()) as CaseData;
   const cases= data_cases.data;
+
+
+  const response_cards = await fetch('https://sheltered-river-97651.herokuapp.com/api/lawyer-cards');
+  const data_cards = (await response_cards.json()) as CardsData;
+  const cards = data_cards.data;
 ---
 
 <Layout

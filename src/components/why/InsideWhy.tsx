@@ -1,9 +1,9 @@
 import React from "react";
-import { TCard } from "../../types";
+import { CardType} from "../../types";
 import WhyCard from "./WhyCard";
 
 interface IInsideWhy {
-  cards: TCard[];
+  cards: CardType[];
   isBackground: boolean;
 }
 

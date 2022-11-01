@@ -1,9 +1,9 @@
 import React from "react";
 import InsideWhy from "./InsideWhy";
-import { TCard } from "../../types";
+import { CardType } from "../../types";
 
 interface IWhy {
-  cards: TCard[];
+  cards: CardType[];
 }
 
 export default function Why({ cards }: IWhy) {
