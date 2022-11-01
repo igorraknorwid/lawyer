@@ -31,7 +31,7 @@ export async function getStaticPaths({ paginate }) {
     };
   });
   // Generate pages from our array of astronauts, with 2 to a page
-  return paginate(blogPages, { pageSize: 5 });
+  return paginate(blogPages.reverse(), { pageSize: 5 });
 }
 // All paginated data is passed on the "page" prop
 const { page } = Astro.props;
