@@ -26,12 +26,14 @@ const cases= data_cases.data;
           {
             blog.map(({attributes}) => {
               return (
+                <li>
                 <a
                   href={`/blog/${attributes.slug}/`}
                   class='lowercase cursor-pointer'
                 >
-                  <p>{attributes.title}</p>
+                  {attributes.title}
                 </a>
+              </li>
               );
             })
           }
