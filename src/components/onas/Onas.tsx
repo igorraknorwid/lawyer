@@ -6,7 +6,7 @@ interface IOnas {
   about: AboutData;
 }
 
-export default function Onas({ about }: IOnas) {
+export default function Markdown({ about }: IOnas) {
   return (
     <div className='px-4 py-12 w-full lg:w-9/12 mx-auto '>
        <h2 className='text-3xl xl:text-6xl xl:pt-0 text-center'>

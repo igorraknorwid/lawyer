@@ -95,10 +95,19 @@ export interface AboutData {
 
 export interface IBlog {
   id: number;
-  data: string;
+  data?: string;
   slug: string;
   title: string;
   subtitle: string;
   content: string;
   image: string;
+}
+
+export type blogDataType = {
+  id: number;
+  attributes: IBlog;
+};
+
+export interface IBlogData {
+  data: blogDataType[];
 }
