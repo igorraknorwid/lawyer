@@ -6,7 +6,7 @@ import Lawyer from "../components/Lawyer";
 import Testimonial from "../components/testomonials/Testimonial.astro";
 import Divorce from "../components/Diworce";
 import BottomAwards from "../components/BottomAwards.astro";
-import { AwardsData, ContactData } from "../types";
+import { AwardsData, CaseData, ContactData } from "../types";
 import Why from "../components/why/Why";
 import Cases from "../components/cases/Cases.astro";
 import CallUs from "../components/callus/CallUs.astro";
@@ -48,11 +48,16 @@ const cards = [
     text: "Wielokrotnie nagradzani prawnicy gotowi do wszczęcia postępowania sądowegopod czas rozwodu",
   },
 ];
+
 const response_contact = await fetch(
   "https://sheltered-river-97651.herokuapp.com/api/contact"
 );
 const contact_data = (await response_contact.json()) as ContactData;
 const { number_phone, visible_phone } = contact_data.data.attributes;
+
+const response_cases = await fetch('https://sheltered-river-97651.herokuapp.com/api/lawyer-cases');
+  const data_cases = (await response_cases.json()) as CaseData;
+  const cases= data_cases.data;
 ---
 
 <Layout
@@ -60,7 +65,7 @@ const { number_phone, visible_phone } = contact_data.data.attributes;
   description='Zadzwoń do adwokata rozwodowego i jego zespół ma ponad 25-letnie doświadczenie. Bezpłatna konsultacja pod numerem 123-456-789'
 >
   <!-- <Test client:load /> -->
-  <Burger links={menu} client:idle />
+  <Burger links={menu} cases={cases} client:idle />
   <Prime />
   <Awards images={x} client:visible />
   <Lawyer

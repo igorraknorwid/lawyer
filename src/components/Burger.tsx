@@ -1,6 +1,7 @@
 import React from "react";
 import { cases } from "../content/cases";
 import "../styles/burger.css";
+import { CaseType} from "../types";
 
 interface ILinkCildren {
   id: number;
@@ -18,10 +19,11 @@ interface ILink {
 
 interface IMenu {
   links: ILink[];
-  // url_cuted_param?: string;
+  cases: CaseType[]
+  
 }
 
-function Menu({ links }: IMenu) {
+function Menu({ links,cases }: IMenu) {
   const [state, setState] = React.useState(false);
   return (
     <ul className='topmenu topmenu_text text-white text-xl xl:text-2xl'>
@@ -60,13 +62,13 @@ function Menu({ links }: IMenu) {
       </li>
       {state && (
         <>
-          {cases.map((link) => {
+          {cases.map(({attributes}) => {
             return (
-              <li className='topmenu_item lowercase' key={link.id}>
+              <li className='topmenu_item lowercase' key={attributes.id}>
                 <div className='topmenu_div flex justify-start items-center'>
                   <div className={`topmenu_target w-6 h-8 `}></div>
                   <div className='pl-10 text-lg'>
-                    <a href={`/${link.slug}/`}>{link.title}</a>
+                    <a href={`/${attributes.slug}/`}>{attributes.title}</a>
                   </div>
                 </div>
               </li>
@@ -80,9 +82,10 @@ function Menu({ links }: IMenu) {
 
 interface ITopNavbar {
   links: ILink[];
+  cases: CaseType[]
 }
 
-export default function TopNavbar({ links }: ITopNavbar) {
+export default function TopNavbar({ links,cases }: ITopNavbar) {
   const [state, setState] = React.useState(false);
   const [init, setInit] = React.useState(true);
   React.useEffect(() => {
@@ -119,7 +122,7 @@ export default function TopNavbar({ links }: ITopNavbar) {
             : "translate-x-full transition-all duration-700"
         } `}
       >
-        <Menu links={links} />
+        <Menu links={links} cases={cases} />
       </div>
     </div>
   );

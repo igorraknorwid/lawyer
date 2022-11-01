@@ -62,9 +62,9 @@ export type TCase = {
   content: string;
 };
 
-interface CaseType {
+export interface CaseType {
   id: number;
-  attributes: TCase[];
+  attributes: TCase;
 }
 
 export interface CaseData {
