@@ -21,22 +21,23 @@ const awards_data = (await response.json()) as AwardsData;
 const data = awards_data.data;
 const x = data.map((item) => item.attributes);
 
-
 const response_contact = await fetch(
   "https://sheltered-river-97651.herokuapp.com/api/contact"
 );
 const contact_data = (await response_contact.json()) as ContactData;
 const { number_phone, visible_phone } = contact_data.data.attributes;
 
+const response_cases = await fetch(
+  "https://sheltered-river-97651.herokuapp.com/api/lawyer-cases"
+);
+const data_cases = (await response_cases.json()) as CaseData;
+const cases = data_cases.data;
 
-const response_cases = await fetch('https://sheltered-river-97651.herokuapp.com/api/lawyer-cases');
-  const data_cases = (await response_cases.json()) as CaseData;
-  const cases= data_cases.data;
-
-
-  const response_cards = await fetch('https://sheltered-river-97651.herokuapp.com/api/lawyer-cards');
-  const data_cards = (await response_cards.json()) as CardsData;
-  const cards = data_cards.data;
+const response_cards = await fetch(
+  "https://sheltered-river-97651.herokuapp.com/api/lawyer-cards"
+);
+const data_cards = (await response_cards.json()) as CardsData;
+const cards = data_cards.data;
 ---
 
 <Layout
@@ -66,9 +67,7 @@ const response_cases = await fetch('https://sheltered-river-97651.herokuapp.com/
     class='px-5 lg:px-10 py-5 lg:py-16 bg-[#140b8a] text-white text-xl xl:text-[60px] tracking-[8px] lg:leading-[70px] lg:mb-0'
   >
     <div class='text_shadow uppercase text-center px-2 py-2'>
-      Telefon do kontaktu: <a class='' href={`tel:${number_phone}`}
-        >{visible_phone}</a
-      >
+      Kontakt: <a class='' href={`tel:${number_phone}`}>{visible_phone}</a>
     </div>
   </div>
 

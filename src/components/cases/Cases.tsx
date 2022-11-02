@@ -20,8 +20,8 @@ function CasesModal({ c, closeModal }: ICase) {
     >
       <div className='bg-blue-600 text-xl text-white w-11/12 xl:w-1/2 mx-auto px-10 py-5 '>
         <div className='flex justify-end items-center'>
-          <button onClick={closeModal} className='myclose text-center'>
-            ❌
+          <button onClick={closeModal} className='myclose text-center text-3xl'>
+            &#10005;
           </button>
         </div>
         <h3 className='mb-5 lg:text-3xl text-center uppercase'>{c.title}</h3>
@@ -29,7 +29,7 @@ function CasesModal({ c, closeModal }: ICase) {
         <div className='flex justify-center items-center'>
           <div className=' border py-2 px-3 tracking-widest'>
             <a href={`/${c.slug}/`} className='uppercase cursor-pointer'>
-              Węncej
+              Więcej
             </a>
           </div>
         </div>

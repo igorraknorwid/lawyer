@@ -41,7 +41,7 @@ export default function Divorce({ image_src, image_alt }: IDivorce) {
       <div className='w-10 h-1 bg-[#cdb171] my-10 mx-auto'></div>
       <div className='xl:flex mb-10 xl:gap-x-10'>
         <div className='mb-10 basis-2/3'>
-          <div className='text-xl xl:text-xl xl:max-w-3xl'>
+          <div className='text-xl lg:text-xl xl:max-w-3xl'>
             <p className='mb-5'>
               Żadne dwie rodziny nie są takie same. Z kolei nie ma dwóch
               identycznych rozwodów. Niektóre rodziny mogą być w stanie dość
