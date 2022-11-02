@@ -27,7 +27,7 @@ export default function Lawyer({ image_src, image_alt }: ILawyer) {
   }, []);
 
   return (
-    <section className='xl:py-24  xl:w-10/12 m-auto'>
+    <section className='px-4 xl:py-24  xl:w-10/12 m-auto'>
       <div style={{ height: "1px" }} ref={topRef}></div>
       <div className='xl:flex'>
         <img

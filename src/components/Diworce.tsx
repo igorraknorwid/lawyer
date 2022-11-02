@@ -33,7 +33,7 @@ export default function Divorce({ image_src, image_alt }: IDivorce) {
   }, []);
 
   return (
-    <section className='px-2 xl:w-10/12 mx-auto mt-24   lg:my-24'>
+    <section className='px-4 xl:w-10/12 mx-auto mt-24   lg:my-24'>
       <div style={{ height: "1px" }} ref={topRef}></div>
       <h2 className='text-3xl xl:text-6xl xl:pt-0 text-center'>
         NASI PRAWNICY ROZWODNI Z GDAŃSKU ZAPEWNIAJĄ DOSTOSOWANĄ REPREZENTACJĘ
