@@ -15,19 +15,22 @@ const awards_data = (await response.json()) as AwardsData;
 const data = awards_data.data;
 const x = data.map((item) => item.attributes);
 
-const response_cases = await fetch('https://sheltered-river-97651.herokuapp.com/api/lawyer-cases');
-  const data_cases = (await response_cases.json()) as CaseData;
-  const cases= data_cases.data;
+const response_cases = await fetch(
+  "https://sheltered-river-97651.herokuapp.com/api/lawyer-cases"
+);
+const data_cases = (await response_cases.json()) as CaseData;
+const cases = data_cases.data;
 
 export async function getStaticPaths() {
-  const response_cases = await fetch('https://sheltered-river-97651.herokuapp.com/api/lawyer-cases');
+  const response_cases = await fetch(
+    "https://sheltered-river-97651.herokuapp.com/api/lawyer-cases"
+  );
   const data_cases = (await response_cases.json()) as CaseData;
-  const cases= data_cases.data;
-  
+  const cases = data_cases.data;
 
-  return cases.map(({attributes}) => ({
+  return cases.map(({ attributes }) => ({
     params: { slug: attributes.slug },
-    props: { attributes  },
+    props: { attributes },
   }));
 }
 
@@ -39,17 +42,20 @@ interface Props {
 const { attributes } = Astro.props as Props;
 ---
 
-<Layout title={` ${attributes.title}`} description={`Radca prawny | ${attributes.title}`}>
+<Layout
+  title={` ${attributes.title}`}
+  description={`Radca prawny | ${attributes.title}`}
+>
   <Burger links={menu} cases={cases} client:idle />
   <Second />
   <section
-    class=' cases w-full lg:w-10/12 xl:w-8/12 px-4 lg:px-0 lg:mx-auto pt-10 lg:py-24'
+    class='cases w-full lg:w-10/12 xl:w-8/12 px-4 lg:px-0 lg:mx-auto pt-10 lg:py-24'
   >
     <div class='lg:flex lg:gap-x-10 xl:gap-x-40'>
       <div class='lg:basis-3/4'>
-        <h2 class='text-3xl font-bold text-[#330033] text-center'>
+        <h3 class='text-3xl font-bold text-[#330033] text-center'>
           {attributes.title}
-        </h2>
+        </h3>
         <div class='text-2xl font-bold mt-4 lg:mt-8'>{attributes.text}</div>
         <div class='text-lg mt-4'>{attributes.content}</div>
       </div>
@@ -59,7 +65,7 @@ const { attributes } = Astro.props as Props;
         </p>
         <ul>
           {
-            cases.map(({attributes}, index) => (
+            cases.map(({ attributes }, index) => (
               <>
                 <li class={`${index === 0 ? "" : "mt-4"}`}>
                   <a
