@@ -35,6 +35,8 @@ export default function Lawyer({ image_src, image_alt }: ILawyer) {
           className=''
           src={state ? image_src : ""}
           alt={image_alt}
+          height={864}
+          width={546}
         />
         <div className='xl:ml-24 px-2 lg:px-0 '>
           <h1 className='text-3xl lg:text-6xl pt-8 xl:pt-0'>

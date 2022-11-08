@@ -46,14 +46,18 @@ export default function BlogCard({
       className={`${index === 0 ? "col-span-full" : ""} flex flex-col border `}
     >
       <div style={{ height: "1px" }} ref={topRef}></div>
-      <a href={`/blog/${slug}/`} >
-        <img src={state ? image : " "} alt={title} />
-      </a>
+      <div className=''>
+        <a href={`/blog/${slug}/`}>
+          <img className='w-full' src={state ? image : " "} alt={title} />
+        </a>
+      </div>
       <div className='mt-5 p-5'>
         <a href={`/blog/${slug}/`} className='uppercase cursor-pointer'>
           <p className='text-3xl hover:text-blue-700 transition-all'>{title}</p>
         </a>
-        <div className='mt-2'><MyMarkdown content={short} /></div>
+        <div className='mt-2'>
+          <MyMarkdown content={short} />
+        </div>
         <a href={`/blog/${slug}/`} className='uppercase cursor-pointer'>
           <div className='mt-2 text-slate-600 hover:text-blue-700 transition-all'>
             Czytaj dalej
