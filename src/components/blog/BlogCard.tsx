@@ -43,7 +43,9 @@ export default function BlogCard({
 
   return (
     <div
-      className={`${index === 0 ? "col-span-full" : ""} flex flex-col border `}
+      className={`${
+        index === 0 ? "col-span-full" : ""
+      } flex flex-col my-border`}
     >
       <div style={{ height: "1px" }} ref={topRef}></div>
       <div className=''>

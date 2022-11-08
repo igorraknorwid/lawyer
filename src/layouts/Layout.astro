@@ -1,5 +1,6 @@
 ---
-import Navigation from "../components/Navigation.astro";
+import { Schema } from "astro-seo-schema";
+
 interface Props {
   title: string;
   description: string;
@@ -29,6 +30,24 @@ import "../styles/global.css";
       property='og:description'
       content='rozwody, sprawy rodzinne | adwokaci  | Pod Filarami 2/7, Gdańsk |123 456 789, kancelaria prawnik'
     />
+    <Schema
+      item={{
+        // "@context": "https://schema.org",
+        // "@type": "Person",
+        // name: "Grace Brewster",
+        // alternateName: "Grace Brewster Murray Hopper",
+        // alumniOf: {
+        //   "@type": "CollegeOrUniversity",
+        //   name: ["Yale University", "Vassar College"],
+        // },
+        // knowsAbout: ["Compilers", "Computer Science"],
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": "https://radca-test.pl/#service",
+        serviceType: "Strona główna",
+      }}
+    />
+
     <title>{title}</title>
   </head>
 
@@ -40,6 +59,4 @@ import "../styles/global.css";
     // var loader = document.getElementById("preloader");
     // loader.style.display = "none";
   </script>
-
-
 </html>
