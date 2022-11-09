@@ -32,19 +32,28 @@ import "../styles/global.css";
     />
     <Schema
       item={{
-        // "@context": "https://schema.org",
-        // "@type": "Person",
-        // name: "Grace Brewster",
-        // alternateName: "Grace Brewster Murray Hopper",
-        // alumniOf: {
-        //   "@type": "CollegeOrUniversity",
-        //   name: ["Yale University", "Vassar College"],
-        // },
-        // knowsAbout: ["Compilers", "Computer Science"],
         "@context": "https://schema.org",
-        "@type": "Service",
-        "@id": "https://radca-test.pl/#service",
-        serviceType: "Strona główna",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            name: "Kancelaria Sprawy Rodzinne",
+            url: "http://www.radca-test.pl",
+          },
+          {
+            "@type": "WebPage",
+            name: "Kancelaria Sprawy Rodzinne",
+            url: "http://www.radca-test.pl",
+          },
+          {
+            "@type": "Organization",
+            name: "Kancelaria Sprawy Rodzinne",
+            url: "http://www.radca-test.pl",
+            sameAs: [
+              "http://www.facebook.com/radca",
+              "http://www.instagram.com/radca",
+            ],
+          },
+        ],
       }}
     />
 

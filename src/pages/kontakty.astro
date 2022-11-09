@@ -4,7 +4,7 @@ import Burger from "../components/Burger";
 import ContactsPage from "../components/ContactsPage.astro";
 import Contacts from "../components/contacts/Contacts.astro";
 import Footer from "../components/footer/Footer.astro";
-import { AwardsData, CaseData } from "../types";
+import { AwardsData, CaseData, ContactData } from "../types";
 
 import { menu } from "../content/menu";
 const response = await fetch(
@@ -19,6 +19,11 @@ const response_cases = await fetch(
 );
 const data_cases = (await response_cases.json()) as CaseData;
 const cases = data_cases.data;
+const response_contact = await fetch(
+  "https://sheltered-river-97651.herokuapp.com/api/contact"
+);
+const contact_data = (await response_contact.json()) as ContactData;
+const { number_phone, visible_phone } = contact_data.data.attributes;
 ---
 
 <Layout
@@ -27,13 +32,20 @@ const cases = data_cases.data;
 >
   <Burger links={menu} cases={cases} client:idle />
   <ContactsPage />
-  <section class='px-4 py-24 w-full lg:w-8/12 mx-auto text-xl'>
-    <h2 class='text-3xl'>
-      Kancelaria Adwokacka Gdańsk- pomoc prawna, adwokat rozwód
-    </h2>
-    <p class='mt-5'>Adres: ul. Stacha Świstackiego 15/10</p>
+  <section
+    itemscope
+    itemtype='http://schema.org/LegalService'
+    class='px-4 py-24 w-full lg:w-8/12 mx-auto text-xl'
+  >
+    <h4 itemprop='name' class='text-3xl'>Kancelaria Sprawy Rodzinne</h4>
+    <span itemprop='description'>Adwokaci i Radcy Prawni</span>
+    <p itemprop='address' class='mt-5'>Adres: ul. Stacha Świstackiego 15/10</p>
     <p class='mt-5'>Kod pocztowy: xx-xxx Gdańsk</p>
-    <p class='mt-5'>Telefon: 123 456 xxx</p>
+    <p class='mt-5'>
+      Telefon: <a itemprop='telephone' class='' href={`tel:${number_phone}`}
+        >{visible_phone}</a
+      >x
+    </p>
     <p class='mt-5'>E-mail: biuro@kancelaria-xxx.pl</p>
   </section>
   <Contacts />

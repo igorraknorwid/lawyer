@@ -1,13 +1,21 @@
 ---
 // -
 import { CaseData, IBlogData } from "../../types";
-const response_blog = await fetch('https://sheltered-river-97651.herokuapp.com/api/lawyer-posts');
+const response_blog = await fetch(
+  "https://sheltered-river-97651.herokuapp.com/api/lawyer-posts"
+);
 const data_blog = (await response_blog.json()) as IBlogData;
 const blog = data_blog.data;
-const response_cases = await fetch('https://sheltered-river-97651.herokuapp.com/api/lawyer-cases');
+const response_cases = await fetch(
+  "https://sheltered-river-97651.herokuapp.com/api/lawyer-cases"
+);
 const data_cases = (await response_cases.json()) as CaseData;
-const cases= data_cases.data;
-
+const cases = data_cases.data;
+const response_contact = await fetch(
+  "https://sheltered-river-97651.herokuapp.com/api/contact"
+);
+const contact_data = (await response_contact.json()) as ContactData;
+const { number_phone, visible_phone } = contact_data.data.attributes;
 ---
 
 <footer class='bg-slate-300'>
@@ -21,19 +29,37 @@ const cases= data_cases.data;
         </a>
       </div>
       <div>
+        <section itemscope itemtype='http://schema.org/LegalService' class=''>
+          <h4 itemprop='name' class=''>Kancelaria Sprawy Rodzinne</h4>
+          <span itemprop='description'>Adwokaci i Radcy Prawni</span>
+          <p itemprop='address' class='mt-5'>
+            Adres: ul. Stacha Świstackiego 15/10
+          </p>
+          <p class='mt-5'>Kod pocztowy: xx-xxx Gdańsk</p>
+          <p class='mt-5'>
+            Telefon: <a
+              itemprop='telephone'
+              class=''
+              href={`tel:${number_phone}`}>{visible_phone}</a
+            >
+          </p>
+          <p class='mt-5'>E-mail: biuro@kancelaria-xxx.pl</p>
+        </section>
+      </div>
+      <div>
         <p class='uppercase'>ostatnie artykuły:</p>
         <ul>
           {
-            blog.map(({attributes}) => {
+            blog.map(({ attributes }) => {
               return (
                 <li>
-                <a
-                  href={`/blog/${attributes.slug}/`}
-                  class='lowercase cursor-pointer'
-                >
-                  {attributes.title}
-                </a>
-              </li>
+                  <a
+                    href={`/blog/${attributes.slug}/`}
+                    class='lowercase cursor-pointer'
+                  >
+                    {attributes.title}
+                  </a>
+                </li>
               );
             })
           }
@@ -43,7 +69,7 @@ const cases= data_cases.data;
         <p class='uppercase'>zakres usług:</p>
         <ul>
           {
-            cases.map(({attributes}) => {
+            cases.map(({ attributes }) => {
               return (
                 <li class='lowercase'>
                   <a href={`/${attributes.slug}/`}>{attributes.title}</a>
