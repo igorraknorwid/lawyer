@@ -17,6 +17,12 @@ const awards_data = (await response.json()) as AwardsData;
 const data = awards_data.data;
 const x = data.map((item) => item.attributes);
 
+const response_cases = await fetch(
+  "https://sheltered-river-97651.herokuapp.com/api/lawyer-cases"
+);
+const data_cases = (await response_cases.json()) as CaseData;
+const cases = data_cases.data;
+
 export async function getStaticPaths({ paginate }) {
   const response = await fetch(
     "https://sheltered-river-97651.herokuapp.com/api/lawyer-posts"
@@ -45,7 +51,7 @@ const pageArray = Array.from({ length: total }, (v, i) => i + 1);
   title='Prawnik ds. rozwodów w Gdańsku | O nas'
   description='Zadzwoń do adwokata rozwodowego i jego zespół ma ponad 25-letnie doświadczenie. Bezpłatna konsultacja pod numerem 123-456-789'
 >
-  <Burger links={menu} client:idle />
+  <Burger links={menu} cases={cases} client:idle />
   <Second />
   <section class='w-full lg:w-8/12 mx-auto lg:py-24'>
     <div class='py-12 text-center'>
