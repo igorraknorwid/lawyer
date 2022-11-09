@@ -5,20 +5,26 @@ import Second from "../components/Second.astro";
 import Onas from "../components/onas/Onas";
 import Contacts from "../components/contacts/Contacts.astro";
 import Footer from "../components/footer/Footer.astro";
-import { AboutData } from "../types";
+import { AboutData, CaseData } from "../types";
 import { menu } from "../content/menu";
 
 const resAbout = await fetch(
   "https://sheltered-river-97651.herokuapp.com/api/about"
 );
 const about: AboutData = await resAbout.json();
+
+const response_cases = await fetch(
+  "https://sheltered-river-97651.herokuapp.com/api/lawyer-cases"
+);
+const data_cases = (await response_cases.json()) as CaseData;
+const cases = data_cases.data;
 ---
 
 <Layout
   title='Prawnik ds. rozwodów w Gdańsku | O nas'
   description='Zadzwoń do adwokata rozwodowego i jego zespół ma ponad 25-letnie doświadczenie. Bezpłatna konsultacja pod numerem 123-456-789'
 >
-  <Burger links={menu} client:idle />
+  <Burger links={menu} cases={cases} client:idle />
   <Second />
   <!-- <AboutUs /> -->
   <Onas about={about} client:load />
