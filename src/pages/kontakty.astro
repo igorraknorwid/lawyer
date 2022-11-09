@@ -19,6 +19,7 @@ const response_cases = await fetch(
 );
 const data_cases = (await response_cases.json()) as CaseData;
 const cases = data_cases.data;
+
 const response_contact = await fetch(
   "https://sheltered-river-97651.herokuapp.com/api/contact"
 );
