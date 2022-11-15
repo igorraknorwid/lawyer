@@ -3,7 +3,6 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 
-
 const inputGroupStyles = {
   div: "w-full  px-3 mb-4 ",
   label: "block uppercase tracking-wide text-gray-700 text-xs font-bold py-2",
@@ -18,11 +17,21 @@ type InputProps = React.DetailedHTMLProps<
 >;
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>((props, ref) => (
-  <input ref={ref} {...props} onChange= {(e) => {
-    if(e.target.id === "phone"){
-      e.target.value=e.target.value.replace(/\s/g, "").match(/.{1,3}/g)?.join(" ").substr(0, 11) || ""
-      console.log(e.target.value)}
-    }}/>
+  <input
+    ref={ref}
+    {...props}
+    onChange={(e) => {
+      if (e.target.id === "phone") {
+        e.target.value =
+          e.target.value
+            .replace(/\s/g, "")
+            .match(/.{1,3}/g)
+            ?.join(" ")
+            .substr(0, 11) || "";
+        console.log(e.target.value);
+      }
+    }}
+  />
 ));
 
 type Option = {
@@ -78,11 +87,10 @@ const Form: React.FC = () => {
     handleSubmit,
     reset,
     formState: { errors },
-    control
+    control,
   } = useForm<IFormInput>();
 
   const onSubmit = (data: IFormInput) => {
-    
     const addMessage = () => {
       const response = axios.post(
         `https://sheltered-river-97651.herokuapp.com/api/forms`,
@@ -109,7 +117,7 @@ const Form: React.FC = () => {
   };
 
   return (
-    <div className='bg-white my-5'>
+    <div className='bg-white my-5 p-4'>
       <div className='text-3xl text-center font-bold pb-5'>
         Formularz kontaktowy
       </div>
@@ -168,10 +176,10 @@ const Form: React.FC = () => {
             placeholder='Telefon'
             className={inputGroupStyles.input}
             id='phone'
-            type='tel'       
-            {...register("phone", { required: true,  minLength: 11 })}
+            type='tel'
+            {...register("phone", { required: true, minLength: 11 })}
           />
-        
+
           {errors?.phone?.type === "minLength" && (
             <p className={inputGroupStyles.errorParagraf}>
               Proszę wpisać poprawny numer telefonu

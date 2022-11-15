@@ -2,7 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import Awards from "../components/Awards";
 import Prime from "../components/Prime.astro";
-import Lawyer from "../components/Lawyer";
+import LawyerImage from "../components/LawyerImage";
+import Lawyer from "../components/Lawyer.astro";
 import Testimonial from "../components/testomonials/Testimonial.astro";
 import Divorce from "../components/Diworce";
 import BottomAwards from "../components/BottomAwards.astro";
@@ -48,11 +49,7 @@ const cards = data_cards.data;
   <Burger links={menu} cases={cases} client:idle />
   <Prime />
   <Awards images={x} client:visible />
-  <Lawyer
-    client:visible
-    image_src='https://res.cloudinary.com/zielona-g-ra/image/upload/v1665553138/attorney_owcg1l.webp'
-    image_alt='lawyer'
-  />
+  <Lawyer />
   <Testimonial />
   <Why cards={cards} client:visible />
   <Divorce

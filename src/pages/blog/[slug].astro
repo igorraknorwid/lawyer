@@ -1,6 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { AwardsData, IBlog,IBlogData  } from "../../types";
+import { AwardsData, IBlog, IBlogData, CaseData } from "../../types";
 import Burger from "../../components/Burger";
 import Second from "../../components/Second.astro";
 import Contacts from "../../components/contacts/Contacts.astro";
@@ -17,13 +17,20 @@ const awards_data = (await response.json()) as AwardsData;
 const data = awards_data.data;
 const x = data.map((item) => item.attributes);
 
-export async function getStaticPaths({ paginate }) {
-   const response = await fetch('https://sheltered-river-97651.herokuapp.com/api/lawyer-posts');
-   const blog_data = (await response.json()) as IBlogData;
-   const data = blog_data.data;
- 
+const response_cases = await fetch(
+  "https://sheltered-river-97651.herokuapp.com/api/lawyer-cases"
+);
+const data_cases = (await response_cases.json()) as CaseData;
+const cases = data_cases.data;
 
-  return data.map(({attributes}) => ({
+export async function getStaticPaths({ paginate }) {
+  const response = await fetch(
+    "https://sheltered-river-97651.herokuapp.com/api/lawyer-posts"
+  );
+  const blog_data = (await response.json()) as IBlogData;
+  const data = blog_data.data;
+
+  return data.map(({ attributes }) => ({
     params: { slug: attributes.slug },
     props: { attributes },
   }));
@@ -35,11 +42,13 @@ interface Props {
 
 // const { slug } = Astro.params;
 const { attributes } = Astro.props as Props;
-
 ---
 
-<Layout title={` ${attributes.title}`} description={`Radca prawny | ${attributes.title}`}>
-  <Burger links={menu} client:idle />
+<Layout
+  title={` ${attributes.title}`}
+  description={`Radca prawny | ${attributes.title}`}
+>
+  <Burger links={menu} cases={cases} client:idle />
   <Second />
   <section class='w-full lg:w-8/12 mx-auto py-12'>
     <div>
@@ -50,8 +59,12 @@ const { attributes } = Astro.props as Props;
         <div class='flex justify-center'>
           <img src={attributes.image} alt={attributes.subtitle} />
         </div>
-        <p class='px-4 my-4 text-xl lg:text-3xl font-bold'>{attributes.subtitle}</p>
-        <div class='px-4'><MyMarkdown content={attributes.content} client:load/></div>
+        <p class='px-4 my-4 text-xl lg:text-3xl font-bold'>
+          {attributes.subtitle}
+        </p>
+        <div class='px-4'>
+          <MyMarkdown content={attributes.content} client:load />
+        </div>
       </div>
     </div>
   </section>

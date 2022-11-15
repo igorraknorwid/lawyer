@@ -66,7 +66,7 @@ function Menu({ links, cases }: IMenu) {
         </div>
       </li>
       {state && (
-        <>
+        <ul>
           {cases.map(({ attributes }) => {
             return (
               <li className='topmenu_item lowercase' key={attributes.id}>
@@ -79,7 +79,7 @@ function Menu({ links, cases }: IMenu) {
               </li>
             );
           })}
-        </>
+        </ul>
       )}
       <li className='topmenu_item'>
         <div className='topmenu_div flex justify-start items-center'>
